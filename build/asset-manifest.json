@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.js": "/static/js/main.85fd9c55.chunk.js",
+    "main.js.map": "/static/js/main.85fd9c55.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a23bda2f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a23bda2f.js.map",
+    "static/js/2.1935ad42.chunk.js": "/static/js/2.1935ad42.chunk.js",
+    "static/js/2.1935ad42.chunk.js.map": "/static/js/2.1935ad42.chunk.js.map",
+    "index.html": "/index.html",
+    "static/js/2.1935ad42.chunk.js.LICENSE.txt": "/static/js/2.1935ad42.chunk.js.LICENSE.txt",
+    "static/media/darken-man-min_50.818f82d0.jpg": "/static/media/darken-man-min_50.818f82d0.jpg",
+    "static/media/darken-rover_50.2273a821.jpg": "/static/media/darken-rover_50.2273a821.jpg",
+    "static/media/galaxyHR_70.bb65fdeb.jpg": "/static/media/galaxyHR_70.bb65fdeb.jpg",
+    "static/media/ingenuity.5d98b03e.png": "/static/media/ingenuity.5d98b03e.png",
+    "static/media/launch-api_50.f4b207d2.jpg": "/static/media/launch-api_50.f4b207d2.jpg",
+    "static/media/opportunity.7e469611.png": "/static/media/opportunity.7e469611.png",
+    "static/media/rover-curiosity.45dbe189.png": "/static/media/rover-curiosity.45dbe189.png",
+    "static/media/rover-pers.5ac5e2fc.png": "/static/media/rover-pers.5ac5e2fc.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a23bda2f.js",
+    "static/js/2.1935ad42.chunk.js",
+    "static/js/main.85fd9c55.chunk.js"
+  ]
+}
