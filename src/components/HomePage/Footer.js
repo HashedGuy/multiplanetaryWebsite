@@ -13,7 +13,7 @@ function Footer() {
                 </ul>
             </nav>
             <div className="project-name">
-                <p className="copyright">multiplanatery life © 2021</p>
+                <p className="copyright">multiplanetary © 2021</p>
             </div>
         </footer>
     )

@@ -25,7 +25,7 @@ function Navbar() {
         <div className="container">
             <nav className="nav">
                 <Link to='/'><span className="hide-me-logo"><img src={logo} alt="Mars logo" className="logo"/></span>
-                    <h4 className="logo-title"><span className="hide-me">multiplanatery life</span></h4></Link>
+                    <h4 className="logo-title"><span className="hide-me">multiplanetary</span></h4></Link>
                 <ul 
                     className={`nav-list ${isActive ? "active" : ""}`}
                 >
