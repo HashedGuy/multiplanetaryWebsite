@@ -128,7 +128,7 @@ function DeadRover() {
                 <div className="photos-info">
                     <h2 className="photos-title">Latest photo from {myDeadRover ? myDeadRover : "Opportunity"}</h2>
                     <p>Photo taken: {isLoading ? <BeatLoader size={6} color='red' loading /> : deadPhoto.earth_date}</p>
-                    <p>Camera: {}</p>
+                    {/* <p>Camera: {}</p> */}
                     <p className="latest-photo-info" id="latest-photo-info-perseverance"></p>
                     <a href="" className="btn"><span>{myDeadRover ? myDeadRover : "Opportunity"} album</span></a>
                 </div>
@@ -137,24 +137,6 @@ function DeadRover() {
                 </div>
             </div>        
         </div>
-
-        {/* <div className="dead-rover-parameters" id="spirit">            
-            <div className="rover-parameters-2">
-                <img src="img/opportunity.png" alt=""/>
-                <div className="dead-rover-parameters-info" id="spirit-info"></div>
-                <div id="not-active-signal-two" style={{display: 'none'}}></div>
-            </div>
-            
-            <div className="photos">
-                <div className="dead-photos-info">
-                    <h2 className="photos-title">Last photo from Spirit</h2>                    
-                    <p className="latest-photo-info" id="latest-photo-info-spirit"></p>
-                    <a href="" className="btn"><span>Spirit album</span></a>
-                </div>
-                <div className="latest-photo-section" id="spirit-latest-photo"></div>
-            </div>
-        
-        </div> */}
         </section>
 
     )

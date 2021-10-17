@@ -161,7 +161,7 @@ function Rovers() {
                     <div className="photos-info">
                         <h2 className="photos-title">Latest photo from {myRover ? myRover : "Perseverance"}</h2>
                         <p>Photo taken: {isLoading ? <BeatLoader size={6} color='green' loading /> : photo.earth_date}</p>
-                        <p>Camera: {}</p>
+                        {/* <p>Camera: {}</p> */}
                         <p className="latest-photo-info" id="latest-photo-info-perseverance"></p>
                         <a href="" className="btn"><span>{myRover ? myRover : "Perseverance"} album</span></a>
                         <p style={{fontSize: '.8rem'}}>WARNING: We are in <a target="_blank" href="https://mars.nasa.gov/all-about-mars/night-sky/solar-conjunction/"> Mars solar conjunction</a>, the period when the Sun comes between Mars and Earth, blocking the signals. This means {myRover} will temporarily pause sending us back raw images for about two weeks. Check back for new images after Oct. 18.</p>
