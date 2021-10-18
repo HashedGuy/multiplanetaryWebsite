@@ -4,6 +4,7 @@ import SatellitePassImg from '../../img/darken-man-min_50.jpg'
 import SpaceGarageImg from '../../img/launch-api_50.jpg'
 
 function MainContent() {
+    document.title = 'Home page'
     return (
         <>                
             <section 

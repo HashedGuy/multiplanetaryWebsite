@@ -5,11 +5,11 @@ import DeadRover from './DeadRover'
 
 function MartianPhotos() {
     return (
-        <div>
+        <>
             <HeroPhotos />
             <Rovers />
             <DeadRover />
-        </div>
+        </>
     )
 }
 

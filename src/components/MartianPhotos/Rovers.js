@@ -27,10 +27,19 @@ function Rovers() {
     const [photo, setPhoto] = useState([])
     
     const [isLoading, setLoading] = useState(false)
+
+    const [fetching, setFetching] = useState(false)
    
+    // useState(() => {
+    //     document.title = "Fetching NASA data ..."
+    // }, [isLoading])
+
     useEffect(() => {
         setLoading(true)
+        setFetching(true)       
+        if (isLoading) {document.title = "Fetching NASA data ..."}
         if (myRover === 'Ingenuity') {
+            setFetching(false)
         }   else if ((myRover === 'Perseverance') || (myRover === 'Curiosity')) {
             fetch(`https://api.nasa.gov/mars-photos/api/v1//manifests/${myRover}/?api_key=${key}`)
             .then(res => res.json())
@@ -38,6 +47,7 @@ function Rovers() {
                 // console.log("render")
                 setData(data.photo_manifest)
                 setLoading(false)
+                setFetching(false)
             }) 
         } else {
             fetch(`https://api.nasa.gov/mars-photos/api/v1//manifests/perseverance/?api_key=${key}`)
@@ -46,6 +56,7 @@ function Rovers() {
                 // console.log("render")
                 setData(data.photo_manifest)
                 setLoading(false)
+                setFetching(false)
             }) 
         }
         return () => {
@@ -56,7 +67,9 @@ function Rovers() {
 
     useEffect(() => {
         setLoading(true)
+        setFetching(true) 
         if (myRover === 'Ingenuity') {
+            setFetching(false)
          } else if ((myRover === 'Perseverance') || (myRover === 'Curiosity')) {
             fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/${myRover}/latest_photos?api_key=${key}`)
                 .then(res => res.json())
@@ -64,6 +77,7 @@ function Rovers() {
                     // console.log(data.latest_photos)
                     setPhoto(data.latest_photos[0])
                     setLoading(false)
+                    setFetching(false) 
                 })   
          } else {
             fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/perseverance/latest_photos?api_key=${key}`)
@@ -72,6 +86,7 @@ function Rovers() {
                     console.log(data.latest_photos)
                     setPhoto(data.latest_photos[0])
                     setLoading(false)
+                    setFetching(false) 
                 })   
          }
          
@@ -80,6 +95,8 @@ function Rovers() {
          }
 
     }, [myRover])
+
+    fetching ? document.title = "Fetching NASA data..." : document.title = "Martian Photos"
 
     return (
         <section className="rovers">
