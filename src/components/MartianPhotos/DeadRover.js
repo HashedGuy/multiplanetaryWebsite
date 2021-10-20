@@ -15,6 +15,10 @@ function DeadRover() {
     
     const [isLoading, setLoading] = useState(false)
     const [deadFetching, setDeadFetching] = useState(false)
+
+    useEffect(() => {
+        setMyDeadRover('Opportunity')
+    }, [])
    
     useEffect(() => {
         setLoading(true)
@@ -85,7 +89,11 @@ function DeadRover() {
             <div className="dead-rover-info">
                 
                 {deadRovers.map(deadRover => (
-                    <div className="dead-rover rover-active">
+                    <div className={
+                        (deadRover === myDeadRover) || (deadRover === '') ? "dead-rover rover-active"
+                        : 
+                        "dead-rover"
+                    }>
                         <a
                                 key={deadRover} 
                                 onClick={
@@ -95,7 +103,10 @@ function DeadRover() {
                                 <h2>{deadRover}</h2>
                                         
                         </a>
-                        <p> 
+                        <p style={
+                                deadRover === 'Spirit' ? {borderRight: 0} : {}
+                            }
+                        > 
                             <span className="remove">
                                 {
                                     deadRover === 'Opportunity' ?

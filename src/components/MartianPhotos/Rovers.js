@@ -8,17 +8,10 @@ function Rovers() {
         
     const rovers = ["Perseverance", "Curiosity", "Ingenuity"]
     const [myRover, setMyRover] = useState('')
-    
-    const [opacity, setOpacity] = useState(false)
-
-    function makeAppear() {
-      setOpacity(!opacity)
-    }
 
     useEffect(() => {
-        makeAppear()
-        // console.log('opacity change')
-    }, [myRover])
+        setMyRover('Perseverance')
+    }, [])
 
     const key = 'Xi8DhCGi9T1CeXVvprgR77bDOpfAxYK6qybRARvp'
     
@@ -98,12 +91,19 @@ function Rovers() {
 
     fetching ? document.title = "Fetching NASA data..." : document.title = "Martian Photos"
 
+    // console.log(myRover)
+
     return (
         <section className="rovers">
             <div className="rover-info">
                     {rovers.map(rover => (
+                        
                         <div 
-                             className={opacity?"rover rover-active":"rover"}
+                             className={                                 
+                                 (rover === myRover) || (rover === '') ? "rover rover-active"
+                                 : 
+                                 "rover"
+                                }
                         >
                             <a
                                 key={rover} 
@@ -114,7 +114,9 @@ function Rovers() {
                                 <h2>{rover}</h2>
                                 
                             </a>
-                            <p> 
+                            <p style={
+                                rover === 'Ingenuity' ? {borderRight: 0} : {}
+                            }> 
                                 <span className="remove">
                                     {
                                         rover === 'Perseverance' ?
