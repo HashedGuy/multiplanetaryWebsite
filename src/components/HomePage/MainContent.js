@@ -2,6 +2,7 @@ import React from 'react'
 import PhotosAPIImg from '../../img/darken-rover_50.jpg'
 import SatellitePassImg from '../../img/darken-man-min_50.jpg'
 import SpaceGarageImg from '../../img/launch-api_50.jpg'
+import {Link} from 'react-router-dom'
 
 function MainContent() {
     document.title = 'Home page'
@@ -12,7 +13,7 @@ function MainContent() {
                 style ={ { backgroundImage: `url(${PhotosAPIImg})` } }
             >
                 <h2 className="section-title">Check if we have any new photo from Mars today</h2>
-                <a href="photos-api.html" className="btn"><span>today's photo</span></a>
+                <Link to='./martianphotos'><a href="photos-api.html" className="btn"><span>today's photo</span></a></Link>
                 <p className="section-info">Thanks to Mars Rover API, we are receiving photos from Mars from the active rovers. Choose your own rover and see the latest photos with all the details.</p>
             </section>
             
