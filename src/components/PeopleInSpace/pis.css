@@ -1,0 +1,202 @@
+body {
+    overflow-x: hidden;
+}
+
+.pis {
+    display: flex;
+    flex-direction: column;
+    margin: 2em 5em;
+    /* border: 1px solid rgb(165, 22, 46); */
+}
+
+.astro {
+    display: flex;
+    flex-direction: row;
+   
+    /* border: 1px solid blue; */
+}
+
+.astro-info {
+    display: flex;
+    flex-direction: row;
+    margin: 0em;
+    /* border: 1px solid red; */
+    padding: 0;
+    font-size: .5rem;
+}
+
+.astro-details {
+    display: flex;
+    justify-content: space-around;
+    padding: 5em;
+    padding-bottom: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.craft-visual img {
+    width: 400px;
+    height: 300px;
+    background-size: cover;
+    /* padding: 1em; */
+    /* border: 1px solid orange; */
+    
+}
+
+.astro-details h1 {
+    margin-bottom: 2em;
+}
+
+.craft-info {
+    width: 60%;
+    padding-left: 2em;
+    border-left: 1px solid darkorange; 
+}
+
+.craft-visual {
+    /* border: 1px solid orange; */
+    padding: 1em;
+}
+
+.craft-visual h2 {
+    margin-bottom: 1em;
+}
+
+.btn-pis {
+    font-size: .6rem;
+    margin-right: .5em;
+}
+
+.astro a {
+    margin-right: .8em;
+}
+
+
+/* Mobile portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    .hero-photos-pis {
+        background-position: 20% top;
+    }
+
+    .pis {
+        flex-direction: row;
+        margin: 2em 1em;
+    }
+
+    .astro {
+        flex-direction: column;
+        /* border: 1px solid green; */
+    }
+
+    .astro-info {
+        font-size: .3rem;
+    }
+
+    .astro-details {
+        /* border: 1px solid blue; */
+        padding: 0 1em;
+        flex-direction: column;
+    }
+
+    .craft-visual img {
+        width: 150px;
+        height: 100px;
+        /* border: 1px solid red; */
+    }
+
+    .craft-visual {
+        order: 1;
+    }
+
+    .craft-visual h2 {
+        font-size: 1rem;
+        margin-bottom: .5em;
+    }
+
+    .craft-visual h3 {
+        font-size: .8rem;
+    }
+
+    .craft-info h1 {
+        font-size: 1.2rem;
+    }
+
+    .craft-info {
+        /* border: 1px solid green; */
+        margin-top: 2em;
+        width: 100%;
+        padding-left: 1em;
+        order: 0;
+    }
+  }
+
+/* Mobile/tablet version */
+@media only screen 
+  and (min-device-width: 568px) 
+  and (max-device-width: 812px) {
+    .pis {
+        flex-direction: row;
+        margin: 2em 1em;
+    }
+
+    .astro {
+        flex-direction: column;
+        margin: 0 2em;
+        padding: 0 2em;
+        /* border: 1px solid green; */
+    }
+
+    .astro a {
+        margin: 0.5em;
+    }
+
+    .astro-info {
+        font-size: .3rem;
+    }
+
+    .astro-details {
+        /* border: 1px solid blue; */
+        justify-content: start;
+        padding: 0 1em;
+        flex-direction: column;
+    }
+
+    .astro-details h1 {
+        margin-bottom: 1em;
+    }
+
+    .craft-visual {
+        /* border: tomato 1px solid; */
+        order: 1;
+    }
+
+    .craft-visual img {
+        width: 250px;
+        height: 200px;
+        margin: 2em 0;
+        /* border: 1px solid red; */
+    }
+
+    .craft-visual h2 {
+        font-size: 1rem;
+        margin-bottom: .8em;
+    }
+
+    .craft-visual h3 {
+        font-size: 1rem;
+    }
+
+    .craft-info h1 {
+        font-size: 1.4rem;
+    }
+
+    .craft-info {
+        /* border: 1px solid rgb(128, 115, 0); */
+        margin-top: 2em;
+        width: 100%;
+        padding-left: 1em;
+        order: 0;
+    }
+}
