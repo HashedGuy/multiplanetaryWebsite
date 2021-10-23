@@ -37,7 +37,7 @@ function Astronauts() {
           
         const id = setInterval(() => {
           fetchData() // <-- (3) invoke in interval callback
-        }, 5000)
+        }, 20000)
       
         fetchData() // <-- (2) invoke on mount
       
