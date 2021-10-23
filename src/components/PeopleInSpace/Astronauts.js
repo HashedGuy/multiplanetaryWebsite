@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import './pis.css'
 import ISSImg from "../../img/iss.png"
 import ShenzhouImg from "../../img/shenzhou.png"
+import PISData from './db.json'
 
 function Astronauts() {
     
@@ -9,17 +10,14 @@ function Astronauts() {
     const [craft, setCraft] = useState('')
     const [issLocation, setIssLocation] = useState([])
 
-    // useEffect(() => {
-    //     fetch('http://api.open-notify.org/astros.json')
-    //         .then(res=>res.json())
-    //         .then(data => {
-    //             // console.log(data.people)
-    //             setAstronaut(data.people)
-    //         })
-    //     // return () => {
-    //     //     cleanup
-    //     // }
-    // }, [])
+    const loadData = () => {
+        JSON.parse(JSON.stringify(PISData))
+        setAstronaut(PISData.people)
+    }
+
+    useEffect(() => {
+        loadData()
+    }, [])
 
     useEffect(() => {
         // (1) define within effect callback scope
@@ -49,7 +47,7 @@ function Astronauts() {
         // <h1>{data.number} people in Space right now</h1>
         <section className="pis">
                 <div className="astro">
-                    {/* {activeAstronaut.map(astronaut => (
+                    {activeAstronaut.map(astronaut => (
                         <div className="astro-info">                                          
                                 
                                 <a className="btn btn-pis" onClick={() => {setCraft(astronaut.craft)}}>
@@ -57,7 +55,7 @@ function Astronauts() {
                                     <h3>{astronaut.craft}</h3>
                                 </a>                   
                         
-                        </div>))} */}
+                        </div>))}
                 </div>
                 <div className="astro-details">
                     <div className = "craft-visual">
