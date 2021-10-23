@@ -1,23 +1,18 @@
 import React, {useState, useEffect} from 'react'
 import PISImg from '../../img/darkenpis.jpg'
+import PISData from './db.json'
 
 function HeroPhotos() {
     const [astNumber, setAstNumber] = useState()
 
-    useEffect(() => {
-        fetch('http://api.open-notify.org/astros.json')
-            .then(res=>res.json())
-            .then(data => {
-                // console.log(data.number)
-                setAstNumber(data.number)
-                // setAstronaut(data.people)
-            })
-        // return () => {
-        //     cleanup
-        // }
-    }, [])
+    const loadData = () => {
+        JSON.parse(JSON.stringify(PISData))
+        setAstNumber(PISData.number)
+    }
 
-    // console.log(astNumber)
+    useEffect(() => {
+        loadData()
+    }, [])
 
     return (
         <div 

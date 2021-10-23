@@ -9,25 +9,25 @@ function Astronauts() {
     const [craft, setCraft] = useState('')
     const [issLocation, setIssLocation] = useState([])
 
-    useEffect(() => {
-        fetch('http://api.open-notify.org/astros.json')
-            .then(res=>res.json())
-            .then(data => {
-                // console.log(data.people)
-                setAstronaut(data.people)
-            })
-        // return () => {
-        //     cleanup
-        // }
-    }, [])
+    // useEffect(() => {
+    //     fetch('http://api.open-notify.org/astros.json')
+    //         .then(res=>res.json())
+    //         .then(data => {
+    //             // console.log(data.people)
+    //             setAstronaut(data.people)
+    //         })
+    //     // return () => {
+    //     //     cleanup
+    //     // }
+    // }, [])
 
     useEffect(() => {
         // (1) define within effect callback scope
         const fetchData = async () => {
           try {
-            const res = await fetch('http://api.open-notify.org/iss-now.json')
+            const res = await fetch('https://api.wheretheiss.at/v1/satellites/25544')
             const jsonData = await res.json()
-            setIssLocation(jsonData.iss_position)
+            setIssLocation(jsonData)
           } catch (error) {
             console.log(error)
           }
@@ -49,7 +49,7 @@ function Astronauts() {
         // <h1>{data.number} people in Space right now</h1>
         <section className="pis">
                 <div className="astro">
-                    {activeAstronaut.map(astronaut => (
+                    {/* {activeAstronaut.map(astronaut => (
                         <div className="astro-info">                                          
                                 
                                 <a className="btn btn-pis" onClick={() => {setCraft(astronaut.craft)}}>
@@ -57,7 +57,7 @@ function Astronauts() {
                                     <h3>{astronaut.craft}</h3>
                                 </a>                   
                         
-                        </div>))}
+                        </div>))} */}
                 </div>
                 <div className="astro-details">
                     <div className = "craft-visual">
