@@ -9,6 +9,8 @@ function Astronauts() {
     const [activeAstronaut, setAstronaut] = useState([])
     const [craft, setCraft] = useState('')
     const [issLocation, setIssLocation] = useState([])
+    const [timeZone, setTimeZone] = useState()
+    const [countryCode, setCountryCode] = useState()
 
     const loadData = () => {
         JSON.parse(JSON.stringify(PISData))
@@ -26,9 +28,11 @@ function Astronauts() {
             const res = await fetch('https://api.wheretheiss.at/v1/satellites/25544')
             const jsonData = await res.json()
             setIssLocation(jsonData)
+            
           } catch (error) {
             console.log(error)
           }
+
         }
           
         const id = setInterval(() => {
@@ -40,7 +44,29 @@ function Astronauts() {
         return () => clearInterval(id);
       }, [])
 
-    console.log(issLocation)
+    useEffect(() => {
+        loadData()
+    }, [])
+
+    const fetchDataTwo = async () => {
+        try {
+            const res = await fetch(`https://api.wheretheiss.at/v1/coordinates/${issLocation.latitude},${issLocation.longitude}`)
+            const data = await res.json()
+            setTimeZone(data.timezone_id)
+            setCountryCode(data.country_code)
+            // console.log(data)
+            // setCountryCode(jsonData1.country_code)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    useEffect(() => {
+        fetchDataTwo()
+    }, [issLocation])
+
+
+    // console.log(issLocation.longitude, issLocation.latitude)
+    // console.log(timeZone, countryCode)
 
     return (
         
@@ -63,6 +89,8 @@ function Astronauts() {
                         <h2>Current {craft} position</h2> 
                         <h3>Latitude: {craft === 'Shenzhou 13' ? 'N/A' : issLocation.latitude}</h3>
                         <h3>Longitude: {craft === 'Shenzhou 13' ? 'N/A': issLocation.longitude}</h3>
+                        <h3>Time zone: {craft === 'Shenzhou 13' ? 'N/A' : timeZone}</h3>
+                        <h3>Country code: {craft === 'Shenzhou 13' ? 'N/A': countryCode}</h3>
                     </div>
                     <div className="craft-info">
                         <h1>{craft === 'Shenzhou 13' ? "Shenzhou 13": "International Space Station (ISS)"}</h1>
