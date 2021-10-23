@@ -78,7 +78,9 @@ function Astronauts() {
                     {activeAstronaut.map(astronaut => (
                         <div className="astro-info">                                          
                                 
-                                <a className="btn btn-pis" onClick={() => {setCraft(astronaut.craft)}}>
+                                <a className="btn btn-pis"
+                                    onClick={() => {setCraft(astronaut.craft)}} 
+                                    >
                                     <h1>{astronaut.name}</h1>
                                     <h3>{astronaut.craft}</h3>
                                 </a>                   
