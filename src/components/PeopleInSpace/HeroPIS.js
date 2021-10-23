@@ -21,7 +21,7 @@ function HeroPhotos() {
 
             <div className="hero-body">
                 <h2 className="hero-title">{astNumber} people in space right now</h2>
-                <p className="hero-info">We use Mars Rover API that is designed to collect image data gathered by NASA's Perseverance, Curiosity, Opportunity, and Spirit rovers on Mars and make it more easily available to other developers, educators, and citizen scientists.</p>
+                <p className="hero-info">Some of us has already left the Earth...Thanks to Open Notify and the WTIA REST API, we can get the updated list of the astronauts in space, as well as the current position of their satellite, timezone information and many more./p>
             </div>
         </div>
     )
