@@ -53,7 +53,9 @@ function Astronauts() {
             const res = await fetch(`https://api.wheretheiss.at/v1/coordinates/${issLocation.latitude},${issLocation.longitude}`)
             const data = await res.json()
             setTimeZone(data.timezone_id)
-            setCountryCode(data.country_code)
+            data.country_code === '??' ? setCountryCode('N/A') : setCountryCode(data.country_code)
+            // setCountryCode(data.country_code)
+
             // console.log(data)
             // setCountryCode(jsonData1.country_code)
         } catch (error) {

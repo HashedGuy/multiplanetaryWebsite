@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import OpportunityImg from '../../img/opportunity.png'
-import {BounceLoader, BarLoader, BeatLoader} from 'react-spinners'
+import {BounceLoader, BeatLoader} from 'react-spinners'
 
 function DeadRover() {
 

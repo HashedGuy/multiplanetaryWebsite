@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import PersImg from '../../img/rover-pers.png'
 import CuriosityImg from '../../img/rover-curiosity.png'
 import IngenuityImg from '../../img/ingenuity.png'
-import {BounceLoader, BarLoader, BeatLoader} from 'react-spinners'
+import {BounceLoader, BeatLoader} from 'react-spinners'
 
 function Rovers() {
         
