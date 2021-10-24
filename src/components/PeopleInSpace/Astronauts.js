@@ -44,10 +44,6 @@ function Astronauts() {
         return () => clearInterval(id);
       }, [])
 
-    useEffect(() => {
-        loadData()
-    }, [])
-
     const fetchDataTwo = async () => {
         try {
             const res = await fetch(`https://api.wheretheiss.at/v1/coordinates/${issLocation.latitude},${issLocation.longitude}`)

@@ -6,8 +6,6 @@ function DeadRover() {
 
     const deadRovers = ["Opportunity", "Spirit"]
     const [myDeadRover, setMyDeadRover] = useState('')
-
-    const key = 'Xi8DhCGi9T1CeXVvprgR77bDOpfAxYK6qybRARvp'
     
     const [deadData, setDeadData] = useState([])
 
@@ -24,7 +22,7 @@ function DeadRover() {
         setLoading(true)
         setDeadFetching(true)
         if (myDeadRover) {
-            fetch(`https://api.nasa.gov/mars-photos/api/v1//manifests/${myDeadRover}/?api_key=${key}`)
+            fetch(`https://api.nasa.gov/mars-photos/api/v1//manifests/${myDeadRover}/?api_key=${process.env.REACT_APP_NASA_API_KEY}`)
             .then(res => res.json())
             .then(data => {
                 // console.log("render")
@@ -33,7 +31,7 @@ function DeadRover() {
                 setDeadFetching(false)
             }) 
         } else {
-            fetch(`https://api.nasa.gov/mars-photos/api/v1//manifests/opportunity/?api_key=${key}`)
+            fetch(`https://api.nasa.gov/mars-photos/api/v1//manifests/opportunity/?api_key=${process.env.REACT_APP_NASA_API_KEY}`)
             .then(res => res.json())
             .then(data => {
                 // console.log("render")
@@ -52,7 +50,7 @@ function DeadRover() {
         setLoading(true)
         setDeadFetching(true)
         if (myDeadRover) {
-            fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/${myDeadRover}/latest_photos?api_key=${key}`)
+            fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/${myDeadRover}/latest_photos?api_key=${process.env.REACT_APP_NASA_API_KEY}`)
                 .then(res => res.json())
                 .then(data => {
                     // console.log(data.latest_photos)
@@ -61,7 +59,7 @@ function DeadRover() {
                     setDeadFetching(false)
                 })   
          } else {
-            fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/latest_photos?api_key=${key}`)
+            fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/latest_photos?api_key=${process.env.REACT_APP_NASA_API_KEY}`)
                 .then(res => res.json())
                 .then(data => {
                     console.log(data.latest_photos)

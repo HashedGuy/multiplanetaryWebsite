@@ -12,8 +12,6 @@ function Rovers() {
     useEffect(() => {
         setMyRover('Perseverance')
     }, [])
-
-    const key = 'Xi8DhCGi9T1CeXVvprgR77bDOpfAxYK6qybRARvp'
     
     const [data, setData] = useState([])
 
@@ -34,7 +32,7 @@ function Rovers() {
         if (myRover === 'Ingenuity') {
             setFetching(false)
         }   else if ((myRover === 'Perseverance') || (myRover === 'Curiosity')) {
-            fetch(`https://api.nasa.gov/mars-photos/api/v1//manifests/${myRover}/?api_key=${key}`)
+            fetch(`https://api.nasa.gov/mars-photos/api/v1//manifests/${myRover}/?api_key=${process.env.REACT_APP_NASA_API_KEY}`)
             .then(res => res.json())
             .then(data => {
                 // console.log("render")
@@ -43,7 +41,7 @@ function Rovers() {
                 setFetching(false)
             }) 
         } else {
-            fetch(`https://api.nasa.gov/mars-photos/api/v1//manifests/perseverance/?api_key=${key}`)
+            fetch(`https://api.nasa.gov/mars-photos/api/v1//manifests/perseverance/?api_key=${process.env.REACT_APP_NASA_API_KEY}`)
             .then(res => res.json())
             .then(data => {
                 // console.log("render")
@@ -64,7 +62,7 @@ function Rovers() {
         if (myRover === 'Ingenuity') {
             setFetching(false)
          } else if ((myRover === 'Perseverance') || (myRover === 'Curiosity')) {
-            fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/${myRover}/latest_photos?api_key=${key}`)
+            fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/${myRover}/latest_photos?api_key=${process.env.REACT_APP_NASA_API_KEY}`)
                 .then(res => res.json())
                 .then(data => {
                     // console.log(data.latest_photos)
@@ -73,7 +71,7 @@ function Rovers() {
                     setFetching(false) 
                 })   
          } else {
-            fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/perseverance/latest_photos?api_key=${key}`)
+            fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/perseverance/latest_photos?api_key=${process.env.REACT_APP_NASA_API_KEY}`)
                 .then(res => res.json())
                 .then(data => {
                     console.log(data.latest_photos)
