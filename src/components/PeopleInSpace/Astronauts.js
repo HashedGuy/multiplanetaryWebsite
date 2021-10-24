@@ -50,10 +50,6 @@ function Astronauts() {
             const data = await res.json()
             setTimeZone(data.timezone_id)
             data.country_code === '??' ? setCountryCode('N/A') : setCountryCode(data.country_code)
-            // setCountryCode(data.country_code)
-
-            // console.log(data)
-            // setCountryCode(jsonData1.country_code)
         } catch (error) {
             console.log(error)
         }
@@ -62,13 +58,7 @@ function Astronauts() {
         fetchDataTwo()
     }, [issLocation])
 
-
-    // console.log(issLocation.longitude, issLocation.latitude)
-    // console.log(timeZone, countryCode)
-
     return (
-        
-        // <h1>{data.number} people in Space right now</h1>
         <section className="pis">
                 <div className="astro">
                     {activeAstronaut.map(astronaut => (
@@ -85,7 +75,9 @@ function Astronauts() {
                 </div>
                 <div className="astro-details">
                     <div className = "craft-visual">
-                        <img src={craft === 'Shenzhou 13' ? ShenzhouImg : ISSImg}/>
+                        <img 
+                            src={craft === 'Shenzhou 13' ? ShenzhouImg : ISSImg} 
+                            className={craft === 'Shenzhou 13' ? "add-padding" : ""}/>
                         <h2>Current {craft} position</h2> 
                         <h3>Latitude: {craft === 'Shenzhou 13' ? 'N/A' : issLocation.latitude}</h3>
                         <h3>Longitude: {craft === 'Shenzhou 13' ? 'N/A': issLocation.longitude}</h3>

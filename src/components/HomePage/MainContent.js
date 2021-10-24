@@ -25,8 +25,7 @@ function MainContent() {
             >
                 <h2 className="section-title">Who are in Space right now?</h2>
                 <Link to='./peopleinspace'><a href="photos-api.html" className="btn"><span>lets know them</span></a></Link>
-                <p className="section-info">If you live for adventure, <strong>what bigger adventure is there than leaving your planet</strong>,
-                    traveling through space, and helping to colonize another celestial body?</p>  
+                <p className="section-info">Some of us has already left the Earth...Thanks to Open Notify and the WTIA REST API, we can get the updated list of the astronauts in space, as well as the current position of their satellite, timezone information and many more.</p>  
             </section>
             
             <section 

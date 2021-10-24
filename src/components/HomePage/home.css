@@ -1,0 +1,230 @@
+/* =================
+Main page
+================= */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    justify-content: flex-end;
+    background-size: cover;
+    /* background-color: rgba(0, 0, 0, 0.24);     */
+}
+
+.hero-body {
+    padding: 2em 7em;
+}
+
+.hero-title {
+    margin-bottom: .5em;
+}
+
+.hero-title, .section-title {
+    width: 55%;
+    font-size: 2.2rem;
+}
+
+.hero-info, .section-info {
+    font-size: 1.3rem;
+    line-height: 1.3em;
+    width: 70%;
+}
+
+.photos-api,
+.pass-satellite-api,
+.launch-api {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2em 7em;
+    /* border: 2px solid red; */
+    justify-content: flex-end;    
+}
+
+.launch-api {
+    height: 120vh;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-end; */
+    padding: 1em;
+    /* border: 2px solid red; */
+    align-items: center;
+    margin: 1em 0;
+    background-color: rgba(0, 0, 0, 0.24);
+    opacity: 70%;
+}
+
+footer li {
+    font-size: 1.2rem;
+}
+
+.copyright {
+    font-size: 1.1rem;
+    width: 100%;
+}
+
+.nav-footer {
+    display: flex;
+    width: 100%;
+    /* border: 1px solid green; */
+    justify-content: center;
+    margin: 1em 0;
+}
+
+.nav-footer li{
+    margin-right: 1em;
+    display: inline-block;
+}
+
+.nav-footer ul {
+    /* border: 1px solid blue; */
+    padding: 0;
+}
+
+/* Mobile version for main page */
+@media (max-width: 812px) {
+   
+    .hero-body, 
+    .photos-api,
+    .pass-satellite-api,
+    .launch-api {
+        padding: 3em 1em;
+    }
+
+    .nav-footer li {
+        margin-right: .5em;
+    }
+
+    .hero-title, .section-title {
+        width: 80%;
+        font-size: 1.5rem;
+    }
+
+    .hero-title {
+        margin-bottom: .5em;
+    }
+
+    .hero-info, .section-info {
+        font-size: .9rem;
+        line-height: 1.2em;
+        width: 90%;
+        letter-spacing: .3px;
+    }
+
+    footer li {
+        font-size: 1rem;
+    }
+    
+    .copyright {
+        font-size: .9rem;
+    }
+}
+
+/* Tablet and mobile landscape version for main page */
+@media only screen 
+  and (min-device-width: 568px) 
+  and (max-device-width: 812px) {
+    .hero-body, 
+    .photos-api,
+    .pass-satellite-api,
+    .launch-api {
+        padding: 3em 2em;
+    }
+
+    .hero-title, .section-title {
+        width: 60%;
+        font-size: 2rem;
+    }
+
+    .hero-title {
+        margin-bottom: 1em;
+    }
+
+    .hero-info, .section-info {
+        font-size: 1.2rem;
+        line-height: 1.2em;
+        width: 90%;
+    }
+
+    footer li {
+        font-size: 1.1rem;
+    }
+    
+    .copyright {
+        font-size: 1rem;
+    }
+  }
+
+  /* =================
+Background images
+================= */
+
+/* Mobile */
+.main {
+    background-image: url("../../img/darken_galaxy_70.jpg");
+    background-size: cover;
+}
+
+.photos-api, .hero-photos {
+    background-image: url("../../img/darken-rover_50.jpg");
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.678);
+    background-position: 20% top;
+}
+
+.pass-satellite-api {
+    background-image: url("../../img/darken-man-min_70.jpg");
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.678);
+    background-position: 20% top;
+}
+
+.launch-api {
+    background-image: url("../../img/launch-api_50.jpg");
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.678);
+    background-position: 20% top;
+}
+
+/* Tablets + desktop */
+@media (min-width: 600px) {
+
+    .main {
+        background-image: url("../../img/darken_galaxy_70.jpg");
+    }
+
+    .photos-api, .hero-photos {
+        background-image: url("../../img/darken-rover_50.jpg");
+    }
+
+    .pass-satellite-api {
+        background-image: url("../../img/darken-man-min_50.jpg");
+    }
+
+    .launch-api {
+        background-image: url("../../img/launch-api_50.jpg");
+    }
+}
+
+/* Retina screens */
+@media (min-width: 1600px) {
+    .main {
+        background-image: url("../../img/darken_galaxy.jpg");
+    }
+
+    .photos-api, .hero-photos {
+        background-image: url("../../img/darken-rover.jpg");
+    }
+
+    .pass-satellite-api {
+        background-image: url("../../img/darken-man-min.jpg");
+    }
+
+    .launch-api {
+        background-image: url("../../img/launch-api_50.jpg");
+    }
+}

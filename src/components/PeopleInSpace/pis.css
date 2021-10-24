@@ -76,6 +76,10 @@ body {
     margin-right: .8em;
 }
 
+.add-padding {
+    padding: 5em;
+}
+
 
 /* Mobile portrait */
 @media only screen 
@@ -146,7 +150,12 @@ body {
         padding-left: 1em;
         order: 0;
     }
-  }
+
+    .add-padding {
+        padding: 1em;
+    }
+}
+
 
 /* Mobile/tablet version */
 @media only screen 
@@ -214,5 +223,9 @@ body {
         width: 100%;
         padding-left: 1em;
         order: 0;
+    }
+
+    .add-padding {
+        padding: 2em;
     }
 }

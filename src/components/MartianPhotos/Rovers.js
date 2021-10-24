@@ -20,10 +20,6 @@ function Rovers() {
     const [isLoading, setLoading] = useState(false)
 
     const [fetching, setFetching] = useState(false)
-   
-    // useState(() => {
-    //     document.title = "Fetching NASA data ..."
-    // }, [isLoading])
 
     useEffect(() => {
         setLoading(true)
