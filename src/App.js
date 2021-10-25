@@ -5,7 +5,6 @@ import PeopleInSpace from './components/PeopleInSpace/PeopleInSpace'
 import {Route} from 'react-router-dom'
 import Navbar from './components/HomePage/Navbar'
 import Footer from './components/HomePage/Footer'
-import './components/HomePage/navbar.css'
 
 function App() {
     return (
