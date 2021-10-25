@@ -62,7 +62,7 @@ function DeadRover() {
             fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/latest_photos?api_key=${process.env.REACT_APP_NASA_API_KEY}`)
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data.latest_photos)
+                    // console.log(data.latest_photos)
                     setDeadPhoto(data.latest_photos[0])
                     setLoading(false)
                     setDeadFetching(false)

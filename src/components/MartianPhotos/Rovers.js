@@ -70,7 +70,7 @@ function Rovers() {
             fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/perseverance/latest_photos?api_key=${process.env.REACT_APP_NASA_API_KEY}`)
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data.latest_photos)
+                    // console.log(data.latest_photos)
                     setPhoto(data.latest_photos[0])
                     setLoading(false)
                     setFetching(false) 

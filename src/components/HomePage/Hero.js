@@ -1,5 +1,4 @@
 import React from 'react'
-import BackImg from '../../img/galaxyHR_70.jpg'
 
 function Hero() {
 
