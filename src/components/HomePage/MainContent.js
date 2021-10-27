@@ -14,7 +14,7 @@ function MainContent() {
                 style ={ { backgroundImage: `url(${PhotosAPIImg})` } }
             >
                 <h2 className="section-title">Check if we have any new photo from Mars today</h2>
-                <Link to='./martianphotos'><a href="photos-api.html" className="btn"><span>today's photo</span></a></Link>
+                <Link to='./martianphotos' className="btn"><span>today's photo</span></Link>
                 <p className="section-info">Thanks to Mars Rover API, we are receiving photos from Mars from the active rovers. Choose your own rover and see the latest photos with all the details.</p>
             </section>
 
@@ -24,7 +24,7 @@ function MainContent() {
                 style ={ { backgroundImage: `url(${PISImg})` } }
             >
                 <h2 className="section-title">Who are in Space right now?</h2>
-                <Link to='./peopleinspace'><a href="photos-api.html" className="btn"><span>lets know them</span></a></Link>
+                <Link to='./peopleinspace' className="btn"><span>lets know them</span></Link>
                 <p className="section-info">Some of us has already left the Earth...Thanks to Open Notify and the WTIA REST API, we can get the updated list of the astronauts in space, as well as the current position of their satellite, timezone information and many more.</p>  
             </section>
             

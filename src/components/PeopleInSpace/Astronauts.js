@@ -62,7 +62,10 @@ function Astronauts() {
         <section className="pis">
                 <div className="astro">
                     {activeAstronaut.map(astronaut => (
-                        <div className="astro-info">                                          
+                        <div 
+                            className="astro-info"
+                            key={astronaut.name}
+                        >                                          
                                 
                                 <a className="btn btn-pis"
                                     onClick={() => {setCraft(astronaut.craft)}} 

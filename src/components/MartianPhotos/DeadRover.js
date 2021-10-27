@@ -87,11 +87,14 @@ function DeadRover() {
             <div className="dead-rover-info">
                 
                 {deadRovers.map(deadRover => (
-                    <div className={
+                    <div 
+                        className={
                         (deadRover === myDeadRover) || (deadRover === '') ? "dead-rover rover-active"
                         : 
                         "dead-rover"
-                    }>
+                        }
+                        key={deadRover}
+                    >
                         <a
                                 key={deadRover} 
                                 onClick={

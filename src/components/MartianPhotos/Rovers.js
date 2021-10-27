@@ -93,11 +93,12 @@ function Rovers() {
                     {rovers.map(rover => (
                         
                         <div 
-                             className={                                 
+                            className={                                 
                                  (rover === myRover) || (rover === '') ? "rover rover-active"
                                  : 
                                  "rover"
                                 }
+                            key={rover}
                         >
                             <a
                                 key={rover} 
