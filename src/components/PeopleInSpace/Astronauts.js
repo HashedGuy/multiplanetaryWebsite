@@ -23,8 +23,6 @@ function Astronauts() {
 
     useEffect(() => {
         loadData()
-        // console.log(activeAstronaut)
-        // console.log(selectedAstro)
     }, [])
 
     useEffect(() => {
@@ -79,9 +77,6 @@ function Astronauts() {
                                         onClick={() => {
                                             setCraft(astronaut.craft)
                                             setSelectedAstro(astronaut)
-                                            // console.log(astronaut)
-                                            // console.log(selectedAstro)
-                                            // console.log(craft)
                                         }} 
                                         >
                                         <h1>{astronaut.name}</h1>
@@ -94,7 +89,6 @@ function Astronauts() {
                         ))}
                         
                 </div>
-               {console.log(selectedAstro)}
                 <div className="astro-info-big">
                     <div className="astro-bio">
                         <div>
