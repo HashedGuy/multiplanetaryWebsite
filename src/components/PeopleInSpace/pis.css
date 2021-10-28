@@ -16,6 +16,17 @@ body {
     /* border: 1px solid blue; */
 }
 
+.astro-info-big {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1em;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.astro-info-big h1 {
+    margin-bottom: 1em;
+}
+
 .astro-info {
     display: flex;
     flex-direction: row;
@@ -25,36 +36,63 @@ body {
     font-size: .5rem;
 }
 
-.astro-details {
+.astro-bio {
     display: flex;
+    flex-direction: row;
+    margin-top: 2em;
+}
+
+.astro-img {
+    width: 170px;
+    height: 200px;
+    border-radius: 100%;
+    margin-left: 3em;
+    margin-top: 4em;
+    border:2px solid #fff;
+        /* -moz-border-radius:190px;
+        -webkit-border-radius:190px;
+        border-radius:190px; */
+}
+
+.flag {
+    width: 40px;
+    height: 30px;
+    border-radius: 0;
+    margin-bottom: 1em;
+}
+
+
+.craft-details {
+    display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    padding: 5em;
+    padding: 2em 5em;
     padding-bottom: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+    width: 600px;
+    
 }
 
 .craft-visual img {
     width: 400px;
     height: 300px;
     background-size: cover;
+    padding: 0;
+    margin: 0;
     /* padding: 1em; */
     /* border: 1px solid orange; */
     
 }
 
-.astro-details h1 {
-    margin-bottom: 2em;
-}
-
 .craft-info {
-    width: 60%;
     padding-left: 2em;
     border-left: 1px solid darkorange; 
+    order: 0;
 }
 
 .craft-visual {
     /* border: 1px solid orange; */
     padding: 1em;
+    order: 1;
 }
 
 .craft-visual h2 {
@@ -66,20 +104,17 @@ body {
     margin-right: .5em;
 }
 
-.btn-pis-hover {
-    background: rgba(255, 255, 255, 0.897);
-    color: rgba(0, 0, 0, 0.938);
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
 .astro a {
     margin-right: .8em;
 }
 
-.add-padding {
-    padding: 5em;
+.credits {
+    font-size: .7rem;
+    color: gray;
+    text-align: center;
+    padding-left: 4em;
+    padding-top: 1em;
 }
-
 
 /* Mobile portrait */
 @media only screen 
@@ -100,27 +135,56 @@ body {
         /* border: 1px solid green; */
     }
 
+    .astro-info-big {
+        flex-direction: column;
+        margin: 0;
+        /* border:1px solid red; */
+    }
+
     .astro-info {
         font-size: .3rem;
     }
 
-    .astro-details {
+    .astro-bio {
+        flex-direction: column;
+        padding: 0 1em;
+        border-left: solid 1px darkorange;
+        margin-left: 1em;
+    }
+
+    .astro-photo-section {
+        /* border: 1px solid green; */
+        margin: 1em 0;
+        text-align: center;
+    }
+
+    .astro-img {
+        width: 100px;
+        height: 150px;
+        border-radius: 100%;
+        margin: 0;
+        margin-top: 1em;
+    }
+
+    .astro-photo-section p {
+        /* border: green 1px solid; */
+        padding: 0;
+    }
+    .craft-details {
         /* border: 1px solid blue; */
         padding: 0 1em;
         flex-direction: column;
-        justify-content: flex-start;
+        width: 100%;
     }
 
     .craft-visual img {
-        width: 150px;
+        width: 130px;
         height: 100px;
         /* border: 1px solid red; */
     }
 
     .craft-visual {
         order: 1;
-        margin-top: 0;
-        /* border: 1px solid green; */
     }
 
     .craft-visual h2 {
@@ -129,33 +193,25 @@ body {
     }
 
     .craft-visual h3 {
-        font-size: .7rem;
-        margin-bottom: .3em;
+        font-size: .8rem;
     }
 
-    .craft-info h1 {
+    .astro-bio h1, .craft-info h1 {
         font-size: 1.2rem;
-        margin-bottom: .5em;
     }
 
-    .craft-info p {
+    .astro-bio, .craft-info p {
         font-size: .7rem;
     }
 
     .craft-info {
         /* border: 1px solid green; */
         margin-top: 2em;
-        margin-bottom: 0;
         width: 100%;
         padding-left: 1em;
         order: 0;
     }
-
-    .add-padding {
-        padding: 1em;
-    }
-}
-
+  }
 
 /* Mobile/tablet version */
 @media only screen 
@@ -169,7 +225,7 @@ body {
     .astro {
         flex-direction: column;
         margin: 0 2em;
-        padding: 0 2em;
+        padding: 0 1em;
         /* border: 1px solid green; */
     }
 
@@ -177,18 +233,38 @@ body {
         margin: 0.5em;
     }
 
+    .astro-info-big {
+        flex-direction: column;
+        margin-right: 1em;
+        /* border:1px solid red; */
+    }
+
     .astro-info {
         font-size: .3rem;
     }
-
-    .astro-details {
-        /* border: 1px solid blue; */
-        justify-content: start;
-        padding: 0 1em;
-        flex-direction: column;
+    
+    .astro-bio {
+        border-left: 1px solid darkorange;
+        padding-left: 1em;
     }
 
-    .astro-details h1 {
+    .astro-img {
+        width: 120px;
+        height: 170px;
+        border-radius: 100%;
+        margin-left: 2em;
+        margin-top: 2em;
+    }
+
+    .craft-details {
+        /* border: 1px solid blue; */
+        justify-content: start;
+        padding-left: 0;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .craft-details h1 {
         margin-bottom: 1em;
     }
 
@@ -220,12 +296,9 @@ body {
     .craft-info {
         /* border: 1px solid rgb(128, 115, 0); */
         margin-top: 2em;
+        margin-left: 0;
         width: 100%;
         padding-left: 1em;
         order: 0;
-    }
-
-    .add-padding {
-        padding: 2em;
     }
 }

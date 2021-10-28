@@ -343,6 +343,7 @@ header{
     margin-top: 1.5em;
     cursor: pointer;
     margin-left: 3em;
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
     /* border:rgb(218, 107, 3) 1px solid; */
 }
 
@@ -350,6 +351,7 @@ header{
     align-self: center;
     padding-left: 2.5em;
     margin-top: .5em;
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
     /* border: 1px solid red; */
 }
 
