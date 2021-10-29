@@ -1,5 +1,5 @@
 import React from 'react'
-import Home from './components/HomePage/Home'
+import MainComponent from './components/HomePage/MainContent'
 import MartianPhotos from './components/MartianPhotos/MartianPhotos'
 import PeopleInSpace from './components/PeopleInSpace/PeopleInSpace'
 import {Route} from 'react-router-dom'
@@ -10,7 +10,7 @@ function App() {
     return (
         <>
             <Navbar />            
-            <Route exact path='/' component={Home}/>
+            <Route exact path='/' component={MainComponent}/>
             <Route exact path='/martianphotos' component={MartianPhotos}/>
             <Route exact path='/peopleinspace' component={PeopleInSpace}/>
             <Footer /> 
