@@ -1,9 +1,4 @@
 import React from 'react'
-import PhotosAPIImg from '../../img/darken-rover_50.jpg'
-import SatellitePassImg from '../../img/darken-man-min_50.jpg'
-import SpaceGarageImg from '../../img/launch-api_50.jpg'
-import PISImg from '../../img/darkenpis.jpg'
-import BackImg from '../../img/galaxyHR_70.jpg'
 import HomePageSections from './HomePageSections'
 
 function MainContent() {
@@ -11,14 +6,14 @@ function MainContent() {
     return (
         <>  
             <HomePageSections 
-                bgImg = {BackImg}
-                title = "Check if we have any new photo from Mars today"                
+                bgImg = "hero-main"
+                title = "For wannabe multiplanet species"                
                 noBtn={true}
-                sectionInfo = "Thanks to Mars Rover API, we are receiving photos from Mars from the active rovers. Choose your own rover and see the latest photos with all the details."
+                sectionInfo = "Getting back to the Moon, staying there, building a city on Mars, colonizing other planets...if all these excite you, you're on the right place."
             />
 
             <HomePageSections 
-                bgImg = {PhotosAPIImg}
+                bgImg = "photos-api"
                 title = "Check if we have any new photo from Mars today"
                 linkTo ='./martianphotos'
                 btnActive = {true}
@@ -27,7 +22,7 @@ function MainContent() {
             />
 
             <HomePageSections 
-                bgImg = {PISImg}
+                bgImg = "pis-api"
                 title = "Who are in Space right now?"
                 linkTo ='./peopleinspace'
                 btnActive = {true}
@@ -36,7 +31,7 @@ function MainContent() {
             />
 
             <HomePageSections 
-                bgImg = {SatellitePassImg}
+                bgImg = "pass-satellite-api"
                 title = "Look at the sky! There might be a satellite flying over your head"
                 linkTo ='./'
                 btnActive = {false}
@@ -45,7 +40,7 @@ function MainContent() {
             />
 
             <HomePageSections 
-                bgImg = {SpaceGarageImg}
+                bgImg = "launch-api"
                 title = "Everything about launches, spaceships and many more"
                 linkTo ='./'
                 btnActive = {false}

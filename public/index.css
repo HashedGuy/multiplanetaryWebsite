@@ -175,26 +175,21 @@ Main page
     /* background-color: rgba(0, 0, 0, 0.24);     */
 }
 
-.hero-body {
-    padding: 2em 7em;
-}
-
-.hero-title {
+ .section-title {
     margin-bottom: .5em;
-}
-
-.hero-title, .section-title {
     width: 55%;
     font-size: 2.2rem;
 }
 
-.hero-info, .section-info {
+.section-info {
     font-size: 1.3rem;
     line-height: 1.3em;
     width: 70%;
 }
 
+.hero-main,
 .photos-api,
+.pis-api,
 .pass-satellite-api,
 .launch-api {
     height: 100vh;
@@ -251,9 +246,10 @@ footer li {
 /* Mobile version for main page */
 @media (max-width: 812px) {
    
-    .hero-body, 
+    .hero-main, 
     .photos-api,
     .pass-satellite-api,
+    .pis-api,
     .launch-api {
         padding: 3em 1em;
     }
@@ -262,16 +258,12 @@ footer li {
         margin-right: .5em;
     }
 
-    .hero-title, .section-title {
+    .section-title {
         width: 80%;
         font-size: 1.5rem;
     }
 
-    .hero-title {
-        margin-bottom: .5em;
-    }
-
-    .hero-info, .section-info {
+    .section-info {
         font-size: .9rem;
         line-height: 1.2em;
         width: 90%;
@@ -291,20 +283,17 @@ footer li {
 @media only screen 
   and (min-device-width: 568px) 
   and (max-device-width: 812px) {
-    .hero-body, 
+    .hero-main, 
     .photos-api,
+    .pis-api,
     .pass-satellite-api,
     .launch-api {
         padding: 3em 2em;
     }
 
-    .hero-title, .section-title {
+    .section-title {
         width: 60%;
         font-size: 2rem;
-    }
-
-    .hero-title {
-        margin-bottom: 1em;
     }
 
     .hero-info, .section-info {
@@ -584,69 +573,71 @@ header{
 Background images
 ================= */
 
-/* Mobile */
-.main {
-    background-image: url("../../img/darken_galaxy_70.jpg");
+/* Desktop + tablet */
+.hero-main, .photos-api, .hero-photos, .pass-satellite-api, .launch-api, .pis-api {
     background-size: cover;
+    background-color: rgba(0, 0, 0, 0.678);
+    background-position: 20% top;
+}
+.hero-main {
+    background-image: url("bg-img/darken_galaxy_70.jpg");
 }
 
 .photos-api, .hero-photos {
-    background-image: url("../../img/darken-rover_50.jpg");
-    background-size: cover;
-    background-color: rgba(0, 0, 0, 0.678);
-    background-position: 20% top;
+    background-image: url("bg-img/darken-rover_50.jpg");
+}
+
+.pis-api {
+    background-image: url("bg-img/darkenpis.jpg");
 }
 
 .pass-satellite-api {
-    background-image: url("../../img/darken-man-min_70.jpg");
-    background-size: cover;
-    background-color: rgba(0, 0, 0, 0.678);
-    background-position: 20% top;
+    background-image: url("bg-img/darken-man-min_50.jpg");
 }
 
 .launch-api {
-    background-image: url("../../img/launch-api_50.jpg");
-    background-size: cover;
-    background-color: rgba(0, 0, 0, 0.678);
-    background-position: 20% top;
+    background-image: url("bg-img/launch-api_50.jpg");
 }
 
-/* Tablets + desktop */
-@media (min-width: 600px) {
+/* Mobile */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
 
-    .main {
-        background-image: url("../../img/darken_galaxy_70.jpg");
+    .hero-main {
+        background-image: url("bg-img/darken_galaxy_70.jpg");
     }
 
     .photos-api, .hero-photos {
-        background-image: url("../../img/darken-rover_50.jpg");
+        background-image: url("bg-img/darken-rover_70.jpg");
     }
 
     .pass-satellite-api {
-        background-image: url("../../img/darken-man-min_50.jpg");
+        background-image: url("bg-img/darken-man-min_70.jpg");
     }
 
     .launch-api {
-        background-image: url("../../img/launch-api_50.jpg");
+        background-image: url("bg-img/launch-api_70.jpg");
     }
 }
 
 /* Retina screens */
-@media (min-width: 1600px) {
-    .main {
-        background-image: url("../../img/darken_galaxy.jpg");
+@media (min-width: 1400px) {
+    .hero-main {
+        background-image: url("bg-img/darken_galaxy.jpg");
     }
 
     .photos-api, .hero-photos {
-        background-image: url("../../img/darken-rover.jpg");
+        background-image: url("bg-img/darken-rover.jpg");
     }
 
     .pass-satellite-api {
-        background-image: url("../../img/darken-man-min.jpg");
+        background-image: url("bg-img/darken-man-min.jpg");
     }
 
     .launch-api {
-        background-image: url("../../img/launch-api_50.jpg");
+        background-image: url("bg-img/launch-api.jpg");
     }
 }
 
