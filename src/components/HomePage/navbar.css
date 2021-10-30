@@ -118,7 +118,7 @@ header{
 }
 
 /* Navbar for mobile/tablet version */
-@media only screen and (max-width: 812px) {
+@media only screen and (max-width: 1024px) {
     
     .hamburger {
         display: block;
@@ -153,18 +153,18 @@ header{
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    .logo {  
+    /* .logo {  
         width: 40%;
         height: 40%;  
         text-align: center;
-        margin-left: 6em;
+        margin-left: 1em;
         margin-top: 1em;    
         /* border:rgb(218, 107, 3) 1px solid; */
-    }
+    /* } */
 
-    .logo-title {
-        padding-left: 4em
-    }
+    /* .logo-title { */
+        /* padding-left: 4em */
+    /* } */ 
 
 }
 /* Navbar for mobile portrait */
@@ -191,6 +191,11 @@ header{
         margin: 4px auto;
     }
 
+    .hamburger {
+        margin-left: 1em;
+        margin-bottom: 2em;
+    }
+
     .nav-list {
         position: fixed;
         max-width: 50%;
@@ -211,10 +216,10 @@ header{
     }
 }
 
-/* Navbar for tablet version and mobile landscape */
+/* Navbar for tablet version */
 @media only screen 
   and (min-device-width: 568px) 
-  and (max-device-width: 812px) {
+  and (max-device-width: 1024px) {
 
     .nav-list {
         position: fixed;
@@ -243,7 +248,8 @@ header{
     }
 
     .logo-title {
-        padding-left: 6em;
+        padding-left: 3.5em;
+        font-size: 1.1rem;
     }
 
     .bar {
@@ -252,3 +258,17 @@ header{
         margin: 6px auto;
     }
 }
+
+/* Navbar for iPadPro version */
+@media only screen 
+  and (min-device-width: 769px) 
+  and (max-device-width: 1024px) {
+    .nav-list {
+        margin-left: 35em;
+    }
+    
+    .logo-title {
+        padding-left: 4em;
+        font-size: 1.3rem;
+    }
+  }

@@ -9,7 +9,7 @@ function MainContent() {
                 bgImg = "hero-main"
                 title = "For wannabe multiplanet species"                
                 noBtn={true}
-                sectionInfo = "Getting back to the Moon, staying there, building a city on Mars, colonizing other planets...if all these excite you, you're on the right place."
+                sectionInfo = "Getting back to the Moon, mining asteroids, building a city on Mars, colonizing planets, you name it...if all these excite you, this is your website."
             />
 
             <HomePageSections 

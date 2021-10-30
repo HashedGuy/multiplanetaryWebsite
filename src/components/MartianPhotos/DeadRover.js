@@ -81,7 +81,9 @@ function DeadRover() {
         <section className="dead-rovers">
 
             <div className="dead-body">
-                <h2 className="section-title">Some rovers on Mars are <span style={{backgroundColor: 'red', color: 'wheat'}}>not active </span>anymore but they sent us the first photos</h2>
+                <h2 className="section-title">
+                    Some rovers on Mars are <span style={{backgroundColor: 'darkred', color: 'wheat'}}>not active </span>anymore but they sent us the first photos
+                </h2>
             </div>
 
             <div className="dead-rover-info">
