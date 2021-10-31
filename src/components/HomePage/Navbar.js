@@ -33,6 +33,7 @@ function Navbar() {
                     <li className="nav-item"><Link to='./peopleinspace'>PeopleInSpace</Link></li>
                     <li className="nav-item not-ready">SatellitePass</li>
                     <li className="nav-item not-ready">SpaceGarage</li>
+                    <li className="nav-item not-ready">API</li>
                 </ul>
                 <div 
                     className={`hamburger ${isActive ? "active" : ""}`} 

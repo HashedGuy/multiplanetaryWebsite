@@ -1,5 +1,5 @@
 {
-    "number": 13, 
+    "number": 10, 
     "people": [
                 {
                     "id":0,
@@ -80,42 +80,6 @@
                     "country_logo": "flags/cn.svg",
                     "bio": "Chinese astronaut Ye Guangfu was born in 1980 in the Sichuan province of China. He is an air force pilot and spent four years as an instructor and four years as a jet fighter pilot amassing 1100 hours of flight time. Ye was recruited as an astronaut trainee for China’s Astronaut Center in 2010 and qualified in 2014. ",
                     "img": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Ye_Guangfu_in_2021.jpg"
-                },
-                {
-                    "id":10,
-                    "craft": "ISS", 
-                    "name": "Raja Chari",
-                    "space_agency": "NASA",
-                    "country_logo": "flags/us.svg",
-                    "bio": "Raja Chari was selected by NASA to join the 2017 Astronaut Candidate Class. He reported for duty in August 2017. The Iowa native graduated from the U.S. Air Force Academy in 1999 with a bachelor’s degrees in Astronautical Engineering and Engineering Science. He continued on to earn a master’s degree in Aeronautics and Astronautics from Massachusetts Institute of Technology and graduated from the U.S. Naval Test Pilot School. He is currently assigned as commander of the SpaceX Crew-3 mission to the ISS scheduled to launch October 2021.",
-                    "img": "https://www.nasa.gov/sites/default/files/thumbnails/image/jsc2017e114853.jpg"
-                },
-                {
-                    "id":11,
-                    "craft": "ISS", 
-                    "name": "Thomas H. Marshburn",
-                    "space_agency": "NASA",
-                    "country_logo": "flags/us.svg",
-                    "bio": "Dr. Thomas H. Marshburn was selected by NASA in 2004. He holds a Bachelor of Science in Physics from Davidson College, North Carolina; a Masters in Engineering Physics from the University of Virginia; a Doctorate of Medicine from Wake Forest University; and a Masters in Medical Science from the University of Texas Medical Branch. The North Carolina native is a veteran of two spaceflights, STS‐127 and Expedition 34/35. Prior to becoming an astronaut, Dr. Marshburn served as a Flight Surgeon, assigned to Space Shuttle Medical Operations and to the joint U.S./Russian Space Program and eventually became the Medical Operations Lead for the International Space Station. He is currently assigned as the pilot of the NASA SpaceX Crew-3 mission to the ISS scheduled to launch October 2021.",
-                    "img": "https://www.nasa.gov/sites/default/files/thumbnails/image/9368855062_a548b9c5eb_o.jpg"
-                },
-                {
-                    "id":12,
-                    "craft": "ISS", 
-                    "name": "Kayla Barron",
-                    "space_agency": "NASA",
-                    "country_logo": "flags/us.svg",
-                    "bio": "Kayla Barron was selected by NASA to join the 2017 Astronaut Candidate Class. She reported for duty in August 2017 and is currently training as Mission Specialist for NASA SpaceX Crew-3 Mission to the ISS scheduled to launch October 2021. The Washington native graduated from the U.S. Naval Academy with a bachelor’s degree in Systems Engineering. A Gates Cambridge Scholar, Barron earned a master’s degree in Nuclear Engineering from the University of Cambridge. As a Submarine Warfare Officer, Barron was a member of the first class of women commissioned into the submarine community.",
-                    "img": "https://www.nasa.gov/sites/default/files/thumbnails/image/jsc2017e118421.jpg"
-                },
-                {
-                    "id":13,
-                    "craft": "ISS", 
-                    "name": "Matthias Maurer",
-                    "space_agency": "ESA",
-                    "country_logo": "flags/de.svg",
-                    "bio": "Matthias Maurer was born in Sankt Wendel (Saarland), Germany, on 18 March 1970. His favourite activities are travelling, photography, reading, politics and learning foreign languages. He also enjoys sports, especially cycling and hiking. In December 2020, Matthias was officially assigned to his first International Space Station mission known as 'Cosmic Kiss'. He is the second ESA astronaut to fly under NASA’s Commercial Crew Programme and has launched from the agency’s Kennedy Space Center in Florida, USA, as part of SpaceX Crew-3, alongside NASA astronauts Raja Chari, Thomas Marshburn and Kayla Barron in late 2021. Prior to his mission assignment, Matthias was based at ESA’s Astronaut Centre in Cologne, Germany where he was project managing the development of a new ESA Moon simulation facility known as Luna.",
-                    "img": "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2019/06/matthias_maurer/19454911-1-eng-GB/Matthias_Maurer_pillars.jpg"
                 }
             ], 
     "message": "success"
