@@ -591,6 +591,10 @@ Mars Photos API Page
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 480px) {
+
+    .section-title {
+        width: 80%;
+    }
     
     .rovers { 
         padding: 3em 1em;
