@@ -15,6 +15,10 @@
     box-shadow: 4px 3px 3px rgba(245, 245, 245, 0.26);
 }
 
+.not-active-api {
+    opacity: 40%;
+}
+
 .api-features {
     line-height: 1.7em;
     border-left: 1px solid rgba(128, 128, 128, 0.788);
@@ -23,10 +27,6 @@
 
 .api-name {
     margin-bottom: 1em;
-}
-
-.not-active-api {
-    opacity: 40%;
 }
 
 .api-details {
