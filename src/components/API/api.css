@@ -1,0 +1,135 @@
+.api-container {
+    padding: 2em;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.api-box {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgba(236, 234, 234, 0.616);
+    /* border-left: 1px solid rgba(236, 234, 234, 0.616); */
+    border-radius: 15px;
+    padding: 1.5em 5em;
+    background-color: rgba(128, 128, 128, 0.12);
+    cursor: pointer;
+    box-shadow: 4px 3px 3px rgba(245, 245, 245, 0.26);
+}
+
+.api-features {
+    line-height: 1.7em;
+    border-left: 1px solid rgba(128, 128, 128, 0.788);
+    padding-left: 1em;
+}
+
+.api-name {
+    margin-bottom: 1em;
+}
+
+.not-active-api {
+    opacity: 40%;
+}
+
+.api-details {
+    padding: 2em 5em;
+    background-color: rgba(207, 205, 205, 0.12);
+    border: 1px solid rgba(236, 234, 234, 0.616);
+    border-top:0;
+    border-radius: 5px;
+    box-shadow: 4px 3px 3px rgba(245, 245, 245, 0.26);
+}
+
+.api-description {
+    margin-bottom: 2em;
+}
+
+.api-details p {
+    border-left: 1px solid gray;
+    padding-left: 1em;
+    margin-top: 1em;
+    width: 70%;
+}
+
+.api-parameters {
+    margin-bottom: 2em;
+}
+
+.api-parameters h2, .api-query h2{
+    margin: 1em 0;
+}
+
+.api-parameters p {
+    margin-bottom: 2em;
+}
+
+.api-link  {
+    border: 1px solid whitesmoke;
+    border-radius: 25px;
+    padding: .5em;
+}
+
+
+.json-box {
+    border: 1px solid whitesmoke;
+    padding: 1em;
+    border-radius: 5px;
+}
+.close-btn {
+    text-align: end;
+}
+
+/* Mobile portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .api-box {
+        /* border: 1px solid red; */
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    .api-features {
+        /* border: 1px solid red; */
+        font-size: .7rem;
+        margin-bottom: 1em;
+    }
+
+    .api-details {
+        /* border: 1px solid red; */
+        padding: 1em;
+        font-size: .7rem;
+    }
+
+    .api-details p {
+        width: 100%;
+    }
+
+    .json-box, .api-link {
+        font-size: .7rem;
+    }
+  }
+
+/* Tablet version */
+@media only screen 
+  and (min-device-width: 568px) 
+  and (max-device-width: 1024px) {
+      .api-box {
+          padding: 1em 2em;
+      }
+
+      .api-features {
+          font-size: .9rem;
+      }
+
+      .api-details {
+          padding: 1em 2em;
+      }
+
+      .api-details p {
+          width: 90%;
+      }
+
+      .json-box, .api-link {
+        font-size: .9rem;
+    }
+  }

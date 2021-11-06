@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react'
 import './pis.css'
 import ISSImg from "../../img/iss.png"
 import ShenzhouImg from "../../img/shenzhou.png"
-import PISData from './db.json'
 
 function Astronauts() {
     
@@ -11,20 +10,21 @@ function Astronauts() {
     const [issLocation, setIssLocation] = useState([])
     const [timeZone, setTimeZone] = useState()
     const [countryCode, setCountryCode] = useState()
-    const [selectedAstro, setSelectedAstro] = useState(PISData.people[0])
+    const [selectedAstro, setSelectedAstro] = useState('')
 
-    const loadData = () => {
-        JSON.parse(JSON.stringify(PISData))
-        setAstronaut(PISData.people)
-        // setSelectedAstro(PISData.people[0])
-    }
-
-    
-
+    // Fetching PeopleInSpace from Multiplanetary API
     useEffect(() => {
-        loadData()
+        fetch('https://multiplanatery-api.netlify.app/api/basic-api')
+            .then(res => res.json())
+            .then(data => {
+                setSelectedAstro(data.people[0])
+                setAstronaut(data.people)
+                
+            })
+            
     }, [])
 
+    // Fetching 'location' from wheretheiss API
     useEffect(() => {
         // (1) define within effect callback scope
         const fetchData = async () => {
@@ -47,7 +47,8 @@ function Astronauts() {
       
         return () => clearInterval(id);
       }, [])
-
+    
+    // Fetching 'timeZone' from wheretheiss API  
     const fetchDataTwo = async () => {
         try {
             const res = await fetch(`https://api.wheretheiss.at/v1/coordinates/${issLocation.latitude},${issLocation.longitude}`)
@@ -58,6 +59,7 @@ function Astronauts() {
             console.log(error)
         }
     }
+
     useEffect(() => {
         fetchDataTwo()
     }, [issLocation])
@@ -92,7 +94,7 @@ function Astronauts() {
                 <div className="astro-info-big">
                     <div className="astro-bio">
                         <div>
-                            <h1>{selectedAstro.name}</h1><img className="flag" src={selectedAstro.country_logo}/>                            
+                            <h1>{selectedAstro.name}</h1><img className="flag" src={`flags/${selectedAstro.country_code}.svg`}/>                            
                             <p>{selectedAstro.bio}</p>
                         </div>                        
                         <div className="astro-photo-section">

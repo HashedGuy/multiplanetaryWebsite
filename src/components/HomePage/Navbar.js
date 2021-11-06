@@ -30,10 +30,10 @@ function Navbar() {
                     className={`nav-list ${isActive ? "active" : ""}`}
                 >
                     <li className="nav-item"><Link to='./martianphotos'>MartianPhotos</Link></li>
-                    <li className="nav-item"><Link to='./peopleinspace'>PeopleInSpace</Link></li>
+                    <li className="nav-item"><Link to='/whoisinspace'>WhoIsInSpace</Link></li>
                     <li className="nav-item not-ready">SatellitePass</li>
                     <li className="nav-item not-ready">SpaceGarage</li>
-                    <li className="nav-item not-ready">API</li>
+                    <li className="nav-item"><Link to='./api'>API</Link></li>
                 </ul>
                 <div 
                     className={`hamburger ${isActive ? "active" : ""}`} 

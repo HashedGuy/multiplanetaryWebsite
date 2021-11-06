@@ -191,17 +191,14 @@ Main page
 .photos-api,
 .pis-api,
 .pass-satellite-api,
-.launch-api {
+.launch-api,
+.api {
     height: 100vh;
     display: flex;
     flex-direction: column;
     padding: 2em 7em;
     /* border: 2px solid red; */
     justify-content: flex-end;    
-}
-
-.launch-api {
-    height: 120vh;
 }
 
 footer {
@@ -250,7 +247,8 @@ footer li {
     .photos-api,
     .pass-satellite-api,
     .pis-api,
-    .launch-api {
+    .launch-api,
+    .api {
         padding: 3em 1em;
     }
 
@@ -287,7 +285,8 @@ footer li {
     .photos-api,
     .pis-api,
     .pass-satellite-api,
-    .launch-api {
+    .launch-api,
+    .api {
         padding: 3em 2em;
     }
 
@@ -316,7 +315,7 @@ Background images
 ================= */
 
 /* Desktop + tablet */
-.hero-main, .photos-api, .hero-photos, .pass-satellite-api, .launch-api, .pis-api {
+.hero-main, .photos-api, .hero-photos, .pass-satellite-api, .launch-api, .pis-api, .api {
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.678);
     background-position: 20% top;
@@ -341,6 +340,10 @@ Background images
     background-image: url("bg-img/launch-api_50.jpg");
 }
 
+.api {
+    background-image: url("bg-img/darken-nem-api.png");
+}
+
 /* Mobile */
 @media only screen 
   and (min-device-width: 320px) 
@@ -362,6 +365,10 @@ Background images
     .launch-api {
         background-image: url("bg-img/launch-api_70.jpg");
     }
+    .api {
+        background-image: url("bg-img/darken-med-api.png");
+    }
+
 }
 
 /* Retina screens */
@@ -380,6 +387,9 @@ Background images
 
     .launch-api {
         background-image: url("bg-img/launch-api.jpg");
+    }
+    .api {
+        background-image: url("bg-img/darken-nem-api.png");
     }
 }
 
