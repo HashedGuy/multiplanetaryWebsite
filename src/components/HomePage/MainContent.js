@@ -47,6 +47,15 @@ function MainContent() {
                 buttonText = "coming soon"
                 sectionInfo = "If you live for adventure, what bigger adventure is there than leaving your planet,
                 traveling through space and helping to colonize another celestial body?"
+            />
+
+            <HomePageSections 
+                bgImg = "api"
+                title = "Use multiplanetary { APIs }"
+                linkTo ='./api'
+                btnActive = {true}
+                buttonText = "See APIs"
+                sectionInfo = "Based on simple REST principles, the Multiplanetary API endpoints return JSON metadata, directly from the Multiplanetary Data Catalogue."
             />       
         </>
     )
