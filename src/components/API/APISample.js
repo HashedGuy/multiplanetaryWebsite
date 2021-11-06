@@ -50,7 +50,7 @@ const APISample = props => {
                     <h2>HTTP Request</h2>
                     <p>{props.query_info}</p>
                     <a href="https://multiplanatery-api.netlify.app/api/basic-api" target="_blank" className="api-link">https://multiplanatery-api.netlify.app/api/basic-api</a>
-                    <p style={{marginTop: '2em'}}>The following example is the fetch( ) method to receive data from PeopleInSpace API, and console logs 'the number' of people in space:</p>
+                    <p style={{marginTop: '2em'}}>{props.fetch_info}</p>
                     <p className="json-box">
                         const fetchedData = ( ) => fetch(<span style={{color: 'darkorange'}}>'https://multiplanatery-api.netlify.app/api/basic-api'</span>)<br />
                                             {bigspace}.then(res => res.json( ))<br />
