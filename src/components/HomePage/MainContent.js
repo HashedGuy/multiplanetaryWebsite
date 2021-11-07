@@ -7,7 +7,7 @@ function MainContent() {
         <>  
             <HomePageSections 
                 bgImg = "hero-main"
-                title = "For wannabe multiplanet species"                
+                title = "For wannabe multiplanetary species"                
                 noBtn={true}
                 sectionInfo = "Getting back to the Moon, mining asteroids, building a city on Mars, colonizing planets, you name it...if all these excite you, this is your website."
             />
