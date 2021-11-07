@@ -75,6 +75,7 @@ const APISample = props => {
                         
                          {'{'} <br />
                         {space}<span style={{color: 'darkorange'}}>"id"</span>: ID_NUMBER, <br />
+                        {space}<span style={{color: 'darkorange'}}>"name"</span>: NAME, <br />
                         {space}<span style={{color: 'darkorange'}}>"craft"</span>: CRAFT_NAME, <br />
                         {space}<span style={{color: 'darkorange'}}>"country_code"</span>: NATIONALITY, <br />
                         {space}<span style={{color: 'darkorange'}}>"space_agency"</span>: SPACE_AGENCY, <br />
