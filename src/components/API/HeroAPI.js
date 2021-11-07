@@ -2,6 +2,7 @@ import React from 'react'
 import HomePageSections from '../HomePage/HomePageSections'
 
 function HeroAPI() {
+    document.title = 'Multiplanetary API'
     return (
         <HomePageSections 
                 bgImg = "api"

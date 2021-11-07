@@ -5,6 +5,7 @@ import HomePageSections from '../HomePage/HomePageSections'
 
 function HeroPhotos() {
     const [astNumber, setAstNumber] = useState('')
+    document.title = 'WhoIsInSpace'
 
     useEffect(() => {
         fetch('https://multiplanatery-api.netlify.app/api/basic-api')
