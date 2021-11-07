@@ -10,6 +10,7 @@ function APIs() {
                     endpoint = "1"
                     content_type = "JSON"
                     auth = {false}
+                    rate_limit = "10 calls/minute"
                     active = {true}
                     status = "active"
 

@@ -22,6 +22,7 @@ const APISample = props => {
                         <h3>Type: {props.type}</h3>
                         <h3>Number of endpoints: {props.endpoint}</h3>
                         <h3>Response data type: {props.content_type}</h3>
+                        <h3>Rate limiting: {props.rate_limit}</h3>
                         <h3>Authorization-required: {props.auth ? 'Yes' : 'No'}</h3>
                         <h3>Status: <span>&nbsp;</span>
                             {props.status} <span>&nbsp;</span>
