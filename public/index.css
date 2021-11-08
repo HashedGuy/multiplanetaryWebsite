@@ -433,7 +433,7 @@ Mars Photos API Page
 
 .rover {
     opacity: 40%;
-    padding: 2em;
+    padding: 2em 1em;
     /* border: 1px solid blue; */
     width: 33%;
     margin-bottom: 0;
@@ -445,9 +445,14 @@ Mars Photos API Page
     padding: 0 2em;
 }
 
+.rover a h2, .dead-rover a h2 {
+    margin-bottom: .5em;
+    font-size: 1.7rem;
+    letter-spacing: .5px;
+}
+
 .rover a h2 {
     color: darkorange;
-    margin-bottom: .5em;
 }
 
 .dead-rover a h2 {
@@ -458,7 +463,7 @@ Mars Photos API Page
     font-size: 1rem;
     border-right: 1px solid orange;
     border-bottom: 0;
-    padding-right: 1.5em;
+    padding-right: 1em;
     letter-spacing: .2px;
     line-height: 1.4em;
 }

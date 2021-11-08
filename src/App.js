@@ -13,7 +13,7 @@ function App() {
             <Navbar />            
             <Route exact path='/' component={MainComponent}/>
             <Route exact path='/martianphotos' component={MartianPhotos}/>
-            <Route exact path='/whoisinspace' component={PeopleInSpace}/>
+            <Route exact path='/whoareinspace' component={PeopleInSpace}/>
             <Route exact path='/api' component={API}/>
             <Footer /> 
                               

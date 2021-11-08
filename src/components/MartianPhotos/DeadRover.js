@@ -148,7 +148,7 @@ function DeadRover() {
                 </div>
                 
                 <div className="photos">
-                    <div className="photos-info">
+                    <div className="dead-photos-info">
                         <h2 className="photos-title">Latest photo from {myDeadRover ? myDeadRover : "Opportunity"}</h2>
                         <p>Photo taken: {isLoading ? <BeatLoader size={6} color='red' loading /> : deadPhoto.earth_date}</p>
                         {/* <p>Camera: {}</p> */}

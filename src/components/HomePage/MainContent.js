@@ -24,10 +24,10 @@ function MainContent() {
             <HomePageSections 
                 bgImg = "pis-api"
                 title = "Who are in Space right now?"
-                linkTo ='./peopleinspace'
+                linkTo ='./whoareinspace'
                 btnActive = {true}
-                buttonText = "lets know them"
-                sectionInfo = "Some of us has already left the Earth...Thanks to Open Notify and the WTIA REST API, we can get the updated list of the astronauts in space, as well as the current position of their satellite, timezone information and many more."
+                buttonText = "let's know them"
+                sectionInfo = "Some of us has already left the Earth...Thanks to WAIS Multiplanetary API and the WTIA REST API, we can get the updated list of the astronauts in space, as well as the current position of their satellite, timezone information and many more."
             />
 
             <HomePageSections 

@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import './pis.css'
-import ISSImg from "../../img/iss.png"
+import ISSImg from "../../img/iss_croped.png"
 import ShenzhouImg from "../../img/shenzhou.png"
 
 function Astronauts() {
@@ -108,7 +108,7 @@ function Astronauts() {
                                 src={craft === 'Shenzhou 13' ? ShenzhouImg : ISSImg} 
                                 className={craft === 'Shenzhou 13' ? "add-padding" : ""}
                             />
-                            <h2>Current {craft} position</h2> 
+                            <h2>Current {craft === 'Shenzhou 13' ? 'Shenzhou 13' : 'ISS'} position</h2> 
                             <h3>Latitude: {craft === 'Shenzhou 13' ? 'N/A' : issLocation.latitude}</h3>
                             <h3>Longitude: {craft === 'Shenzhou 13' ? 'N/A': issLocation.longitude}</h3>
                             <h3>Time zone: {craft === 'Shenzhou 13' ? 'N/A' : timeZone}</h3>
