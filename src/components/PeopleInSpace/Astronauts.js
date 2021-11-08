@@ -80,7 +80,8 @@ function Astronauts() {
                                             setCraft(astronaut.craft)
                                             setSelectedAstro(astronaut)
                                         }} 
-                                        >
+                                        >                                        
+                                        <img className= "btn-flag" src={`flags/${astronaut.country_code}.svg`}/>
                                         <h1>{astronaut.name}</h1>
                                         <h3>{astronaut.craft}</h3>
                                     </a>                                         
