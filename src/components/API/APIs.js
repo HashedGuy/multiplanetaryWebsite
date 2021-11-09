@@ -20,11 +20,23 @@ function APIs() {
           />  
 
           <APISample
+                    name = "WAIS-X API" 
+                    type = "REST"
+                    endpoint = "3"
+                    content_type = "JSON"
+                    auth = {true}
+                    rate_limit = 'TBA'
+                    active = {false}
+                    status = 'in production'
+          />
+
+          <APISample
                     name = "SpaceGarage API" 
                     type = "REST"
                     endpoint = "3"
                     content_type = "JSON"
                     auth = {true}
+                    rate_limit = 'TBA'
                     active = {false}
                     status = 'in production'
           />
