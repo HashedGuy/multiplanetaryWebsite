@@ -50,10 +50,10 @@ const APISample = props => {
                 <div className="api-parameters">
                     <h2>HTTP Request</h2>
                     <p>{props.query_info}</p>
-                    <a href="https://multiplanatery-api.netlify.app/api/basic-api" target="_blank" className="api-link">https://multiplanatery-api.netlify.app/api/basic-api</a>
+                    <a href="https://multiplanatery-api.netlify.app/api/wais" target="_blank" className="api-link">https://multiplanatery-api.netlify.app/api/wais</a>
                     <p style={{marginTop: '2em'}}>{props.fetch_info}</p>
                     <p className="json-box">
-                        const fetchedData = ( ) => fetch(<span style={{color: 'darkorange'}}>'https://multiplanatery-api.netlify.app/api/basic-api'</span>)<br />
+                        const fetchedData = ( ) => fetch(<span style={{color: 'darkorange'}}>'https://multiplanatery-api.netlify.app/api/wais'</span>)<br />
                                             {bigspace}.then(res => res.json( ))<br />
                                             {bigspace}.then(data => console.log(data.<span style={{color: 'darkorange'}}>number</span>))
                     </p>

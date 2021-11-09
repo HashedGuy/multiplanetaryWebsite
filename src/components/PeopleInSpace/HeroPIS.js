@@ -8,7 +8,7 @@ function HeroPhotos() {
     document.title = 'WhoAreInSpace'
 
     useEffect(() => {
-        fetch('https://multiplanatery-api.netlify.app/api/basic-api')
+        fetch('https://multiplanatery-api.netlify.app/api/wais')
             .then(res => res.json())
             .then(data => {
                 

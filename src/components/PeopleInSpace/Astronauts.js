@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import './pis.css'
 import ISSImg from "../../img/iss_croped.png"
 import ShenzhouImg from "../../img/shenzhou.png"
+import SoyuzImg from "../../img/soyuz.png"
+import DragonImg from "../../img/dragon.png"
 
 function Astronauts() {
     
@@ -11,10 +13,25 @@ function Astronauts() {
     const [timeZone, setTimeZone] = useState()
     const [countryCode, setCountryCode] = useState()
     const [selectedAstro, setSelectedAstro] = useState('')
+    const [showLaunchInfo, setLaunchInfo] = useState(false)
+    const [showISSLocationInfo, setISSLocationInfo] = useState(false)
+    const [showISSParking, setISSParking] = useState(false)
+
+    const showLaunch = () => {
+        setLaunchInfo(!showLaunchInfo)
+    }
+
+    const issLocationInfo = () => {
+        setISSLocationInfo(!showISSLocationInfo)
+    }
+
+    const issParking = () => {
+        setISSParking(!showISSParking)
+    }
 
     // Fetching PeopleInSpace from Multiplanetary API
     useEffect(() => {
-        fetch('https://multiplanatery-api.netlify.app/api/basic-api')
+        fetch('https://multiplanatery-api.netlify.app/api/wais')
             .then(res => res.json())
             .then(data => {
                 setSelectedAstro(data.people[0])
@@ -93,14 +110,35 @@ function Astronauts() {
                         
                 </div>
                 <div className="astro-info-big">
-                    <div className="astro-bio">
-                        <div>
-                            <h1>{selectedAstro.name}</h1><img className="flag" src={`flags/${selectedAstro.country_code}.svg`}/>                            
-                            <p>{selectedAstro.bio}</p>
-                        </div>                        
-                        <div className="astro-photo-section">
-                            <img className="astro-img" src={selectedAstro.img}/>
-                            <p className="credits">Credits to NASA Active Astronauts</p>
+                    <div className="astro-info-medium">
+                        <div className="astro-bio">
+                            <div>
+                                <h1>{selectedAstro.name}</h1><img className="flag" src={`flags/${selectedAstro.country_code}.svg`}/>                            
+                                <p>{selectedAstro.bio}</p>
+                            </div>                        
+                            <div className="astro-photo-section">
+                                <img className="astro-img" src={selectedAstro.img}/>
+                                <p className="credits">Credits to NASA Active Astronauts</p>
+                            </div>
+                        </div>
+
+                        <div className="launch-details">
+                            <a className="btn" onClick={showLaunch}>space journey</a>
+                                {showLaunchInfo ? 
+                                    <div className="launch-show">
+                                        <div className="launch-info">
+                                            <h3>Launched from: Baikonur, Kazakhstan</h3>
+                                            <h3>Launch rocket: Soyuz</h3>
+                                            <h3>Launch time: 9 April 2021, at 07:42 UTC </h3>
+                                            <h3>Operator: Roscosmos</h3>
+                                            <h3>Mission name: Soyuz MS-18</h3>
+                                            <h3>Mission type: ISS crew rotation</h3>
+                                        </div>
+                                        <div className="launch-visuals">
+                                            <img src={DragonImg} />
+                                        </div>
+                                    </div> : ''
+                                }
                         </div>
                     </div>
                     <div className="craft-details">
@@ -109,11 +147,43 @@ function Astronauts() {
                                 src={craft === 'Shenzhou 13' ? ShenzhouImg : ISSImg} 
                                 className={craft === 'Shenzhou 13' ? "add-padding" : ""}
                             />
-                            <h2>Current {craft === 'Shenzhou 13' ? 'Shenzhou 13' : 'ISS'} position</h2> 
-                            <h3>Latitude: {craft === 'Shenzhou 13' ? 'N/A' : issLocation.latitude}</h3>
-                            <h3>Longitude: {craft === 'Shenzhou 13' ? 'N/A': issLocation.longitude}</h3>
-                            <h3>Time zone: {craft === 'Shenzhou 13' ? 'N/A' : timeZone}</h3>
-                            <h3>Country code: {craft === 'Shenzhou 13' ? 'N/A': countryCode}</h3>
+
+                        {craft === 'Shenzhou 13' ? '' :
+                        <> 
+                            <a class="btn" onClick={issLocationInfo}>Current ISS Location</a>
+
+                            {showISSLocationInfo ? 
+                                <div style={craft === 'Shenzhou 13' ? {display:'none'} : {}}>
+                                    
+                                    <h3>Latitude: {issLocation.latitude}</h3>
+                                    <h3>Longitude: {issLocation.longitude}</h3>
+                                    <h3>Time zone: {timeZone}</h3>
+                                    <h3>Country code: {countryCode}</h3>
+                                
+                                {/* <h3>Currently docked spaceships:</h3> 
+                                    <ul>    
+                                        <li>Northrop Grumman's Cygnus space freighter</li>
+                                        <li>Russia's Soyuz MS-19 crew ship</li>
+                                        <li>Progress 78 and 79 resupply ships</li>
+                                    </ul>
+                                <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/iss_11-08-21.jpg"/> */}
+                                </div> : ''
+                            }
+                            <a class="btn" onClick={issParking}>iss parking</a>
+                            { showISSParking ? 
+                                <div className="issParking">
+                                    <img className="parking-img" src="https://www.nasa.gov/sites/default/files/thumbnails/image/iss_11-08-21.jpg"/>
+                                    <p>Credists to NASA ISS Images</p>
+                                    <h3>Currently docked spaceships:</h3> 
+                                        <ul>    
+                                            <li>Northrop Grumman's Cygnus space freighter</li>
+                                            <li>Russia's Soyuz MS-19 crew ship</li>
+                                            <li>Progress 78 and 79 resupply ships</li>
+                                        </ul>
+                                </div> : ''
+                            }
+                            </>
+                        }
                         </div>
                         <div className="craft-info">
                             <h1>{craft === 'Shenzhou 13' ? "Shenzhou 13": "International Space Station (ISS)"}</h1>

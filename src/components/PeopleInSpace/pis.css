@@ -28,6 +28,11 @@ body {
     margin-bottom: 1em;
 }
 
+.astro-info-medium {
+    display: flex;
+    flex-direction: column;
+}
+
 .astro-info {
     display: flex;
     flex-direction: row;
@@ -62,6 +67,16 @@ body {
     margin-bottom: 1em;
 }
 
+.launch-show {
+    display: flex;
+}
+
+.launch-details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+}
+
 
 .craft-details {
     display: flex;
@@ -82,6 +97,14 @@ body {
     /* padding: 1em; */
     /* border: 1px solid orange; */
     
+}
+
+.launch-visuals img {
+    width: 200px;
+    height: 250px;
+    background-size: cover;
+    padding: 0;
+    margin-left: 2em;
 }
 
 .craft-info {
@@ -121,6 +144,19 @@ body {
     width: 30px;
     height: 25px;
     margin-bottom: .5em;
+}
+
+.parking-img {
+    border-radius: 5px;
+}
+
+.issParking p {
+    margin-bottom: 2em;
+}
+
+.issParking li {
+    font-size: 1rem;
+    font-family: 'Source Sans Pro', sans-serif;;
 }
 
 /* Mobile portrait */
