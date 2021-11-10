@@ -68,7 +68,13 @@ body {
 }
 
 .launch-show {
-    display: flex;
+    display: flex;    
+}
+
+.launch-show, .issLocation-show, .parking-show {
+    background-color: rgba(20, 20, 20, 0.295);
+    padding: 1em;
+    border-radius: 5px;
 }
 
 .launch-details {
@@ -104,7 +110,7 @@ body {
     height: 250px;
     background-size: cover;
     padding: 0;
-    margin-left: 2em;
+    margin-right: 2em;
 }
 
 .craft-info {
@@ -148,15 +154,44 @@ body {
 
 .parking-img {
     border-radius: 5px;
+    order: 1;
+}
+
+.issParking {
+    display: flex;
+    flex-direction: column;
 }
 
 .issParking p {
     margin-bottom: 2em;
 }
 
-.issParking li {
-    font-size: 1rem;
-    font-family: 'Source Sans Pro', sans-serif;;
+.launch-info, .issLocation-show, .parking-show {
+    border-left:1px solid darkorange;
+    padding-left: 1em;
+    margin: 0;
+}
+
+.launch-info {
+    order:1;
+}
+
+.launch-info li, .issLocation-show li, .parking-show li {
+    font-size: 1rem
+}
+
+.details {
+    color: gray;
+}
+
+.parking-show {
+    order:0;
+    margin-bottom: 1em;
+}
+
+.exc {
+    font-family: 'Hammersmith One', sans-serif;
+    margin-bottom: .5em;
 }
 
 /* Mobile portrait */

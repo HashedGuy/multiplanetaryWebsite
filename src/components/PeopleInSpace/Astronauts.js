@@ -122,24 +122,24 @@ function Astronauts() {
                             </div>
                         </div>
 
-                        <div className="launch-details">
+                        {/* <div className="launch-details">
                             <a className="btn" onClick={showLaunch}>space journey</a>
                                 {showLaunchInfo ? 
                                     <div className="launch-show">
-                                        <div className="launch-info">
-                                            <h3>Launched from: Baikonur, Kazakhstan</h3>
-                                            <h3>Launch rocket: Soyuz</h3>
-                                            <h3>Launch time: 9 April 2021, at 07:42 UTC </h3>
-                                            <h3>Operator: Roscosmos</h3>
-                                            <h3>Mission name: Soyuz MS-18</h3>
-                                            <h3>Mission type: ISS crew rotation</h3>
-                                        </div>
+                                        <ul className="launch-info">
+                                            <li>Launched from: <span className="details">Baikonur, KZ</span></li>
+                                            <li>Launch rocket: <span className="details">Soyuz</span></li>
+                                            <li>Launch time: <span className="details">9 Apr 2021, 07:42 UTC</span> </li>
+                                            <li>Operator: <span className="details">Roscosmos</span></li><br/>
+                                            <li>Mission name: <span className="details">Soyuz MS-18</span></li>
+                                            <li>Mission type: <span className="details">ISS crew rotation</span></li>
+                                        </ul>
                                         <div className="launch-visuals">
                                             <img src={DragonImg} />
                                         </div>
                                     </div> : ''
                                 }
-                        </div>
+                        </div> */}
                     </div>
                     <div className="craft-details">
                         <div className = "craft-visual">
@@ -153,12 +153,12 @@ function Astronauts() {
                             <a class="btn" onClick={issLocationInfo}>Current ISS Location</a>
 
                             {showISSLocationInfo ? 
-                                <div style={craft === 'Shenzhou 13' ? {display:'none'} : {}}>
+                                <ul className="issLocation-show" style={craft === 'Shenzhou 13' ? {display:'none'} : {}}>
                                     
-                                    <h3>Latitude: {issLocation.latitude}</h3>
-                                    <h3>Longitude: {issLocation.longitude}</h3>
-                                    <h3>Time zone: {timeZone}</h3>
-                                    <h3>Country code: {countryCode}</h3>
+                                    <li>Latitude: <span className="details">{issLocation.latitude}</span></li>
+                                    <li>Longitude: <span className="details">{issLocation.longitude}</span></li>
+                                    <li>Time zone: <span className="details">{timeZone}</span></li>
+                                    <li>Country code: <span className="details">{countryCode}</span></li>
                                 
                                 {/* <h3>Currently docked spaceships:</h3> 
                                     <ul>    
@@ -167,21 +167,26 @@ function Astronauts() {
                                         <li>Progress 78 and 79 resupply ships</li>
                                     </ul>
                                 <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/iss_11-08-21.jpg"/> */}
-                                </div> : ''
+                                </ul> : ''
                             }
-                            <a class="btn" onClick={issParking}>iss parking</a>
+                            {/* <a class="btn" onClick={issParking}>iss parking</a>
                             { showISSParking ? 
                                 <div className="issParking">
-                                    <img className="parking-img" src="https://www.nasa.gov/sites/default/files/thumbnails/image/iss_11-08-21.jpg"/>
-                                    <p>Credists to NASA ISS Images</p>
-                                    <h3>Currently docked spaceships:</h3> 
-                                        <ul>    
-                                            <li>Northrop Grumman's Cygnus space freighter</li>
-                                            <li>Russia's Soyuz MS-19 crew ship</li>
-                                            <li>Progress 78 and 79 resupply ships</li>
+                                    <div className="parking-img">
+                                        <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/iss_11-08-21.jpg"/>
+                                        <p className="credits">Credists to NASA ISS Images</p>
+                                    </div>
+                                    
+                                    <div className="parking-show">
+                                        <h4 className="exc">Currently docked spaceships:</h4> 
+                                        <ul className="parking-show-ul">    
+                                            <li><span className="details">Northrop Grumman's Cygnus space freighter</span></li>
+                                            <li><span className="details">Russia's Soyuz MS-19 crew ship</span></li>
+                                            <li><span className="details">Progress 78 and 79 resupply ships</span></li>
                                         </ul>
+                                    </div>
                                 </div> : ''
-                            }
+                            } */}
                             </>
                         }
                         </div>
