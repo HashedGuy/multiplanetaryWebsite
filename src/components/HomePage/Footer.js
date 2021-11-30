@@ -9,8 +9,8 @@ function Footer() {
                 <ul>
                     <li className="nav-item-footer"><Link to='/martianphotos'><span className="remove">Martian</span>Photos</Link></li>
                     <li className="nav-item-footer"><Link to='/whoareinspace'>WhoAreInSpace</Link></li>
-                    <li className="nav-item-footer not-ready">SatellitePass</li>
-                    <li className="nav-item-footer not-ready"><span className="remove">Space</span>Garage</li>
+                    <li className="nav-item-footer not-ready">RocketScience</li>
+                    <li className="nav-item-footer"><Link to='/flights'>Flights</Link></li>
                     <li className="nav-item-footer"><Link to='/api'>API</Link></li>
                 </ul>
             </nav>

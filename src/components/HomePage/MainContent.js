@@ -1,5 +1,6 @@
 import React from 'react'
 import HomePageSections from './HomePageSections'
+import Animation from '../RocketScience/Animation'
 
 function MainContent() {
     document.title = 'Home page'
@@ -18,7 +19,7 @@ function MainContent() {
                 linkTo ='./martianphotos'
                 btnActive = {true}
                 buttonText = "today's photo"
-                sectionInfo = "Thanks to Mars Rover API, we are receiving photos from Mars from the active rovers. Choose your own rover and see the latest photos with all the details."
+                sectionInfo = "Thanks to NASA Mars Rover API, we are receiving photos from Mars from the active rovers. Choose your own rover and see the latest photos with all the details."
             />
 
             <HomePageSections 
@@ -27,7 +28,7 @@ function MainContent() {
                 linkTo ='./whoareinspace'
                 btnActive = {true}
                 buttonText = "let's know them"
-                sectionInfo = "Some of us has already left the Earth...Thanks to WAIS Multiplanetary API and the WTIA REST API, we can get the updated list of the astronauts in space, as well as the current position of their satellite, timezone information and many more."
+                sectionInfo = "Some of us has already left the Earth...Thanks to WAIS Multiplanetary API, we can get the updated list of the astronauts in space, and many more about them and their mission in space."
             />
 
             <HomePageSections 
@@ -57,6 +58,8 @@ function MainContent() {
                 buttonText = "See APIs"
                 sectionInfo = "Based on simple REST principles, the Multiplanetary API endpoints return JSON metadata, directly from the Multiplanetary Data Catalogue."
             />       
+
+            <Animation />
         </>
     )
 }

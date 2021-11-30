@@ -3,7 +3,7 @@ import HeroAPI from './HeroAPI'
 import APIs from './APIs'
 import './api.css'
 
-function MartianPhotos() {
+function API() {
     return (
         <>
             <HeroAPI />
@@ -12,4 +12,4 @@ function MartianPhotos() {
     )
 }
 
-export default MartianPhotos
+export default API

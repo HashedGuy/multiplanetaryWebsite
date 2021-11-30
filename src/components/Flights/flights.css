@@ -1,0 +1,258 @@
+.schedule {
+    font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em 0;
+    /* border: 1px solid darkorange; */
+}
+
+.schedules {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.schedule-box {
+    margin-top: .5em;
+}
+.location {
+    padding: 0 1rem;
+    text-align: right;
+    position:relative;
+    top: 10px;
+    width: 300px;
+    transform: translateX(300%);
+    overflow: hidden;
+}
+
+.location-nav {
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.location a{
+    margin-bottom: 0;
+}
+
+.location ul{
+    /* background-color: rgb(27, 27, 27); */
+    padding: 1em 0;
+    border-radius: 5px;
+    font-size: .5rem;
+}
+
+.location li {
+    font-size: 1rem;
+    padding: 0 .5em;
+    opacity: .4;
+    transition: filter 300ms;
+}
+
+.location li:hover {
+    filter: brightness(2);
+}
+
+.loc-btn {
+    padding: .5em;
+    font-size: .8rem;
+}
+
+.active-location {
+    opacity: 1 !important;
+}
+
+.departurePro {
+    display: flex;
+    border-right: 1px solid rgb(65, 63, 63);
+    /* flex: 2; */
+}
+
+.blockedBtn {
+    opacity: .1 !important;
+    pointer-events: none;
+}
+
+.smaller {
+    font-size: .9rem !important;
+}
+
+.smaller p {
+    font-size: .7rem;
+}
+
+.arrivalsPro {
+    display: flex;
+}
+
+.arrivals, .departure {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 1em;
+    /* flex: 1; */
+    width: 100%;
+    
+}
+
+.biggerBtn {
+    /* width: 15px;
+    height: 25px; */
+    border: 1px solid rgb(102, 101, 101);
+    color: whitesmoke;
+    padding: 1em .5em;
+    display: inline-block;
+    text-align: center; 
+    align-self: center;
+    border-radius: 5px;
+    /* opacity: .6; */
+}
+
+.biggerBtn:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+.arrivals ul, .departure ul {
+    /* font-size: .5rem; */
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.arrivals h1, .departure h1 {
+    margin-bottom: 1em;
+}
+
+.arrivals li, .departure li, .location li {
+    border-bottom: 1px solid gray;
+    cursor: pointer;
+    margin-bottom: .5em;
+    font-size: 1rem;
+}
+
+.headerX {
+    background-color: rgb(198 232 10);
+    border-radius: 5px;
+    color: #232324;
+    /* font-weight: 700; */
+}
+
+.row {
+    background-color: rgb(16, 16, 16);
+    border-radius: 5px;
+}
+
+.row:nth-child(even) {
+    background-color: rgb(20, 20, 20);
+}
+
+.headerX, .row {
+    display: flex;
+    font-weight: 500;
+    padding: .5em;
+    border-bottom: 2px solid rgb(29, 28, 28);
+    border-right: 2px solid rgb(29, 28, 28);
+}
+
+.headerX .col {
+    font-size: 1rem;
+}
+
+.row {
+    /* background-color: rgba(143, 138, 138, 0.836); */
+    color: whitesmoke;
+    align-items: center;
+    cursor: pointer;
+}
+.col {
+    flex: 1;
+    /* margin-right: 1em; */
+    padding: .2em;
+    border-radius: 5px;
+    text-align: center;
+    font-size: .8rem;
+   
+}
+
+.status {
+    background-color: green;
+    color: white;
+}
+
+.status-eit {
+    background-color: rgb(51, 108, 194);
+    color: whitesmoke; 
+}
+
+.status-tbc {
+    background-color: darkorange;
+    color: whitesmoke;
+}
+
+.operator-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.mission {
+    font-weight: 700;
+}
+
+.time {
+    background-color: white;
+    margin-right: .5em;
+    color: rgb(0, 0, 0);
+}
+
+.departure-features {
+    display: flex;
+    border-bottom: 1px solid darkorange;
+    padding: 0;
+    margin-bottom: .5em;
+    align-items: center;
+    padding: 1em;
+    justify-content: space-between;
+}
+
+.departure-features h1 {
+    /* border: 1px solid red; */
+    margin:0;
+}
+
+.distance {
+    margin-left: 1em;
+}
+
+.departure-features a {
+    font-size: 1.5rem;
+}
+
+.departure-features-xtra {
+    font-size: .9rem;
+    padding: 0 1em;
+    margin-top: 0;
+    margin-bottom: 1em;
+    background-color: rgb(10, 10, 10);
+    border-radius: 5px;
+    opacity: .6;
+    padding-bottom: .5em;
+    width: 70%;
+}
+
+.arrow {
+    display: flex;
+    justify-content: flex-end;
+    color: rgb(238, 236, 236);
+    font-size: .7rem;
+    color: darkorange;
+    opacity: 1;
+}
+
+.aci {
+    /* border-bottom: 1px solid gray; */
+    /* margin-top: 1em; */
+    margin-bottom: 3em;
+}

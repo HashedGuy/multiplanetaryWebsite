@@ -31,8 +31,8 @@ function Navbar() {
                 >
                     <li className="nav-item"><Link to='./martianphotos'>MartianPhotos</Link></li>
                     <li className="nav-item"><Link to='/whoareinspace'>WhoAreInSpace</Link></li>
-                    <li className="nav-item not-ready">SatellitePass</li>
-                    <li className="nav-item not-ready">SpaceGarage</li>
+                    <li className="nav-item not-ready">RocketScience</li>
+                    <li className="nav-item"><Link to='/flights'>Flights</Link></li>
                     <li className="nav-item"><Link to='./api'>API</Link></li>
                 </ul>
                 <div 
