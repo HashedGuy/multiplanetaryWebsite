@@ -3,18 +3,18 @@ import DropdownMenu from './DropdownMenu'
 import DropdownMenuSettings from './DropdownMenuSettings.js'
 import './Dropdown.css'
     
-    function Dropdown(props) {
+    function DropdownArrival(props) {
       const [clickedOperator, setClickedOperator] = useState()
       const [clickedLocation, setClickedLocation] = useState()
       
       const sendOperatorToChild = (index) => { // the callback
         setClickedOperator(index);
-        props.sendOperatorToParent(index)
+        props.sendOperatorToParentA(index)
       };
 
       const sendLocationToChild = (index) => { // the callback
         setClickedLocation(index);
-        props.sendLocationToParent(index)
+        props.sendLocationToParentA(index)
       };
 
       return (
@@ -28,6 +28,7 @@ import './Dropdown.css'
                 slug="moon"
                 title="Moon"
                 clickedLocation={clickedLocation}
+                active={true}
               >
                 <DropdownMenu
                   sendLocationToChild={sendLocationToChild}
@@ -41,6 +42,7 @@ import './Dropdown.css'
                 slug="space-station"
                 title="Space station"
                 clickedLocation={clickedLocation}
+                active={true}
               >
                 <DropdownMenu
                 sendLocationToChild={sendLocationToChild}
@@ -53,6 +55,7 @@ import './Dropdown.css'
                 slug="earth"
                 title="Location"
                 clickedLocation={clickedLocation}
+                active={true}
               >
                 <DropdownMenu
                   sendLocationToChild={sendLocationToChild}
@@ -60,7 +63,7 @@ import './Dropdown.css'
               </NavItem> 
             }              
 
-            <NavItem icon="&#128640;" title="Operator">
+            <NavItem icon="&#128640;" title="Operator" active={false}>
               <DropdownMenuSettings 
                 sendOperatorToChild={sendOperatorToChild}
                 sendLocationToChild={sendLocationToChild}
@@ -87,8 +90,8 @@ import './Dropdown.css'
       return (
         <li className="navX-item">
           <a 
-            className="icon-button" 
-            title={props.title} 
+            className={!props.active ? "icon-button wip-btn" : "icon-button"} 
+            title={!props.active ? "coming soon" : props.title} 
             onClick={() => {
               setOpen(!open)
               }}
@@ -102,4 +105,4 @@ import './Dropdown.css'
     }
     
 
-export default Dropdown
+export default DropdownArrival

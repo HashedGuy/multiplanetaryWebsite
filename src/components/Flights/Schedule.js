@@ -2,11 +2,15 @@ import React, {useState, useEffect} from 'react'
 import moment from 'moment'
 import Dropdown from './Dropdown/Dropdown'
 import './Dropdown/Dropdown.css'
+import DropdownArrival from './Dropdown/DropdownArrival'
 
 import Animation from '../RocketScience/Animation'
 import ISSDeparture from './Routes/ISSDeparture'
 import TSSDeparture from './Routes/TSSDeparture'
 import MoonDeparture from './Routes/MoonDeparture'
+import MoonArrivals from './Routes/MoonArrivals'
+import ISSArrivals from './Routes/ISSArrivals'
+import TSSArrivals from './Routes/TSSArrivals'
 
 function Schedule() {
     document.title = 'Multiplanetary Flights'    
@@ -15,23 +19,26 @@ function Schedule() {
     const [clickedX, setClickedX] = useState(true)
     const [clickedOperator, setClickedOperator] = useState()
     const [clickedLocation, setClickedLocation] = useState('earth')
+    const [clickedOperatorA, setClickedOperatorA] = useState()
+    const [clickedLocationA, setClickedLocationA] = useState('earth')
     const [bigger, setBigger] = useState(false)
     const [departureBigger, setDepartureBigger] = useState(false)
 
     const sendOperatorToParent = (index) => { // the callback
-        // console.log(index);
         setClickedOperator(index);
       };
 
     const sendLocationToParent = (index) => { // the callback
-        // console.log(index);
         setClickedLocation(index);
       };
+    
+    const sendOperatorToParentA = (index) => { // the callback
+        setClickedOperatorA(index);
+      };
 
-
-    // fetch('https://ll.thespacedevs.com/2.2.0/launch/?limit=10&offset=6370')
-    //     .then(res=>res.json())
-    //     .then(data => console.log(data))
+    const sendLocationToParentA = (index) => { // the callback
+        setClickedLocationA(index);
+      };
 
     useEffect(() => {
         fetch('https://fdo.rocketlaunch.live/json/launches/next/5')
@@ -44,6 +51,9 @@ function Schedule() {
 
     console.log(clickedLocation)
     console.log(clickedOperator)
+
+    console.log(clickedLocationA)
+    console.log(clickedOperatorA)
     return (
         <>
          <Animation
@@ -51,13 +61,10 @@ function Schedule() {
             activeAnimation = {departureBigger}  
         />
         <div className="schedule">
-            {/* <div className="aci"></div> */}
-
             <div className="schedules">
                 <div className="departurePro" style={departureBigger ? {flex: 2, opacity: .4} : {}}>           
                 <div 
-                    className="departure"
-                    
+                    className="departure"                    
                 >
 
                     <Dropdown 
@@ -95,9 +102,6 @@ function Schedule() {
                             } 
                              you can easily change the departure location. Or by clicking &#128640; icon you can filter out the flights from your preffed operator only .</span></p>
                             : ''}
-                            {/* <a className="arrow" onClick={() => {setClicked(!clicked)}}>
-                                {clicked ? '\u25B3' : '\u25BD'}
-                            </a> */}
                         </div> 
                     
                     <section className="schedule-box">
@@ -197,39 +201,93 @@ function Schedule() {
                     </a>
                     <div className="arrivals">
 
-                        <Dropdown 
+                        <DropdownArrival 
                             title="Arrivals &#129666;"
+                            sendOperatorToParentA={sendOperatorToParentA}
+                            sendLocationToParentA={sendLocationToParentA}
                         >
 
-                        </Dropdown>
+                        </DropdownArrival>
 
                         <div className={bigger ? "departure-features-xtra smaller" : "departure-features-xtra"}>
-                            {clickedX ? 
-                                <p>The current flight table shows the arrivals for the planet Earth. <br/><br/> <span style={{opacity: .3}}>By clicking the
-                                    {clickedLocation === 'moon' ? '\u1F314' : '\u1F30D'} you can easily change the arrival location. Or by clicking &#128640; icon you can filter out the flights from your preffed operator only .</span></p>
-                                : ''}
-                                {/* <a className="arrow" onClick={() => {setClickedX(!clickedX)}}>
-                                    {clickedX ? '\u25B3' : '\u25BD'}
-                                </a> */}
+                        {clickedX ? 
+                            <p>The current flight table shows the arrivals for the  
+                            {
+                                clickedLocationA ? ` ${clickedLocationA.toLocaleUpperCase()}` :
+
+                                (clickedLocationA === undefined) ? ''
+                                : ''
+                            }
+                            
+                            {
+                                clickedOperatorA ? `  operated by ${clickedOperatorA.toLocaleUpperCase()}` :
+
+                                (clickedOperatorA === undefined) ? ''
+                                : ''
+                            }   .<br/><br/> <span style={{opacity: .3}}>By clicking the 
+                            {
+                                clickedLocationA === 'moon' ? ' \u{1F314} ' 
+                                
+                                :
+
+                                (clickedLocationA === 'space-station') || (clickedLocationA === 'iss') || (clickedLocationA === 'tss') ? ' \u{1F6F0} ' 
+                                
+                                :
+                                    ' \u{1F30D} '
+                            
+                            } 
+                             you can easily change the arrival location. Or by clicking &#128640; icon you can filter out the flights from your preffed operator only .</span></p>
+                            : ''}
                             </div> 
 
                         <section className="schedule-box">
                             <div className="headerX">                            
-                                <div className={bigger ? "col smaller" : "col"}>Operator</div>
-                                <div className={bigger ? "col smaller" : "col"}>Mission</div>
-                                <div className={bigger ? "col smaller" : "col"}>Vehicle</div>
-                                <div className={bigger ? "col smaller" : "col"}>Date/UTC</div>
-                                <div className={bigger ? "col smaller" : "col"}>Departs from</div>                      
-                                <div className={bigger ? "col smaller" : "col"}>Status</div>
+                                <div className="col">Operator</div>
+                                <div className="col">Mission</div>
+                                <div className="col">Vehicle</div>
+                                <div className="col">Date/UTC</div>
+                                <div className="col">Departs from</div>                      
+                                <div className="col">Status</div>
                             </div>
-                            <ISSDeparture />
-                            <TSSDeparture />
+                            {clickedOperatorA === 'OperatorX' ?
+                                'Choose one of the available commercial operators or the space agencies as the arrival location.'
+                                :
+                                clickedOperatorA === 'private-companies' ?
+                                'Choose one of the available commercial operators as the arrival location.'
+                                :
+                                clickedOperatorA === 'space-agencies' ?
+                                'Choose one of the available space agencies as the arrival location.'
+                                :
+                                ``
+                            }
+                            {
+                            clickedLocationA === 'moon' ?
+                            <MoonArrivals />
+
+                            :
+                            clickedLocationA === 'space-station' ?
+                            `Choose one of the available space stations for the arrival location.`
+
+                            :
+                            clickedLocationA === 'iss' ?
+                            <ISSArrivals />
+
+                            :
+                            clickedLocationA === 'tss' ?
+                            <TSSArrivals />
+
+                            :
+                            <>
+                                <ISSDeparture />
+                                <TSSDeparture />
+                            </>
+
+                        } 
+                            
                         </section>
                     </div>                        
                 </div>
-            </div>
-
-            
+            </div>            
         </div>
         </>
     )

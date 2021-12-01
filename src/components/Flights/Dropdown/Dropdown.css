@@ -151,3 +151,8 @@
     transform: translateX(110%);
     transition: all var(--speed) ease;
   }
+
+  .wip-btn {
+    opacity: .4;
+    cursor: not-allowed;
+  }
