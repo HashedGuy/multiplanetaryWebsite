@@ -175,7 +175,7 @@
   and (-webkit-min-device-pixel-ratio: 2) {
 
     .rocket {
-        width: 150px;
+        width: 200px;
     }
     
     @keyframes slide {
