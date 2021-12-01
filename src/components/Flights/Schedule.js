@@ -79,7 +79,7 @@ function Schedule() {
                             {
                                 clickedLocation ? ` ${clickedLocation.toLocaleUpperCase()}` :
 
-                                (clickedLocation === undefined) ? ''
+                                (clickedLocation === undefined) ? ' Earth'
                                 : ''
                             }
                             
@@ -215,7 +215,7 @@ function Schedule() {
                             {
                                 clickedLocationA ? ` ${clickedLocationA.toLocaleUpperCase()}` :
 
-                                (clickedLocationA === undefined) ? ''
+                                (clickedLocationA === undefined) ? ' Earth'
                                 : ''
                             }
                             
