@@ -163,13 +163,13 @@
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
     .dropdown {
-      top: 405px;
+      top: 305px;
       width: 160px;
       transform: translateX(20%);
     }
 
     .ddArrival {
-      top: 1133px;
+      top: 1036px;
     }
 
     .navbarX {

@@ -272,6 +272,10 @@
         margin: 0;
     }
 
+    .departurePro {
+        height: 650px;
+    }
+
     .arrivalsPro, .departurePro {
         border: 0;
         margin: 0 1em;
