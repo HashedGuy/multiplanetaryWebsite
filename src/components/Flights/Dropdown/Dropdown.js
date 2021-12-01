@@ -20,7 +20,7 @@ import './Dropdown.css'
       return (
         <Navbar>
           <h1>{props.title}</h1>
-          <div className="nav-list">
+          <div className="nav-listY">
             {
             clickedLocation === 'moon' ? 
               <NavItem 

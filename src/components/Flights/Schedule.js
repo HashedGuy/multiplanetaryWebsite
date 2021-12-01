@@ -108,7 +108,7 @@ function Schedule() {
                         <div className="headerX">                            
                             <div className="col">Operator</div>
                             <div className="col">Mission</div>
-                            <div className="col">Vehicle</div>
+                            <div className="col rimuv">Vehicle</div>
                             <div className="col">Date/UTC</div>
                             <div className="col">Launch site</div>                      
                             <div className="col">Status</div>
@@ -132,7 +132,7 @@ function Schedule() {
                                         <img className="operator-logo" src={`logos/${flight.provider.slug}.png`} title={flight.provider.name}/>
                                     </div>
                                     <div className="col">{flight.name}</div>
-                                    <div className="col">{flight.vehicle.name}</div>
+                                    <div className="col rimuv">{flight.vehicle.name}</div>
                                     <div className="col time">{flight.win_open === null ? flight.date_str : moment(flight.win_open).format('lll') }</div>
                                     <div className="col">{flight.pad.location.name}, {flight.pad.location.country}</div>                                    
                                     
@@ -154,7 +154,7 @@ function Schedule() {
                                         <img className="operator-logo" src={`logos/${flight.provider.slug}.png`} title={flight.provider.name}/>
                                     </div>
                                     <div className="col">{flight.name}</div>
-                                    <div className="col">{flight.vehicle.name}</div>
+                                    <div className="col rimuv">{flight.vehicle.name}</div>
                                     <div className="col time">{flight.win_open === null ? flight.date_str : moment(flight.win_open).format('lll') }</div>
                                     <div className="col">{flight.pad.location.name}, {flight.pad.location.country}</div>                                    
                                     
@@ -183,7 +183,7 @@ function Schedule() {
                     </section>
                 </div>
                 <a 
-                    className={departureBigger ? "biggerBtn blockedBtn" : "biggerBtn"}
+                    className={departureBigger ? "biggerBtn blockedBtn rimuv" : "biggerBtn rimuv"}
                     onClick={() => setBigger(!bigger)}
                     title={!bigger ? "make it larger":"make it smaller"}
                 >
@@ -193,7 +193,7 @@ function Schedule() {
                 
                 <div className="arrivalsPro" style={bigger ? {flex: 2, opacity: .4} : {}}>
                     <a 
-                        className={bigger ? "biggerBtn blockedBtn" : "biggerBtn"}
+                        className={bigger ? "biggerBtn blockedBtn rimuv" : "biggerBtn rimuv"}
                         onClick={() => setDepartureBigger(!departureBigger)}
                         title={!departureBigger ? "make it larger":"make it smaller"}
                     >
@@ -244,7 +244,7 @@ function Schedule() {
                             <div className="headerX">                            
                                 <div className="col">Operator</div>
                                 <div className="col">Mission</div>
-                                <div className="col">Vehicle</div>
+                                <div className="col rimuv">Vehicle</div>
                                 <div className="col">Date/UTC</div>
                                 <div className="col">Departs from</div>                      
                                 <div className="col">Status</div>

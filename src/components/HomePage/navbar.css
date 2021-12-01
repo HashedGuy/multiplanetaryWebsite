@@ -178,11 +178,11 @@ header{
         height: 50%;  
         margin-top: 5em;
         margin-bottom: .5em;
-        margin-left: 3.5em;
+        margin-left: 4.5em;
     }
 
     .logo-title {
-        padding-left: 2.8em;
+        padding-left: 4em;
     }
 
     .bar {
@@ -213,6 +213,10 @@ header{
         transition: 0.3s;
         box-shadow:
             0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav a:not(.active-link)  {
+        font-size: 1rem;
     }
 }
 

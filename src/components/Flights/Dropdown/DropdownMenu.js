@@ -25,8 +25,6 @@ function DropdownMenu(props) {
     }, [])
 
     useEffect(() => {
-      // props.setOpen(closeDropdownMenu)
-      // setCloseDropdownMenu(!closeDropdownMenu)
     }, [clickedLoc])
 
     useEffect(() => {
@@ -56,7 +54,7 @@ function DropdownMenu(props) {
     }
   
     return (
-      <div className="dropdown" style={{ height: menuHeight }} ref={dropdownRef}>
+      <div className={props.dropdown==="arrival" ? "dropdown ddArrival": "dropdown"} style={{ height: menuHeight }} ref={dropdownRef}>
   
         <CSSTransition
           in={activeMenu === 'main'}
