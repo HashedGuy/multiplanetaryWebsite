@@ -16,8 +16,6 @@
     font-family: 'Source Sans Pro', sans-serif;
     width: 100%;
     align-self: flex-end;
-    /* padding: 1em; */
-    /* margin: 1em 4em; */
     padding: 2em 7em;
     padding-right: 0;
 }
@@ -251,5 +249,50 @@
         0% {transform: rotate(60deg) scale(.4) translate(-500px, -100px);}
         100% {    transform: rotate(37deg) scale(1) translate(350px, 970px);}
     }
+
+    .animationTitle {
+        padding: 1em 2em;
+        font-size: .9rem;
+    }
+
+    .rocketM {
+        animation: slideM 15s ease-in infinite;
+    }
+
+    @keyframes slideM {
+        0% {transform:rotate(34deg) scale(1) translate(-100px, 400px);}
+        100% {transform: rotate(34deg) scale(.1) translate(-500px, -500px);} 
+    }
+
+    .capsuleM {
+        animation: slideXM 15s ease-in-out infinite;
+    }
+
+    @keyframes slideXM {
+        0% {transform: rotate(60deg) scale(.4) translateX(-400px);}
+        50% {transform: rotate(198deg) scale(.6) translateY(-20px);}
+        100% {transform: rotate(43deg) scale(1.2) translateY(480px);}
+    }
+
+    .issMP {
+        margin-top: 2em;
+        height: 70px;
+        animation: drift 8s infinite;
+    }
+
+    .rimuv {
+        display: none;
+    }
+
+    .rsMP {
+        align-self: flex-start;
+        font-size: .8rem;
+        margin-left: 1.5em;
+    }
+
+    .scene {
+        margin-right: 0;
+    }
+
     
   }

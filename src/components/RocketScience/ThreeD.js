@@ -7,7 +7,7 @@ function ThreeD(props) {
             {props.type === 'main-page' ?
                 <div className="rsMP"> 
                 <h1>It's a rocket science!</h1>
-                <p>We'll try to learn together rocket science by applying basic physics concepts and humble animations </p>
+                <p className="rimuv">We'll try to learn together rocket science by applying basic physics concepts and humble animations </p>
                 <Link to="./rocketscience" className="btn">Coming soon</Link>
                 </div>
                 :''} 
