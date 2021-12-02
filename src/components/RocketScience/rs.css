@@ -129,7 +129,7 @@
     width: 1em;
     height: 1em;
     border-radius: 50%;
-    background: lightblue;
+    background: rgb(231, 29, 14);
 
     position: absolute;
     left: -.5em;
@@ -137,7 +137,7 @@
 
     background-image: radial-gradient(
         circle at top,
-        lightblue,
+        rgb(218, 106, 61),
         #000
     );
 
@@ -187,7 +187,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #0ff7;
+    background: rgba(166, 206, 187, 0.467);
     box-shadow: 0 0 0.5em #000a inset;
 }
 .cube .front {transform: translateZ(1em);}
@@ -199,7 +199,7 @@
     position: absolute;
     width: 2em;
     height: 2em;
-    background: #0ff7;
+    background: rgba(148, 173, 156, 0.467);
     transform: translateY(-50%) rotateX(90deg);
     box-shadow: 0 0 0.5em #000a inset;
 }
