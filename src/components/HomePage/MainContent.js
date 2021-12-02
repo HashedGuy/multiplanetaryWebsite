@@ -1,6 +1,7 @@
 import React from 'react'
 import HomePageSections from './HomePageSections'
 import Animation from '../RocketScience/Animation'
+import ThreeD from '../RocketScience/ThreeD'
 
 function MainContent() {
     document.title = 'Home page'
@@ -11,6 +12,10 @@ function MainContent() {
                 title = "For wannabe multiplanetary species"                
                 noBtn={true}
                 sectionInfo = "Getting back to the Moon, mining asteroids, building a city on Mars, colonizing planets, you name it...if all these excite you, this is your website."
+            />
+
+            <Animation
+                type="main-page"
             />
 
             <HomePageSections 
@@ -31,16 +36,21 @@ function MainContent() {
                 sectionInfo = "Some of us has already left the Earth...Thanks to WAIS Multiplanetary API, we can get the updated list of the astronauts in space, and many more about them and their mission in space."
             />
 
-            <HomePageSections 
+            
+
+            {/* <HomePageSections 
                 bgImg = "pass-satellite-api"
                 title = "Look at the sky! There might be a satellite flying over your head"
                 linkTo ='./'
                 btnActive = {false}
                 buttonText = "coming soon"
                 sectionInfo = "Query next passes for a given satellite above you. Uses Skyfield to predict passes, and Celestrak GP API to get updated TLE data."
+            /> */}
+            <ThreeD 
+                type="main-page"
             />
 
-            <HomePageSections 
+            {/* <HomePageSections 
                 bgImg = "launch-api"
                 title = "Everything about launches, spaceships and many more"
                 linkTo ='./'
@@ -48,18 +58,18 @@ function MainContent() {
                 buttonText = "coming soon"
                 sectionInfo = "If you live for adventure, what bigger adventure is there than leaving your planet,
                 traveling through space and helping to colonize another celestial body?"
-            />
+            /> */}
 
             <HomePageSections 
                 bgImg = "api"
                 title = "Use multiplanetary { APIs }"
                 linkTo ='./api'
-                btnActive = {true}
+                btnActive = {false}
                 buttonText = "See APIs"
                 sectionInfo = "Based on simple REST principles, the Multiplanetary API endpoints return JSON metadata, directly from the Multiplanetary Data Catalogue."
             />       
 
-            <Animation />
+            {/* <Animation /> */}
         </>
     )
 }

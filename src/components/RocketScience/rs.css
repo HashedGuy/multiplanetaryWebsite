@@ -5,29 +5,70 @@
     margin-bottom: 0;
     display: flex;
     justify-content: space-between;
+    height: 30vh;
 }
 
+.animationM {
+    height: 100vh !important;
+}
+
+.animationTitle {
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 100%;
+    align-self: flex-end;
+    /* padding: 1em; */
+    /* margin: 1em 4em; */
+    padding: 2em 7em;
+    padding-right: 0;
+}
 .rocket {
-    width: 250px;
+    width: 100%;
+    height: 620px;
     opacity: .4;
     margin-left: 25em;
     animation: slide 10s ease-in infinite;
     animation-fill-mode: forwards;
 }
 
+.issMP {
+    width: 100%;
+    height: 120px;
+    opacity: .4;
+    animation: drift 10s infinite;
+}
+
+@keyframes drift {
+    from {transform:translateX(-500px)}
+    to {transform: translateX(1200px)}
+}
+
+.rocketM {
+    animation: slideM 20s ease-in infinite;
+    margin: 0;
+    height: 520px;
+}
+
 @keyframes slide {
     0% {transform:rotate(60deg) scale(1) translate(200px, 400px);}
-    100% {transform: rotate(20deg) scale(.1) translate(-200px, 200px);}
-    
+    100% {transform: rotate(-40deg) scale(.01) translate(500px, -800px);} 
 }
+
+@keyframes slideM {
+    0% {transform:rotate(60deg) scale(1) translate(-100px, 400px);}
+    100% {transform: rotate(-40deg) scale(.1) translate(500px, -800px);} 
+}
+
 
 .capsule {
     height: 125px;
     margin-right: 1em;
     opacity: .4;
     animation: slideX 15s ease-in-out infinite;
-    animation-fill-mode: both;
-        
+    animation-fill-mode: both;     
+}
+
+.capsuleM {
+    animation: slideXM 20s ease-in-out infinite;
 }
 
 @keyframes slideX {
@@ -36,6 +77,13 @@
     100% {transform: rotate(5deg) scale(1) translateY(350px);}
     
 }
+
+@keyframes slideXM {
+    0% {transform: rotate(60deg) scale(.4) translateX(-400px);}
+    50% {transform: rotate(10deg) scale(.6) translateY(-20px);}
+    100% {transform: rotate(5deg) scale(1.5) translateY(400px);}
+}
+
 
 /* ThreeD */
 .mainThreeD {
@@ -50,11 +98,27 @@
     perspective-origin: 50% calc(50% - 2em);
 }
 
+.mainThreeDMP {
+    justify-content: space-between;
+}
+
+.rsMP {
+    width: 30%;
+    align-self: flex-end;
+    font-size: 1.2rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 2em 0;
+    margin-left: 5em;
+}
 
 .scene {
     position: relative;
     transform-style: preserve-3d;
     animation: sceneRotate 30s infinite linear; 
+}
+
+.sceneMP {
+    margin-right: 5em;
 }
 
 @keyframes sceneRotate {
