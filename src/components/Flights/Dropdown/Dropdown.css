@@ -38,6 +38,7 @@
     justify-content: center;
     font-size: 1rem;
     border: 0 !important;
+    position: relative;
   }
 
   .nav-listY {
@@ -74,7 +75,7 @@
 
   .dropdown {
     position: absolute;
-    top: 425px;
+    top: 30px;
     width: 190px;
     transform: translateX(5%);
     background-color: rgba(17, 17, 17, 0.658);
@@ -163,13 +164,13 @@
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
     .dropdown {
-      top: 655px;
+      /* top: 655px; */
       width: 160px;
       transform: translateX(20%);
     }
 
     .ddArrival {
-      top: 1483px;
+      /* top: 1483px; */
     }
 
     .navbarX {
@@ -186,6 +187,6 @@
 and (min-device-width: 568px) 
 and (max-device-width: 1024px) {
   .ddArrival {
-    top: 1147px;
+    /* top: 1147px; */
   }
 }
