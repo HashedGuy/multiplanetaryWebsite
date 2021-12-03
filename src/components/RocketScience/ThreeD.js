@@ -7,17 +7,17 @@ function ThreeD(props) {
             {props.type === 'main-page' ?
                 <div className="rsMP"> 
                 <h1>It's a rocket science!</h1>
-                <p className="rimuv">We'll try to learn together rocket science by applying basic physics concepts and humble animations </p>
+                <p className="rimuv">We'll try to learn more about space by applying basic physics concepts and humble animations </p>
                 <Link to="./rocketscience" className="btn">Coming soon</Link>
                 </div>
                 :''} 
             <div className={props.type ==='main-page' ? "scene sceneMP": "scene"}>
                 <div className="floor"></div>
                 <div className="cube">
-                    <div className="front"></div>
-                    <div className="back"></div>
-                    <div className="left"></div>
-                    <div className="right"></div>
+                    <div className="front">F</div>
+                    <div className="back">m</div>
+                    <div className="left">g</div>
+                    <div className="right">=</div>
                     <div className="top">
                         <div className="ballShadow"></div>
                     </div>

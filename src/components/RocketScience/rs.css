@@ -1,7 +1,8 @@
 .animation {
     /* margin: 10em 5em; */
     /* padding: 5em; */
-    margin-top: 5em;
+    /* margin-top: 5em; */
+    padding-top: 2em;
     margin-bottom: 0;
     display: flex;
     justify-content: space-between;
@@ -29,8 +30,8 @@
 }
 
 .issMP {
-    width: 100%;
-    height: 120px;
+    width: 50%;
+    height: 90px;
     opacity: .4;
     animation: drift 10s infinite;
 }
@@ -53,7 +54,8 @@
 
 @keyframes slideM {
     0% {transform:rotate(60deg) scale(1) translate(-100px, 400px);}
-    100% {transform: rotate(-40deg) scale(.1) translate(500px, -800px);} 
+    50% {transform: rotate(-40deg) scale(.5) translate(400px, -2900px);} 
+    100% {transform: rotate(321deg) scale(.1) translate(500px, -2800px);} 
 }
 
 
@@ -77,7 +79,7 @@
 }
 
 @keyframes slideXM {
-    0% {transform: rotate(60deg) scale(.4) translateX(-400px);}
+    0% {transform: rotate(60deg) scale(.4) translateX(-1000px) translateY(-1200px);}
     50% {transform: rotate(10deg) scale(.6) translateY(-20px);}
     100% {transform: rotate(5deg) scale(1.5) translateY(400px);}
 }
@@ -185,6 +187,8 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    padding: 0 1em;
+    padding-top: .2em;
     background: rgba(166, 206, 187, 0.467);
     box-shadow: 0 0 0.5em #000a inset;
 }
@@ -260,7 +264,7 @@
     }
 
     @keyframes slideM {
-        0% {transform:rotate(34deg) scale(1) translate(-100px, 400px);}
+        0% {transform:rotate(34deg) scale(.5) translate(-100px, 400px);}
         100% {transform: rotate(34deg) scale(.1) translate(-500px, -500px);} 
     }
 
@@ -290,7 +294,7 @@
         margin-left: 1.5em;
     }
 
-    .scene {
+    .sceneMP {
         margin-right: 2em;
     }
 
