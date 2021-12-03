@@ -75,13 +75,13 @@ function Schedule() {
 
                         <div className="departure-features-xtra">
                         {clicked ? 
-                            <p>The current flight table shows the departures from the  
+                            <p>The current flight table shows the departures from the <span style={{textTransform: 'capitalize'}}> 
                             {
-                                clickedLocation ? ` ${clickedLocation.toLocaleUpperCase()}` :
+                                clickedLocation ? ` ${clickedLocation.toLowerCase()}` :
 
                                 (clickedLocation === undefined) ? ' Earth'
                                 : ''
-                            }
+                            }</span>
                             
                             {
                                 clickedOperator ? `  operated by ${clickedOperator.toLocaleUpperCase()}` :
@@ -211,13 +211,13 @@ function Schedule() {
 
                         <div className={bigger ? "departure-features-xtra smaller" : "departure-features-xtra"}>
                         {clickedX ? 
-                            <p>The current flight table shows the arrivals for the  
+                            <p>The current flight table shows the arrivals for the  <span style={{textTransform: 'capitalize'}}>
                             {
-                                clickedLocationA ? ` ${clickedLocationA.toLocaleUpperCase()}` :
+                                clickedLocationA ? ` ${clickedLocationA.toLowerCase()}` :
 
                                 (clickedLocationA === undefined) ? ' Earth'
                                 : ''
-                            }
+                            }</span>
                             
                             {
                                 clickedOperatorA ? `  operated by ${clickedOperatorA.toLocaleUpperCase()}` :
