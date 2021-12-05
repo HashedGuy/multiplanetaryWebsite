@@ -5,6 +5,7 @@ import PeopleInSpace from './components/PeopleInSpace/PeopleInSpace'
 import API from './components/API/API'
 import Flights from './components/Flights/Flights'
 import RocketScience from './components/RocketScience/RocketScience'
+import BehindScenes from './components/BehindScenes/BehindScenes'
 import {Route} from 'react-router-dom'
 import Navbar from './components/HomePage/Navbar'
 import Footer from './components/HomePage/Footer'
@@ -19,6 +20,7 @@ function App() {
             <Route exact path='/api' component={API}/>
             <Route exact path='/flights' component={Flights}/>
             <Route exact path='/rocketscience' component={RocketScience}/>
+            <Route exact path='/behindscenes' component={BehindScenes}/>
             <Footer /> 
                               
         </>

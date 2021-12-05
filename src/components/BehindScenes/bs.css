@@ -1,0 +1,13 @@
+.aloha {
+    margin: 15em 10em;
+    border: 1px solid aqua;
+    text-align: center;
+    padding: 2em;
+    background: rgba(54, 54, 54, 0.438);
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.aloha h2 {
+    margin-bottom: 1em;
+}
