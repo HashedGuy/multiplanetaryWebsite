@@ -153,7 +153,7 @@ function DeadRover() {
                         <p>Photo taken: {isLoading ? <BeatLoader size={6} color='red' loading /> : deadPhoto.earth_date}</p>
                         {/* <p>Camera: {}</p> */}
                         <p className="latest-photo-info" id="latest-photo-info-perseverance"></p>
-                        <a href="" className="btn"><span>{myDeadRover ? myDeadRover : "Opportunity"} album</span></a>
+                        {/* <a href="" className="btn"><span>{myDeadRover ? myDeadRover : "Opportunity"} album</span></a> */}
                     </div>
                     <div className="latest-photo-section" id="perseverance-latest-photo">
                         <img src={isLoading ? "Photo Loading..." : deadPhoto.img_src} className="latest-photo" alt={`latest photo from ${myDeadRover}`}/>

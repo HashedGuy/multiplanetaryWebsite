@@ -12,6 +12,8 @@ import MoonArrivals from './Routes/MoonArrivals'
 import ISSArrivals from './Routes/ISSArrivals'
 import TSSArrivals from './Routes/TSSArrivals'
 
+import {BounceLoader, BeatLoader} from 'react-spinners'
+
 function Schedule() {
     document.title = 'Multiplanetary Flights'    
     const [flights, setFlights] = useState([])
@@ -23,6 +25,7 @@ function Schedule() {
     const [clickedLocationA, setClickedLocationA] = useState('earth')
     const [bigger, setBigger] = useState(false)
     const [departureBigger, setDepartureBigger] = useState(false)
+    const [isLoading, setLoading] = useState(false)
 
     const sendOperatorToParent = (index) => { // the callback
         setClickedOperator(index);
@@ -41,11 +44,14 @@ function Schedule() {
       };
 
     useEffect(() => {
+        setLoading(true)
         fetch('https://fdo.rocketlaunch.live/json/launches/next/5')
             .then(res => res.json())
             .then(data => {
-                console.log(data.result)
+                
+                // console.log(data.result)
                 setFlights(data.result)
+                setLoading(false)
             })                
     }, [])
 
@@ -114,6 +120,7 @@ function Schedule() {
                             <div className="col">Status</div>
                         </div>
                         {
+                                isLoading ? <BeatLoader size={8} color='green' loading /> : 
                                 clickedOperator === 'OperatorX' ?
                                 'Choose one of the available commercial operators or the space agencies for the departure location'
                                 :
@@ -179,7 +186,7 @@ function Schedule() {
                             'Choose one of the available space stations for the departure location'
                             :
                             `No available departure flight from ${clickedLocation.toLocaleUpperCase()}.`             
-                        }                            
+                        }                       
                     </section>
                 </div>
                 <a 
@@ -249,6 +256,7 @@ function Schedule() {
                                 <div className="col">Departs from</div>                      
                                 <div className="col">Status</div>
                             </div>
+                            {}
                             {clickedOperatorA === 'OperatorX' ?
                                 'Choose one of the available commercial operators or the space agencies as the arrival location.'
                                 :

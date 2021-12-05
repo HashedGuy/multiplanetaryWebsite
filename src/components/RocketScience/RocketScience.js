@@ -1,5 +1,4 @@
 import React from 'react'
-import Animation from './Animation'
 import ThreeD from './ThreeD'
 import './rs.css'
 
