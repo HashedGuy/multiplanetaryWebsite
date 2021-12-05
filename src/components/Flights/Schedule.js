@@ -120,7 +120,7 @@ function Schedule() {
                             <div className="col">Status</div>
                         </div>
                         {
-                                isLoading ? <BeatLoader size={8} color='green' loading /> : 
+                                isLoading ? <BeatLoader size={10} color='green' loading /> : 
                                 clickedOperator === 'OperatorX' ?
                                 'Choose one of the available commercial operators or the space agencies for the departure location'
                                 :

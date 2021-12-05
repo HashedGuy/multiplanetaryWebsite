@@ -2,8 +2,7 @@ import React, {useState, useEffect} from 'react'
 import './pis.css'
 import ISSImg from "../../img/iss_croped.png"
 import TongImg from "../../img/tiangongX.png"
-import SoyuzImg from "../../img/soyuz.png"
-import DragonImg from "../../img/dragon.png"
+import {BeatLoader} from 'react-spinners'
 
 function Astronauts() {
     
@@ -16,6 +15,7 @@ function Astronauts() {
     const [showLaunchInfo, setLaunchInfo] = useState(false)
     const [showISSLocationInfo, setISSLocationInfo] = useState(false)
     const [showISSParking, setISSParking] = useState(false)
+    const [isLoading, setLoading] = useState(false)
 
     const showLaunch = () => {
         setLaunchInfo(!showLaunchInfo)
@@ -31,24 +31,27 @@ function Astronauts() {
 
     // Fetching PeopleInSpace from Multiplanetary API
     useEffect(() => {
+        setLoading(true)
         fetch('https://multiplanatery-api.netlify.app/api/wais')
             .then(res => res.json())
             .then(data => {
                 setSelectedAstro(data.people[0])
                 setAstronaut(data.people)
-                
+                setLoading(false)
             })
             
     }, [])
 
     // Fetching 'location' from wheretheiss API
     useEffect(() => {
+        setLoading(true)
         // (1) define within effect callback scope
         const fetchData = async () => {
           try {
             const res = await fetch('https://api.wheretheiss.at/v1/satellites/25544')
             const jsonData = await res.json()
             setIssLocation(jsonData)
+            setLoading(false)
             
           } catch (error) {
             console.log(error)
@@ -67,11 +70,13 @@ function Astronauts() {
     
     // Fetching 'timeZone' from wheretheiss API  
     const fetchDataTwo = async () => {
+        setLoading(true)
         try {
             const res = await fetch(`https://api.wheretheiss.at/v1/coordinates/${issLocation.latitude},${issLocation.longitude}`)
             const data = await res.json()
             setTimeZone(data.timezone_id)
             data.country_code === '??' ? setCountryCode('N/A') : setCountryCode(data.country_code)
+            setLoading(false)
         } catch (error) {
             console.log(error)
         }
@@ -113,13 +118,22 @@ function Astronauts() {
                     <div className="astro-info-medium">
                         <div className="astro-bio">
                             <div>
+                            {isLoading ? <BeatLoader size={8} color='green' loading /> :
+                            <>
                                 <h1>{selectedAstro.name}</h1><img className="flag" src={`flags/${selectedAstro.country_code}.svg`}/>                            
                                 <p>{selectedAstro.bio}</p>
-                            </div>                        
-                            <div className="astro-photo-section">
-                                <img className="astro-img" src={selectedAstro.img}/>
-                                <p className="credits">Credits to NASA Active Astronauts</p>
-                            </div>
+                            </>}
+                            </div> 
+                                                
+                                <div className="astro-photo-section">
+                                {isLoading ? <BeatLoader size={8} color='green' loading /> :
+                                    <> 
+                                    <img className="astro-img" src={selectedAstro.img}/>
+                                    <p className="credits">Credits to NASA Active Astronauts</p>
+                                    </>
+                                }
+                                </div>
+                            
                         </div>
 
                         {/* <div className="launch-details">
