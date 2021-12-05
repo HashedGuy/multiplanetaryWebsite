@@ -21,12 +21,26 @@
     padding-right: 0;
 }
 .rocket {
-    width: 300px;
+    width: 350px;
     height: 100%;
     opacity: .4;
-    margin-left: 25em;
+    margin-left: 15em;
     animation: slide 10s ease-in infinite;
     animation-fill-mode: forwards;
+}
+
+.neutron {
+    /* width: 400px; */
+    height: 200%;
+    opacity: .4;
+    margin-left: 25em;
+    animation: slideNeutron 15s ease-in infinite;
+    animation-fill-mode: forwards;
+}
+
+.neutronM {
+    width: 300px !important;
+    height: 100%;
 }
 
 .issMP {
@@ -50,6 +64,11 @@
 @keyframes slide {
     0% {transform:rotate(53deg) scale(1) translate(200px, 800px);}
     100% {transform: rotate(85deg) scale(.5) translate(-1000px, -1300px);} 
+}
+
+@keyframes slideNeutron {
+    0% {transform: scale(1) translateY(200px);}
+    100% {transform: scale(.1) translateY(-2400px);} 
 }
 
 @keyframes slideM {

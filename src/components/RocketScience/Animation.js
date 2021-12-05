@@ -16,10 +16,14 @@ function Animation(props) {
             {props.type === 'main-page' ? 
             <img className="issMP" src={`png/issmodel.png`}/> : ""}
             <img 
+                className={props.type === 'main-page' ? "neutron neutronM" : "neutron"} 
+                src={`png/neutron+.png`}
+            />
+            {/* <img 
                 className= {props.type === "main-page" ? "rocket rocketM" : "rocket"} 
                 style= {props.activeAnimationX ? {opacity:.4} : {}} 
                 src={`png/sn20.png`}
-            />
+            /> */}
             <img
                 className={props.type === "main-page" ? "capsule capsuleM" : "capsule"} 
                 style= {props.activeAnimation ? {opacity:.4} : {}} 
