@@ -13,6 +13,7 @@ import ISSArrivals from './Routes/ISSArrivals'
 import TSSArrivals from './Routes/TSSArrivals'
 
 import {BounceLoader, BeatLoader} from 'react-spinners'
+import SpaceXDepartures from './Routes/SpaceXDepartures'
 
 function Schedule() {
     document.title = 'Multiplanetary Flights'    
@@ -124,6 +125,11 @@ function Schedule() {
                                 clickedOperator === 'OperatorX' ?
                                 'Choose one of the available commercial operators or the space agencies for the departure location'
                                 :
+
+                                clickedOperator === 'spacex' ? 
+                                <SpaceXDepartures />
+                                :
+                                
                                 clickedOperator === 'private-companies' ?
                                 'Choose one of the available commercial operators for the departure location'
                                 :

@@ -10,7 +10,11 @@ function ThreeD(props) {
                 <p className="rimuv">We'll try to learn more about space by applying basic physics concepts and humble animations </p>
                 <Link to="./rocketscience" className="btn">Coming soon</Link>
                 </div>
-                :''} 
+                
+                :
+                
+                <div className="titleRS"><h1>Coming soon</h1></div>
+                } 
             <div className={props.type ==='main-page' ? "scene sceneMP": "scene"}>
                 <div className="floor"></div>
                 <div className="cube">
