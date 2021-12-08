@@ -166,6 +166,11 @@ body {
     margin-bottom: 2em;
 }
 
+.issLocation-show li{
+    font-family: 'Source Sans Pro', sans-serif !important;
+    letter-spacing: 1px;
+    line-height: 1.3em;
+}
 .launch-info, .issLocation-show, .parking-show {
     border-left:1px solid darkorange;
     padding-left: 1em;
