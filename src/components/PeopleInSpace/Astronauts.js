@@ -70,13 +70,13 @@ function Astronauts() {
     
     // Fetching 'timeZone' from wheretheiss API  
     const fetchDataTwo = async () => {
-        setLoading(true)
+        // setLoading(true)
         try {
             const res = await fetch(`https://api.wheretheiss.at/v1/coordinates/${issLocation.latitude},${issLocation.longitude}`)
             const data = await res.json()
             setTimeZone(data.timezone_id)
             data.country_code === '??' ? setCountryCode('N/A') : setCountryCode(data.country_code)
-            setLoading(false)
+            // setLoading(false)
         } catch (error) {
             console.log(error)
         }
