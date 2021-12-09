@@ -129,31 +129,11 @@ function Astronauts() {
                                 {isLoading ? <BeatLoader size={8} color='green' loading /> :
                                     <> 
                                     <img className="astro-img" src={selectedAstro.img}/>
-                                    <p className="credits">Credits to NASA Active Astronauts</p>
                                     </>
                                 }
                                 </div>
                             
                         </div>
-
-                        {/* <div className="launch-details">
-                            <a className="btn" onClick={showLaunch}>space journey</a>
-                                {showLaunchInfo ? 
-                                    <div className="launch-show">
-                                        <ul className="launch-info">
-                                            <li>Launched from: <span className="details">Baikonur, KZ</span></li>
-                                            <li>Launch rocket: <span className="details">Soyuz</span></li>
-                                            <li>Launch time: <span className="details">9 Apr 2021, 07:42 UTC</span> </li>
-                                            <li>Operator: <span className="details">Roscosmos</span></li><br/>
-                                            <li>Mission name: <span className="details">Soyuz MS-18</span></li>
-                                            <li>Mission type: <span className="details">ISS crew rotation</span></li>
-                                        </ul>
-                                        <div className="launch-visuals">
-                                            <img src={DragonImg} />
-                                        </div>
-                                    </div> : ''
-                                }
-                        </div> */}
                     </div>
                     <div className="craft-details">
                         <div className = "craft-visual">

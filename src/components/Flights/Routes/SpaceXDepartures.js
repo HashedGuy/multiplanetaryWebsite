@@ -3,7 +3,7 @@ import React from 'react'
 function SpaceXDepartures() {
     return (
         <>
-            <div className="row">
+            {/* <div className="row">
                 <div className="col">
                     <img className="operator-logo" src="logos/spacex.png" title="SpaceX"/>
                 </div>
@@ -12,7 +12,7 @@ function SpaceXDepartures() {
                 <div className="col time">Dec 9, 2021 10:00 AM</div> 
                 <div className="col">Kennedy Space Center, United States</div> 
                 <div className="col status">Confirmed</div>
-            </div>
+            </div> */}
             <div className="row">
                 <div className="col">
                     <img className="operator-logo" src="logos/spacex.png" title="SpaceX"/>
