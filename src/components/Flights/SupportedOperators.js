@@ -3,7 +3,7 @@ import React from 'react'
 function SupportedOperators() {
     return (
         <div className="supported-operators">
-            <h1>Tracked operators</h1>
+            <h1>Available operators</h1>
             <div className="operators">
                 <a><img src={`logos/spacex.png`} className="supported-operators-logo" title="SpaceX" alt="spacex"/></a>
                 <a><img src={`logos/arianespace.png`} className="supported-operators-logo" title="ArianeSpace" alt="ariane-space"/></a>
