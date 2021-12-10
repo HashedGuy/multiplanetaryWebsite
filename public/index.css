@@ -324,19 +324,23 @@ Background images
     background-position: 20% top;
 }
 .hero-main {
-    background-image: url("bg-img/compressed/darken_galaxy_70.jpg");
+    /* background-image: url("bg-img/compressed/darken_galaxy_70.jpg"); */
+    background-image: url("https://ik.imagekit.io/74qyv5bswgr/darken_galaxy_70_XKKgxqR3l.jpg?updatedAt=1639145448935");
 }
 
 .photos-api, .hero-photos {
-    background-image: url("bg-img/compressed/darken-rover_50.jpg");
+    /* background-image: url("bg-img/compressed/darken-rover_50.jpg"); */
+    background-image: url("https://ik.imagekit.io/74qyv5bswgr/darken-rover_D2auRI6hq.jpg?updatedAt=1639145196817");
 }
 
 .pis-api {
-    background-image: url("bg-img/compressed/darkenpis.jpg");
+    /* background-image: url("bg-img/compressed/darkenpis.jpg"); */
+    background-image: url("https://ik.imagekit.io/74qyv5bswgr/darkenpis_hdD-GB0i_.jpg?updatedAt=1639145059139");
 }
 
 .api {
-    background-image: url("bg-img/compressed/darken-nem-api.png");
+    /* background-image: url("bg-img/compressed/darken-nem-api.png"); */
+    background-image: url("https://ik.imagekit.io/74qyv5bswgr/darken-nem-api_IF8JeRZ93B.png?updatedAt=1639144708397");
 }
 
 /* Mobile */
@@ -346,15 +350,18 @@ Background images
   and (-webkit-min-device-pixel-ratio: 2) {
 
     .hero-main {
-        background-image: url("bg-img/compressed/darken_galaxy_70.jpg");
+        /* background-image: url("bg-img/compressed/darken_galaxy_70.jpg"); */
+        background-image: url("https://ik.imagekit.io/74qyv5bswgr/darken_galaxy_70_XOYTxq90jn.jpg?updatedAt=1639146233938");
     }
 
     .photos-api, .hero-photos {
-        background-image: url("bg-img/compressed/darken-rover_70.jpg");
+        /* background-image: url("bg-img/compressed/darken-rover_70.jpg"); */
+        background-image: url("https://ik.imagekit.io/74qyv5bswgr/darken-rover_70_KQ_mdeRxpf.jpg?updatedAt=1639146233311");
     }
 
     .api {
-        background-image: url("bg-img/compressed/darken-med-api-.png");
+        /* background-image: url("bg-img/compressed/darken-med-api-.png"); */
+        background-image: url("https://ik.imagekit.io/74qyv5bswgr/darken-med-api-_sb3_0Em087.png?updatedAt=1639146234359");
     }
 
 }
@@ -362,15 +369,18 @@ Background images
 /* Retina screens */
 @media (min-width: 1400px) {
     .hero-main {
-        background-image: url("bg-img/compressed/darken_galaxy.jpg");
+        /* background-image: url("bg-img/compressed/darken_galaxy.jpg"); */
+        background-image: url("https://ik.imagekit.io/74qyv5bswgr/darken_galaxy_eFX0Kgt9o9r.jpg?updatedAt=1639145316151");
     }
 
     .photos-api, .hero-photos {
-        background-image: url("bg-img/compressed/darken-rover.jpg");
+        /* background-image: url("bg-img/compressed/darken-rover.jpg"); */
+        background-image: url("https://ik.imagekit.io/74qyv5bswgr/darken-rover_D2auRI6hq.jpg?updatedAt=1639145196817");
     }
 
     .api {
-        background-image: url("bg-img/compressed/darken-nem-api.png");
+        /* background-image: url("bg-img/compressed/darken-nem-api.png"); */
+        background-image: url("https://ik.imagekit.io/74qyv5bswgr/darken-nem-api_IF8JeRZ93B.png?updatedAt=1639144708397");
     }
 }
 
