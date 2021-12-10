@@ -324,27 +324,19 @@ Background images
     background-position: 20% top;
 }
 .hero-main {
-    background-image: url("bg-img/darken_galaxy_70.jpg");
+    background-image: url("bg-img/compressed/darken_galaxy_70.jpg");
 }
 
 .photos-api, .hero-photos {
-    background-image: url("bg-img/darken-rover_50.jpg");
+    background-image: url("bg-img/compressed/darken-rover_50.jpg");
 }
 
 .pis-api {
-    background-image: url("bg-img/darkenpis.jpg");
-}
-
-.pass-satellite-api {
-    background-image: url("bg-img/darken-man-min_50.jpg");
-}
-
-.launch-api {
-    background-image: url("bg-img/launch-api_50.jpg");
+    background-image: url("bg-img/compressed/darkenpis.jpg");
 }
 
 .api {
-    background-image: url("bg-img/darken-nem-api.png");
+    background-image: url("bg-img/compressed/darken-nem-api.png");
 }
 
 /* Mobile */
@@ -354,22 +346,15 @@ Background images
   and (-webkit-min-device-pixel-ratio: 2) {
 
     .hero-main {
-        background-image: url("bg-img/darken_galaxy_70.jpg");
+        background-image: url("bg-img/compressed/darken_galaxy_70.jpg");
     }
 
     .photos-api, .hero-photos {
-        background-image: url("bg-img/darken-rover_70.jpg");
+        background-image: url("bg-img/compressed/darken-rover_70.jpg");
     }
 
-    .pass-satellite-api {
-        background-image: url("bg-img/darken-man-min_70.jpg");
-    }
-
-    .launch-api {
-        background-image: url("bg-img/launch-api_70.jpg");
-    }
     .api {
-        background-image: url("bg-img/darken-med-api.png");
+        background-image: url("bg-img/compressed/darken-med-api-.png");
     }
 
 }
@@ -377,22 +362,15 @@ Background images
 /* Retina screens */
 @media (min-width: 1400px) {
     .hero-main {
-        background-image: url("bg-img/darken_galaxy.jpg");
+        background-image: url("bg-img/compressed/darken_galaxy.jpg");
     }
 
     .photos-api, .hero-photos {
-        background-image: url("bg-img/darken-rover.jpg");
+        background-image: url("bg-img/compressed/darken-rover.jpg");
     }
 
-    .pass-satellite-api {
-        background-image: url("bg-img/darken-man-min.jpg");
-    }
-
-    .launch-api {
-        background-image: url("bg-img/launch-api.jpg");
-    }
     .api {
-        background-image: url("bg-img/darken-nem-api.png");
+        background-image: url("bg-img/compressed/darken-nem-api.png");
     }
 }
 
