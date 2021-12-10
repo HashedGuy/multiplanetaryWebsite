@@ -8,13 +8,14 @@ function Animation(props) {
         {props.type === "main-page" ? 
             <div className="animationTitle">
                 <h1>Don't miss the launch!</h1> 
-                <p>Feel like you're at the airport checking the flight table for departures or arrivals. But space airport...</p>
                 <Link to="./flights" className="btn">Flights table</Link>
+                <p>Feel like you're at the airport checking the flight table for departures or arrivals. But space airport...</p>
+                
             </div>
                 : ''
             }
-            {props.type === 'main-page' ? 
-            <img className="issMP" src={`png/issmodel.png`}/> : ""}
+            {/* {props.type === 'main-page' ? 
+            <img className="issMP" src={`png/issmodel.png`}/> : ""} */}
             <img 
                 className={props.type === 'main-page' ? "neutron neutronM" : "neutron"} 
                 src={`png/neutron+.png`}

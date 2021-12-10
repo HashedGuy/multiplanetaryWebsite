@@ -4,7 +4,7 @@
     /* margin-top: 5em; */
     padding-top: 2em;
     margin-bottom: 0;
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
     height: 30vh;
 }
@@ -15,11 +15,20 @@
 
 .animationTitle {
     font-family: 'Source Sans Pro', sans-serif;
-    width: 100%;
-    align-self: flex-end;
-    padding: 2em 7em;
-    padding-right: 0;
+    width: 55%;
+    /* align-self: flex-end; */
+    padding: 2em 7.5em;
+    position: relative;
+    top: 55%;
+    /* padding-right: 0; */
 }
+
+.animationTitle h1 {
+    margin-bottom: .5em;
+    font-size: 2.2rem;
+    /* width: 55%; */
+}
+
 .rocket {
     width: 350px;
     height: 100%;
@@ -329,5 +338,29 @@
         margin-right: 2em;
     }
 
+    .animationTitle {
+        width: 90%;
+        top: 68%;
+        padding: 3em 1em;
+    }
+
+    .animationTitle h1 {
+        font-size: 1.5rem;
+    }
     
   }
+
+  /* Tablet version */
+@media only screen 
+and (min-device-width: 568px) 
+and (max-device-width: 1024px) {
+    .animationTitle {
+        width: 90%;
+        top: 65%;
+        padding: 3em 2em;
+    }
+
+    .animationTitle h1 {
+        font-size: 2rem;
+    }
+}

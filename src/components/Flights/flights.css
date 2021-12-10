@@ -267,9 +267,9 @@
 .supported-operators-logo {
     width: 90px;
     height: 90px;
-    border-radius: 50%;
+    border-radius: 5px 20px 5px;
     margin: .5em 1em;
-    box-shadow: 3px 3px 3px rgb(49, 49, 49);
+    box-shadow: 0 8px 8px -4px rgb(49, 49, 49);
     transition: all .2s ease-in-out; 
 }
 
@@ -333,6 +333,7 @@
         width: 30px;
         height: 30px;
         margin: .5em;
+        border-radius: 50%;
     }
 
     .supported-operators {

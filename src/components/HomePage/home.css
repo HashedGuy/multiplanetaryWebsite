@@ -30,6 +30,12 @@ Background images
     background-position: 20% top;
 }
 
+.flights-api {
+    background: rgb(29, 29, 29);
+    background-size: cover;
+    background-position: 20% top;
+}
+
 /* Tablets + desktop */
 @media (min-width: 600px) {
 

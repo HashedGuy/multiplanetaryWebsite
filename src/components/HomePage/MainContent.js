@@ -14,9 +14,18 @@ function MainContent() {
                 sectionInfo = "Getting back to the Moon, mining asteroids, building a city on Mars, colonizing planets, you name it...if all these excite you, this is your website."
             />
 
-            <Animation
-                type="main-page"
+            <HomePageSections 
+                bgImg="flights-api"
+                title="Don't miss the launch!"
+                btnActive={true}
+                linkTo='./flights'
+                buttonText="flights table"
+                sectionInfo="Feel like you're at the airport checking the flight table for departures or arrivals. But space airport..."
             />
+
+            {/* <Animation
+                type="main-page"
+            /> */}
 
             <HomePageSections 
                 bgImg = "photos-api"
