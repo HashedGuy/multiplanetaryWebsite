@@ -75,7 +75,7 @@ function Schedule() {
                 >
 
                     <Dropdown 
-                        title="Departures &#128640;"
+                        title="Departures"
                         sendOperatorToParent={sendOperatorToParent}
                         sendLocationToParent={sendLocationToParent}
                     />
@@ -215,7 +215,7 @@ function Schedule() {
                     <div className="arrivals">
 
                         <DropdownArrival 
-                            title="Arrivals &#129666;"
+                            title="Arrivals"
                             sendOperatorToParentA={sendOperatorToParentA}
                             sendLocationToParentA={sendLocationToParentA}
                         >
