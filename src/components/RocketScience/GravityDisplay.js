@@ -30,8 +30,8 @@ function GravityDisplay(props) {
             orangeRelease = {orangeRelease}  
             bothRelease = {bothRelease}
         />
-
-        <a className="btn" onClick={()=>setShowWhy(!showWhy)}>
+    <div className="queriesG">
+        <a className="btn btn-query" onClick={()=>setShowWhy(!showWhy)}>
             {props.id === 'earth' ? "Why balls fall at all" 
             :
             
@@ -78,7 +78,12 @@ function GravityDisplay(props) {
             :
 
             props.id === 'mars' ?
-            <p>Because the gravity is stronger than on the Moon. <br/><br/>Despite the fact Mars has an atmosphere, the air density is so low that it would not affect the falling speed of the objects dramatically like on the Earth.</p>
+            <>
+            <p>Because the Martian gravity is stronger than on the Moon. <br/><br/></p>
+            <p className="question"><a onClick={()=>setWhyFaster(!whyFaster)}>Martian air resistance slows down the objects' fall as well?</a></p>
+                <br/>
+                <p style={whyFaster ? {display: 'block'} : {display: 'none'}}>Despite the fact Mars has an atmosphere, the air density is so low that it would not affect the falling speed of the objects dramatically like it does on the Earth.</p>
+            </>
             :
 
             // props.id === 'venus' ?
@@ -87,6 +92,7 @@ function GravityDisplay(props) {
             
             ''}
             </div>
+        </div>
     </div>
 
     )

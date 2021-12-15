@@ -8,7 +8,7 @@
 }
 
 .gravity p {
-    width: 70%;
+    /* width: 100%; */
     font-size: 1.1rem;
 }
 .gravity h1 {
@@ -40,11 +40,16 @@
 }
 
 .gravity-display {
-    flex: 1;
+    flex: 2;
+    text-align: end;
 }
 
 .gravity-animation {
     margin: 10em 0;
+}
+
+.queriesG {
+    text-align: left;
 }
 
 .calculations {
@@ -266,3 +271,78 @@
 .question {
     font-size: 1.1rem !important;
 }
+
+/* Mobile portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+      .gravity-sections {
+          flex-direction: column;
+          margin: 0;
+      }
+
+      .gravity {
+          padding: 1em;
+      }
+
+      .gravity-sections h1 {
+          margin: 0;
+          font-size: 1.6rem;
+      }
+
+      .locations {
+          order: 1;
+          margin-top: 2em;
+          text-align: center;
+      }
+
+      .gravity-display {
+          margin-top: 1em;
+          text-align: center;
+      }
+
+      .release {
+          font-size: .5rem;
+      }
+
+
+  }
+
+  /* Tablet version */
+  @media only screen 
+  and (min-device-width: 568px) 
+  and (max-device-width: 1024px) {
+      .gravity-display {
+          flex: 2;
+          padding: 1em;
+      }
+
+      .release {
+          margin-right: 1em;
+      }
+
+      .mainGravityX {
+          min-height: 70vh;
+      }
+
+      .gravity {
+          padding: .5em 2em;
+      }
+
+      .gravity p {
+          width: 100%;
+      }
+
+      .gravity-sections h1 {
+          font-size: 1.5rem;
+      }
+
+      .btn-query {
+          font-size: .9rem;
+      }
+
+      .release {
+          font-size: .6rem;
+      }
+  }
