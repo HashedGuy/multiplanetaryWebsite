@@ -20,9 +20,9 @@ function GravityDisplay(props) {
     }, [props.id]) 
     return (
         <div className="gravity-display">
-        <a className="btn release" onClick={() => setOrangeRelease(props.id)}>Release orange ball</a>                    
-        <a className="btn release" onClick={() => setBothRelease(props.id)}>Release both</a>
-        <a className="btn release" onClick={() => setPinkRelease(props.id)}>Release green ball</a>
+        <a className="btn release" onClick={() => setOrangeRelease(props.id)}>Drop orange ball</a>                    
+        <a className="btn release" onClick={() => setBothRelease(props.id)}>Drop both</a>
+        <a className="btn release" onClick={() => setPinkRelease(props.id)}>Drop green ball</a>
         <a className="btn release restart-btn" onClick={restartFunc}>Restart</a>
 
         <GravityAnimation 

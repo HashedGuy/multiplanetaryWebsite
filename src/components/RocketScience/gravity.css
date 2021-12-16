@@ -304,7 +304,7 @@
       }
 
       .release {
-          font-size: .5rem;
+          font-size: .6rem;
       }
 
 
@@ -320,7 +320,8 @@
       }
 
       .release {
-          margin-right: 1em;
+          margin-right: .7em;
+          font-size: .6rem;
       }
 
       .mainGravityX {
@@ -341,9 +342,5 @@
 
       .btn-query {
           font-size: .9rem;
-      }
-
-      .release {
-          font-size: .6rem;
       }
   }
