@@ -23,6 +23,7 @@ function GravityDisplay(props) {
 
 
     const reboostFunc = () => {
+        restartFunc()
         setReboost(props.id)
             setCount(prevCount => prevCount - 1)
         
