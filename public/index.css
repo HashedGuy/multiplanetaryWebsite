@@ -343,6 +343,10 @@ Background images
     background-image: url("https://ik.imagekit.io/74qyv5bswgr/darken-nem-api_IF8JeRZ93B.png?updatedAt=1639144708397");
 }
 
+.sceneISS {
+    background-image: url("bg-img/iss-inside.jpg");
+}
+
 /* Mobile */
 @media only screen 
   and (min-device-width: 320px) 

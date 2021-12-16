@@ -4,8 +4,24 @@ import './gravity.css'
 function GravityAnimation(props) {
     return (
         <div className="mainGravityX">
-            <div className="sceneG">
-                <div className="floorG"></div>
+            <div className={props.reboost ? "sceneG sceneISS" : "sceneG"}>
+                <div 
+                    className={
+                            props.id === 'iss' ? "floorG floorISS" 
+                            :
+
+                            props.id === 'mars' ? "floorG floorMars"
+                            :
+
+                            props.id === 'moon' ? "floorG floorMoon"
+                            :
+
+                            "floorG"
+                            
+                        }
+                >
+
+                </div>
                 <div 
                     className={
                         (props.orangeRelease === 'earth') || (props.bothRelease === 'earth') ? "gravity-ball orange-earth" 
@@ -17,7 +33,10 @@ function GravityAnimation(props) {
                         (props.orangeRelease === 'mars') || (props.bothRelease === 'mars') ? "gravity-ball mars"
                         :
 
-                        (props.orangeRelease === 'venus') || (props.bothRelease === 'venus') ? "gravity-ball venus"
+                        (props.orangeRelease === 'iss') || (props.bothRelease === 'iss') ? "gravity-ball orange-iss"
+                        :
+
+                        (props.reboost === 'iss') ? "gravity-ball reboost-iss"
                         :
                          
                         "gravity-ball"
@@ -34,7 +53,10 @@ function GravityAnimation(props) {
                         (props.pinkRelease === 'mars') || (props.bothRelease === 'mars') ? "gravity-ball-two mars"
                         :
 
-                        (props.pinkRelease === 'venus') || (props.bothRelease === 'venus') ? "gravity-ball-two venus"
+                        (props.pinkRelease === 'iss') || (props.bothRelease === 'iss') ? "gravity-ball-two green-iss"
+                        :
+
+                        (props.reboost === 'iss') ? "gravity-ball-two reboost-iss"
                         :
                         
                          "gravity-ball-two"}></div>

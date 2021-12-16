@@ -106,6 +106,10 @@
     animation: sceneRotate 30s infinite linear; 
 }
 
+.sceneISS {
+    animation: none !important;
+}
+
 .floorG{
     width: 10em;
     height: 10em;
@@ -124,11 +128,49 @@
     /* top: 1em;     */
 }
 
+.floorISS {
+    background-image: 
+        radial-gradient(#0000, rgb(24 24 26) 75%), 
+        repeating-conic-gradient( 
+            from 45deg,
+            rgb(255 255 255 / 90%) 0deg 90deg, 
+            rgb(51 108 194) 90deg 180deg) !important;
+}
+
+.floorMars {
+    background-image: radial-gradient(#0000, rgb(218 107 3 / 57%) 75%), repeating-conic-gradient( from 
+45deg
+, rgb(218 106 61) 
+0deg
+ 
+90deg
+, #0c0b0b 
+90deg
+ 
+180deg
+)!important;
+}
+
+.floorMoon {
+    background-image: radial-gradient(#0000, rgb(255 255 255 / 90%) 75%), repeating-conic-gradient( from 
+    45deg
+    , #0c0b0b 
+    0deg
+     
+    90deg
+    , rgb(255 255 255 / 75%) 
+    90deg
+     
+    180deg
+    ) !important;
+}
+
 .release {
     padding: .5em;
     font-size: .8rem;
     text-align: right;
     margin-right: .5em;
+    
 }
 
 .gravity-ball {
@@ -189,14 +231,24 @@
 }
 
 .mars {
-    animation: ballGravityMoon 1.7s forwards,
+    animation: ballGravityMoon 1.76s forwards,
     sceneRotate 30s infinite linear reverse; 
 }
 
-/* .venus {
-    animation: ballGravityMoon 1s forwards,
+.orange-iss {
+    animation: ballGravityISSO 5s infinite,
     sceneRotate 30s infinite linear reverse; 
-} */
+}
+
+.green-iss {
+    animation: ballGravityISSG 5s infinite,
+    sceneRotate 30s infinite linear reverse; 
+}
+
+.reboost-iss {
+    animation: reboost 10s 3s forwards;
+    /* sceneRotate 30s infinite linear reverse;  */
+}
 
 @keyframes sceneRotate {
     to {transform: rotateY(360deg)}
@@ -232,16 +284,50 @@
     100% {bottom: 0em;}
 }
 
+@keyframes ballGravityISSO {
+    0% { bottom: 4em;}
+    40% {bottom: 3.9em;} 
+    75% {bottom: 3.95em;}
+    100% {bottom: 4em;}
+}
+
+@keyframes ballGravityISSG {
+    0% {bottom: 4em;}
+    40% {bottom: 3.9em; } 
+    75% {bottom: 3.95em;}
+    100% {bottom: 4em;}
+}
+
+@keyframes reboost {
+    0% { bottom: 4em;}
+    100% {bottom: 3.9em; transform: translateX(300px);}
+}
+
 .restart-btn {
-    background: whitesmoke;
-    color: rgb(175, 38, 38);
+    background: rgb(175, 38, 38);
+    color: whitesmoke;
+    
 }
 
 .restart-btn:hover {
-    background: rgb(175, 38, 38);
-    color: whitesmoke;
+    background: whitesmoke;
+    color: rgb(175, 38, 38);
     /* border: 0; */
     
+}
+
+.reboost-btn {
+    background: green;
+    color: whitesmoke;
+}
+
+.reboost-btn:hover {
+    background: whitesmoke;
+    color: green;
+}
+
+.reboost-btn::after {
+    /* content: 'engine'; */
 }
 
 .orange-ball {

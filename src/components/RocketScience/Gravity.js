@@ -41,7 +41,9 @@ function Gravity(props) {
                         </a> */}
                         <a 
                             className={
-                                gravityLocation === 'iss' ? "btn btn-gravity btn-gr-active" : "btn btn-gravity btn-gr-not-active"}>
+                                gravityLocation === 'iss' ? "btn btn-gravity btn-gr-active" : "btn btn-gravity"}
+                                onClick={() => setGravityLocation('iss')}
+                        >
                             ISS (LEO)
                         </a>
                     </div>
@@ -76,9 +78,9 @@ function Gravity(props) {
                />
                :
 
-               gravityLocation === 'venus' ?
+               gravityLocation === 'iss' ?
                <GravityDisplay
-                            id="venus"
+                            id="iss"
                />
                :
 
