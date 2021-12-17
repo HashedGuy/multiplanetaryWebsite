@@ -43,10 +43,11 @@ function ThreeD(props) {
                 </div>
                 <div  className="ball"></div>                           
             </div>
-            <div className="titleRS">
+            {props.type === 'main-page' ? '' : 
+                <div className="titleRS">
                     <h1>Let's start with gravity</h1>
                     <div className="gravity-chevron"><a onClick={executeScroll}>&#8964;</a></div>
-                </div>
+                </div>}
             
         </div>
         {props.type ==='main-page' ? '' :
