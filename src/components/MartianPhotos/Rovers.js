@@ -89,6 +89,7 @@ function Rovers() {
 
     return (
         <section className="rovers">
+            <h1 className="api-error">Currently NASA servers do not respond. Please check again later:)</h1>
             <div className="rover-info">
                     {rovers.map(rover => (
                         

@@ -138,7 +138,7 @@
 }
 
 .floorMars {
-    background-image: radial-gradient(#0000, rgb(218 107 3 / 57%) 75%), repeating-conic-gradient( from 
+    background-image: radial-gradient(#0000, rgb(193 68 14 / 70%) 75%), repeating-conic-gradient( from 
 45deg
 , rgb(218 106 61) 
 0deg
@@ -245,7 +245,7 @@
 }
 
 .reboost-iss {
-    animation: reboost 10s 3s forwards;
+    animation: reboost 15s 3s forwards;
     /* sceneRotate 30s infinite linear reverse;  */
 }
 
@@ -325,10 +325,6 @@
     color: green;
 }
 
-.reboost-btn::after {
-    /* content: 'engine'; */
-}
-
 .orange-ball {
     display: inline-block;
     width: 1em;
@@ -354,7 +350,13 @@
 }
 
 .question {
+    margin-top: 1em;
+    margin-bottom: .3em;
     font-size: 1.1rem !important;
+}
+
+.reboost-message {
+    text-align: left;
 }
 
 /* Mobile portrait */
@@ -377,6 +379,10 @@
           font-size: 1.6rem;
       }
 
+      .gravity-sections p {
+          font-size: .9rem;
+      }
+
       .locations {
           order: 1;
           margin-top: 2em;
@@ -392,6 +398,15 @@
           font-size: .6rem;
       }
 
+      .reboost-message {
+          text-align: center;
+          font-size: 1rem;
+          margin: 1em;
+      }
+
+      .question {
+          font-size: 1rem !important;
+      }
 
   }
 

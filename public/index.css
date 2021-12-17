@@ -343,8 +343,14 @@ Background images
     background-image: url("https://ik.imagekit.io/74qyv5bswgr/darken-nem-api_IF8JeRZ93B.png?updatedAt=1639144708397");
 }
 
-.sceneISS {
-    background-image: url("bg-img/iss-inside.jpg");
+.api-error {
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    margin: 1em 2em;
+    padding: .5em;
+    border-radius: 5px;
+    border: 1px solid gray;
+    background: rgba(49, 49, 49, 0.534);
 }
 
 /* Mobile */
