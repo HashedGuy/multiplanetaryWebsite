@@ -65,7 +65,7 @@ function GravityDisplay(props) {
                     props.id === 'mars' ? "Why balls fall faster than moon"
                     :
             
-                    props.id === 'iss' ? "Soon...stay tuned!"
+                    props.id === 'iss' ? "What's reboost"
                     :
             
                     ''}
@@ -110,9 +110,13 @@ function GravityDisplay(props) {
                     </>
                     :
                     
-                    // props.id === 'venus' ?
-                    // <p>Kinda. The reason is Venus has almost the same gravity with the Earth. So the fall look almost identical in free fall, however air resistance would slow down <span className="blue-ball"></span> speed on the Earth, which doesn't happen in Venus.</p>
-                    // :
+                    props.id === 'iss' ?
+                    <>
+                    <p>International Space Station orbits in an altitude where there's almost no air, but there're still some tiny amount of atomic oxygen which in collision with the spacecraft slows down the ISS and causes a loss of altitude, around 90-100m every day. Therefore, once in a month the ISS reboosts (i.e. firing its engines) to adjust its altitude. <br/><br/>
+                        During reboost, the objects that stay at rest (but actually they're in free fall) start to move to the opposite direction of the spacecraft's velocity. When the reboost is complete, the objects are again stop to 'move'.
+                    Luckily, there're enough real shootage of the ISS reboost in YouTube. Here's <a href="https://www.youtube.com/watch?v=sI8ldDyr3G0">my fav one</a> by NASA astronaut Jeff Williams.</p>
+                    </>
+                    :
                     
                     ''}
                     </div>
