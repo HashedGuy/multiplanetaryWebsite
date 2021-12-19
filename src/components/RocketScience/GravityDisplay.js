@@ -125,7 +125,7 @@ function GravityDisplay(props) {
                     <>
                     <p>International Space Station orbits in an altitude where there's almost no air, but there're still some tiny amount of atomic oxygen which in collision with the spacecraft slows down the ISS and causes a loss of altitude, around 90-100m every day. Therefore, once in a month the ISS reboosts (i.e. firing its engines) to adjust its altitude. <br/><br/>
                         During reboost, the objects that stay at rest (but actually they're in free fall) start to move to the opposite direction of the spacecraft's velocity. When the reboost is complete, the objects are again stop to 'move'.
-                        Luckily, there're enough real shootage of the ISS reboost in YouTube. Here's <a href="https://www.youtube.com/watch?v=sI8ldDyr3G0">my fav one</a> by NASA astronaut Jeff Williams.</p>
+                        Luckily, there're enough real shootage of the ISS reboost in YouTube. Here's <a target="_blank" href="https://www.youtube.com/watch?v=sI8ldDyr3G0">my fav one</a> by NASA astronaut Jeff Williams.</p>
                   
                     <p className="question"><a onClick={()=>setWhyFaster(!whyFaster)}>If the balls are in free fall inside the ISS why do they float?</a></p>
                     <p style={whyFaster ? {display: 'block'} : {display: 'none'}}>Whenver we watch the ISS videos, we see objects, astronauts floating, like they're in zero-gravity. That's not true thou. The ISS itself, and everything inside it experience 90% of the Earth gravity but they manage to not to hit the Earth thanks to their enormous velocity (7.6km per second). This scenario is also called 'microgravity'.</p>
