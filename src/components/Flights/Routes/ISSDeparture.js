@@ -2,17 +2,7 @@ import React from 'react'
 
 function ISSDeparture() {
     return (
-        <>
-            <div className="row">
-                <div className="col">
-                    <img className="operator-logo" src="logos/roscosmos.png" title="Roscosmos"/>
-                </div>
-                <div className="col">MS-20</div>
-                <div className="col rimuv">Soyuz MS</div>
-                <div className="col time">20 Dec, 2021</div> 
-                <div className="col">International Space Station</div> 
-                <div className="col status-eit">Expected in time</div>
-            </div>
+        <>           
             <div className="row">
                 <div className="col">
                     <img className="operator-logo" src="logos/roscosmos.png" title="Roscosmos"/>
