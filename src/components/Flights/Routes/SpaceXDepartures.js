@@ -13,7 +13,7 @@ function SpaceXDepartures() {
                 <div className="col">Kennedy Space Center, United States</div> 
                 <div className="col status">Confirmed</div>
             </div> */}
-            <div className="row">
+            {/* <div className="row">
                 <div className="col">
                     <img className="operator-logo" src="logos/spacex.png" title="SpaceX"/>
                 </div>
@@ -22,7 +22,7 @@ function SpaceXDepartures() {
                 <div className="col time">Dec 19, 2021 03:58 AM</div>
                 <div className="col">Cape Canaveral Space Force Station, United States</div> 
                 <div className="col status-eit">Expected in time</div>
-            </div>
+            </div> */}
             <div className="row">
                 <div className="col">
                     <img className="operator-logo" src="logos/spacex.png" title="SpaceX"/>
@@ -33,7 +33,7 @@ function SpaceXDepartures() {
                 <div className="col">Kennedy Space Center, United States</div> 
                 <div className="col status-eit">Expected in time</div>
             </div>
-            <div className="row">
+            {/* <div className="row">
                 <div className="col">
                     <img className="operator-logo" src="logos/spacex.png" title="SpaceX"/>
                 </div>
@@ -42,7 +42,7 @@ function SpaceXDepartures() {
                 <div className="col time">Dec 2021</div> 
                 <div className="col">Vandenberg Space Force Base, United States</div> 
                 <div className="col status-tbc">TBC</div>
-            </div>
+            </div> */}
         </>
     )
 }
