@@ -119,6 +119,11 @@ function GravityDisplay(props) {
                         <p className="question"><a onClick={()=>setWhyFaster(!whyFaster)}>Would balls bounce higher or more on the Moon than they do on the Earth?</a></p>
                         
                         <p style={whyFaster ? {display: 'block'} : {display: 'none'}}>The answer is it depends. Not having air resistance might make us think of more bounces on the Moon but bouncing mainly depends on the elasticity of the ground. For instance, the wooden floor on the Earth would bounce the object more than the Moon's dusty ground.</p>
+                        <video width="640px" height="480px" controls>
+                          <source src="./video/SVGsMoon.mp4" type="video/mp4"/>
+                          {/* <source src="movie.ogg" type="video/ogg"/> */}
+                        Your browser does not support the video tag.
+                        </video> 
                     </>
                     :
                     
