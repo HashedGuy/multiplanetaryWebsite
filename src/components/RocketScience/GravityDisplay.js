@@ -103,6 +103,11 @@ function GravityDisplay(props) {
                         <p className="question"><a onClick={()=>setWhyFaster(!whyFaster)}>Ok, why orange ball falls faster?</a></p>
                         
                         <p style={whyFaster ? {display: 'block'} : {display: 'none'}}>Unlike other planets, the Earth has the air! So air resistance affects the objects' falling speed. Two objects with the same mass, the one with less air resistance shape will fall faster. <br/><br/>However, our balls have the same perfect circle shape. Here comes another rule: two objects, with the same shape, heavier will fall faster because it provides more net force against the air, like our <span className="orange-ball"></span> ball.</p>
+                        <video width="640px" height="480px" controls>
+                          <source src="./video/SVGs.mp4" type="video/mp4"/>
+                          {/* <source src="movie.ogg" type="video/ogg"/> */}
+                        Your browser does not support the video tag.
+                        </video> 
                     </>
                     :
                     
