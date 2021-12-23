@@ -103,7 +103,7 @@ function GravityDisplay(props) {
                         <p className="question"><a onClick={()=>setWhyFaster(!whyFaster)}>Ok, why orange ball falls faster?</a></p>
                         
                         <p style={whyFaster ? {display: 'block'} : {display: 'none'}}>Unlike other planets, the Earth has the air! So air resistance affects the objects' falling speed. Two objects with the same mass, the one with less air resistance shape will fall faster. <br/><br/>However, our balls have the same perfect circle shape. Here comes another rule: two objects, with the same shape, heavier will fall faster because it provides more net force against the air, like our <span className="orange-ball"></span> ball.</p>
-                        <video width="640px" height="480px" controls>
+                        <video width="640px" height="480px" controls autoPlay muted>
                           <source src="./video/SVGs.mp4" type="video/mp4"/>
                           {/* <source src="movie.ogg" type="video/ogg"/> */}
                         Your browser does not support the video tag.
@@ -119,7 +119,7 @@ function GravityDisplay(props) {
                         <p className="question"><a onClick={()=>setWhyFaster(!whyFaster)}>Would balls bounce higher or more on the Moon than they do on the Earth?</a></p>
                         
                         <p style={whyFaster ? {display: 'block'} : {display: 'none'}}>The answer is it depends. Not having air resistance might make us think of more bounces on the Moon but bouncing mainly depends on the elasticity of the ground. For instance, the wooden floor on the Earth would bounce the object more than the Moon's dusty ground.</p>
-                        <video width="640px" height="480px" controls>
+                        <video width="640px" height="480px" controls autoPlay muted>
                           <source src="./video/SVGsMoon.mp4" type="video/mp4"/>
                           {/* <source src="movie.ogg" type="video/ogg"/> */}
                         Your browser does not support the video tag.
@@ -133,7 +133,7 @@ function GravityDisplay(props) {
                     <p className="question"><a onClick={()=>setWhyFaster(!whyFaster)}>Martian air resistance slows down the objects' fall as well?</a></p>
                         
                         <p style={whyFaster ? {display: 'block'} : {display: 'none'}}>Despite the fact Mars has an atmosphere, the air density is so low that it would not affect the falling speed of the objects dramatically like it does on the Earth.</p>
-                        <video width="640px" height="480px" controls>
+                        <video width="640px" height="480px" controls autoPlay muted>
                           <source src="./video/SVGsMars.mp4" type="video/mp4"/>
                           {/* <source src="movie.ogg" type="video/ogg"/> */}
                         Your browser does not support the video tag.
