@@ -86,7 +86,7 @@ function GravityDisplay(props) {
                     {props.id === 'earth' ? 
                     <>
                         <p>Because of many reasons, but what concerns us the most here is the greater pulling force of Earth's gravity than the drag force, aka 'air resistance'.</p>
-                        <video width="640px" height="480px" controls autoPlay>
+                        <video width="640px" height="480px" controls autoPlay muted>
                           <source src="./video/Vectors.mp4" type="video/mp4"/>
                           {/* <source src="movie.ogg" type="video/ogg"/> */}
                         Your browser does not support the video tag.
