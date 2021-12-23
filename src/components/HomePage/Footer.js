@@ -11,7 +11,8 @@ function Footer() {
                     <li className="nav-item-footer"><Link to='/whoareinspace'>WhoAreInSpace</Link></li>
                     <li className="nav-item-footer"><Link to='/rocketscience'>RocketScience</Link></li>
                     <li className="nav-item-footer"><Link to='/flights'>Flights</Link></li>
-                    <li className="nav-item-footer not-ready"><Link to='/api'>API</Link></li>
+                    {/* <li className="nav-item-footer not-ready"><Link to='/api'>API</Link></li> */}
+                    <li className="nav-item-footer not-ready"><Link to='/behindscenes'>BehindScenes</Link></li>
                 </ul>
             </nav>
             <div className="project-name">

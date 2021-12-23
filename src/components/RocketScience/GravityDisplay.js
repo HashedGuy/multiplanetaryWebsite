@@ -9,7 +9,7 @@ function GravityDisplay(props) {
     const [bothRelease, setBothRelease] = useState(false)
     const [reboost, setReboost] = useState(false)
     const [reboostLoading, setReboostLoading] = useState(false)
-    const [showWhy, setShowWhy] = useState(false)
+    const [showWhy, setShowWhy] = useState(true)
     const [whyFaster, setWhyFaster] = useState(false)
     const [whyFasterX, setWhyFasterX] = useState(false)
     const [count, setCount] = useState(3)
@@ -86,6 +86,11 @@ function GravityDisplay(props) {
                     {props.id === 'earth' ? 
                     <>
                         <p>Because of many reasons, but what concerns us the most here is the enormous pulling force of Earth's gravity.</p>
+                        <video width="640px" height="480px" controls>
+                          <source src="./video/Vectors.mp4" type="video/mp4"/>
+                          {/* <source src="movie.ogg" type="video/ogg"/> */}
+                        Your browser does not support the video tag.
+                        </video> 
                         
                         {/* <MathJaxContext className="calculations">
                             <MathJax 
@@ -128,7 +133,7 @@ function GravityDisplay(props) {
                         Luckily, there're enough real shootage of the ISS reboost in YouTube. Here's <a target="_blank" href="https://www.youtube.com/watch?v=sI8ldDyr3G0">my fav one</a> by NASA astronaut Jeff Williams.</p>
                   
                     <p className="question"><a onClick={()=>setWhyFaster(!whyFaster)}>If the balls are in free fall inside the ISS why do they float?</a></p>
-                    <p style={whyFaster ? {display: 'block'} : {display: 'none'}}>Whenver we watch the ISS videos, we see objects, astronauts floating, like they're in zero-gravity. That's not true thou. The ISS itself, and everything inside it experience 90% of the Earth gravity but they manage to not to hit the Earth thanks to their enormous velocity (7.6km per second). This scenario is also called 'microgravity'.</p>
+                    <p style={whyFaster ? {display: 'block'} : {display: 'none'}}>Whenver we watch the ISS videos, we see objects, astronauts floating, like they're in zero-gravity. That's not true thou. The ISS itself, and everything inside it experience 90% of the Earth gravity but they manage not to hit the Earth thanks to their enormous velocity (7.6km per second). This scenario is also called 'microgravity'.</p>
                     
                     <p className="question"><a onClick={()=>setWhyFasterX(!whyFasterX)}>Then why balls are not at 100% rest?</a></p>
                     <p style={whyFasterX ? {display: 'block'} : {display: 'none'}}>To imitiate the real ISS environment, when you drop the balls in our animation, you can see tiny drifts up and down or left and right. This is usually caused by the ventilation working inside the spacecraft.</p>
