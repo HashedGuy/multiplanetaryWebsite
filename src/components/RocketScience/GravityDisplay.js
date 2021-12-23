@@ -85,7 +85,7 @@ function GravityDisplay(props) {
                <div style={showWhy ? {display:'block'} : {display:'none'}}>
                     {props.id === 'earth' ? 
                     <>
-                        <p>Because of many reasons, but what concerns us the most here is the enormous pulling force of Earth's gravity.</p>
+                        <p>Because of many reasons, but what concerns us the most here is the greater pulling force of Earth's gravity.</p>
                         <video width="640px" height="480px" controls>
                           <source src="./video/Vectors.mp4" type="video/mp4"/>
                           {/* <source src="movie.ogg" type="video/ogg"/> */}
