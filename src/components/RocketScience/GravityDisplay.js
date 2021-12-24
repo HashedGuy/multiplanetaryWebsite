@@ -11,7 +11,7 @@ function GravityDisplay(props) {
     const [reboost, setReboost] = useState(false)
     const [reboostLoading, setReboostLoading] = useState(false)
     const [showWhy, setShowWhy] = useState(true)
-    const [whyFaster, setWhyFaster] = useState(false)
+    const [whyFaster, setWhyFaster] = useState(true)
     const [whyFasterX, setWhyFasterX] = useState(false)
     const [whyFasterY, setWhyFasterY] = useState(false)
     const [whyFasterG, setWhyFasterG] = useState(false)
@@ -90,7 +90,7 @@ function GravityDisplay(props) {
                     {props.id === 'earth' ? 
                     <>
                         <p>Because of many reasons, but what concerns us the most here is the greater pulling force of Earth's gravity than the drag force, aka 'air resistance'.</p>
-                        <ReactPlayer url="https://youtu.be/tpwYOtEyQ2Q"/>
+                        <ReactPlayer className="react-player" url="https://youtu.be/tpwYOtEyQ2Q"/>
                         {/* <video width="640px" height="480px" controls autoPlay muted>
                           <source href="https://www.youtube.com/watch?v=tpwYOtEyQ2Q" type="video/mp4"/>
                           <track king="subtitle" src="wtf.vtt" srcLang='en' default/>
@@ -111,7 +111,7 @@ function GravityDisplay(props) {
                         
                         
                         
-                        <ReactPlayer url="https://youtu.be/bzZlq1j4Nz8"/>
+                        <ReactPlayer className="react-player" url="https://youtu.be/bzZlq1j4Nz8"/>
                     </>
                     :
                     

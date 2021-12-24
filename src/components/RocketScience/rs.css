@@ -298,6 +298,10 @@
     -2px 1px 20px #ff99cc;
 }
 
+.react-player {
+    margin: 2em 0;
+}
+
 /* Mobile portrait */
 @media only screen 
   and (min-device-width: 320px) 
