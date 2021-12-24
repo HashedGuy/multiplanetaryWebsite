@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react'
 import GravityAnimation from './GravityAnimation'
+import ReactPlayer from "react-player"
 import {BounceLoader, BeatLoader} from 'react-spinners'
 import { MathJax, MathJaxContext } from "better-react-mathjax"
 
@@ -89,12 +90,12 @@ function GravityDisplay(props) {
                     {props.id === 'earth' ? 
                     <>
                         <p>Because of many reasons, but what concerns us the most here is the greater pulling force of Earth's gravity than the drag force, aka 'air resistance'.</p>
-                        <video width="640px" height="480px" controls autoPlay muted>
-                          <source src="./video/Vectors.mp4" type="video/mp4"/>
+                        <ReactPlayer url="https://youtu.be/tpwYOtEyQ2Q"/>
+                        {/* <video width="640px" height="480px" controls autoPlay muted>
+                          <source href="https://www.youtube.com/watch?v=tpwYOtEyQ2Q" type="video/mp4"/>
                           <track king="subtitle" src="wtf.vtt" srcLang='en' default/>
-                          {/* <source src="movie.ogg" type="video/ogg"/> */}
                         Your browser does not support the video tag.
-                        </video> 
+                        </video>  */}
                         
                         {/* <MathJaxContext className="calculations">
                             <MathJax 
@@ -107,11 +108,10 @@ function GravityDisplay(props) {
                         <p className="question"><a onClick={()=>setWhyFaster(!whyFaster)}>Ok, why orange ball falls faster?</a></p>
                         
                         <p style={whyFaster ? {display: 'block'} : {display: 'none'}}>Unlike other planets, the Earth has the air! So air resistance affects the objects' falling speed. Two objects with the same mass, the one with less air resistance shape will fall faster. <br/><br/>However, our balls have the same perfect circle shape. Here comes another rule: two objects, with the same shape, heavier will fall faster because it provides more net force against the air, like our <span className="orange-ball"></span> ball.</p>
-                        <video width="640px" height="480px" controls autoPlay muted>
-                          <source src="./video/SVGs.mp4" type="video/mp4"/>
-                          {/* <source src="movie.ogg" type="video/ogg"/> */}
-                        Your browser does not support the video tag.
-                        </video> 
+                        
+                        
+                        
+                        <ReactPlayer url="https://youtu.be/bzZlq1j4Nz8"/>
                     </>
                     :
                     
