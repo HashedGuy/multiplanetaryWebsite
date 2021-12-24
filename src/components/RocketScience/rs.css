@@ -139,11 +139,14 @@
     position: absolute;
 }
 
-.gravity-chevron {
+.gravity-chevron a {
     position: static;
     /* margin-left: 2.8em; */
     animation: chevronBounce 2s infinite ease-out;
     margin-bottom: 1em;
+    color: whitesmoke !important;
+    text-shadow: 3px 3px 20px #ff99cc,
+    -2px 1px 30px #ff99cc;
 }
 
 @keyframes chevronBounce {
@@ -288,6 +291,11 @@
         translate(-50%, -50%)
         rotateX(90deg);
     top: 1em;    
+}
+
+.grav-title {    
+    text-shadow: 2px 2px 5px #ff99cc,
+    -2px 1px 20px #ff99cc;
 }
 
 /* Mobile portrait */

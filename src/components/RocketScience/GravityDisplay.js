@@ -12,6 +12,9 @@ function GravityDisplay(props) {
     const [showWhy, setShowWhy] = useState(true)
     const [whyFaster, setWhyFaster] = useState(false)
     const [whyFasterX, setWhyFasterX] = useState(false)
+    const [whyFasterY, setWhyFasterY] = useState(false)
+    const [whyFasterG, setWhyFasterG] = useState(false)
+    const [whyFasterB, setWhyFasterB] = useState(false)
     const [count, setCount] = useState(3)
 
     const restartFunc = () => {
@@ -88,6 +91,7 @@ function GravityDisplay(props) {
                         <p>Because of many reasons, but what concerns us the most here is the greater pulling force of Earth's gravity than the drag force, aka 'air resistance'.</p>
                         <video width="640px" height="480px" controls autoPlay muted>
                           <source src="./video/Vectors.mp4" type="video/mp4"/>
+                          <track king="subtitle" src="wtf.vtt" srcLang='en' default/>
                           {/* <source src="movie.ogg" type="video/ogg"/> */}
                         Your browser does not support the video tag.
                         </video> 
@@ -116,9 +120,9 @@ function GravityDisplay(props) {
                         <p>Because of the absence of the air. We've seen from the Earth animation how air resistance slowed down the fall of <span className="blue-ball"></span>ball. The moon doesn't have any air or an atmosphere. <br/><br/> 
                            Luckily, we have <a href="https://www.youtube.com/watch?v=oYEgdZ3iEKA" target="_blank">a real footage</a> of the free fall experiement of a hammer and a feather on the Moon conducted by the NASA Apollo Mission.</p>
                        
-                        <p className="question"><a onClick={()=>setWhyFaster(!whyFaster)}>Would balls bounce higher or more on the Moon than they do on the Earth?</a></p>
+                        <p className="question"><a onClick={()=>setWhyFasterB(!whyFasterB)}>Would balls bounce higher or more on the Moon than they do on the Earth?</a></p>
                         
-                        <p style={whyFaster ? {display: 'block'} : {display: 'none'}}>The answer is it depends. Not having air resistance might make us think of more bounces on the Moon but bouncing mainly depends on the elasticity of the ground. For instance, the wooden floor on the Earth would bounce the object more than the Moon's dusty ground.</p>
+                        <p style={whyFasterB ? {display: 'block'} : {display: 'none'}}>The answer is it depends. Not having air resistance might make us think of more bounces on the Moon but bouncing mainly depends on the elasticity of the ground. For instance, the wooden floor on the Earth would bounce the object more than the Moon's dusty ground.</p>
                         <video width="640px" height="480px" controls autoPlay muted>
                           <source src="./video/SVGsMoon.mp4" type="video/mp4"/>
                           {/* <source src="movie.ogg" type="video/ogg"/> */}
@@ -130,9 +134,9 @@ function GravityDisplay(props) {
                     props.id === 'mars' ?
                     <>
                     <p>Because the Martian gravity is stronger than on the Moon.</p>
-                    <p className="question"><a onClick={()=>setWhyFaster(!whyFaster)}>Martian air resistance slows down the objects' fall as well?</a></p>
+                    <p className="question"><a onClick={()=>setWhyFasterG(!whyFasterG)}>Martian air resistance slows down the objects' fall as well?</a></p>
                         
-                        <p style={whyFaster ? {display: 'block'} : {display: 'none'}}>Despite the fact Mars has an atmosphere, the air density is so low that it would not affect the falling speed of the objects dramatically like it does on the Earth.</p>
+                        <p style={whyFasterG ? {display: 'block'} : {display: 'none'}}>Despite the fact Mars has an atmosphere, the air density is so low that it would not affect the falling speed of the objects dramatically like it does on the Earth.</p>
                         <video width="640px" height="480px" controls autoPlay muted>
                           <source src="./video/SVGsMars.mp4" type="video/mp4"/>
                           {/* <source src="movie.ogg" type="video/ogg"/> */}
@@ -147,8 +151,8 @@ function GravityDisplay(props) {
                         During reboost, the objects that stay at rest (but actually they're in free fall) start to move to the opposite direction of the spacecraft's velocity. When the reboost is complete, the objects are again stop to 'move'.
                         Luckily, there're enough real shootage of the ISS reboost in YouTube. Here's <a target="_blank" href="https://www.youtube.com/watch?v=sI8ldDyr3G0">my fav one</a> by NASA astronaut Jeff Williams.</p>
                   
-                    <p className="question"><a onClick={()=>setWhyFaster(!whyFaster)}>If the balls are in free fall inside the ISS why do they float?</a></p>
-                    <p style={whyFaster ? {display: 'block'} : {display: 'none'}}>Whenver we watch the ISS videos, we see objects, astronauts floating, like they're in zero-gravity. That's not true thou. The ISS itself, and everything inside it experience 90% of the Earth gravity but they manage not to hit the Earth thanks to their enormous velocity (7.6km per second). This scenario is also called 'microgravity'.</p>
+                    <p className="question"><a onClick={()=>setWhyFasterY(!whyFasterY)}>If the balls are in free fall inside the ISS why do they float?</a></p>
+                    <p style={whyFasterY ? {display: 'block'} : {display: 'none'}}>Whenver we watch the ISS videos, we see objects, astronauts floating, like they're in zero-gravity. That's not true thou. The ISS itself, and everything inside it experience 90% of the Earth gravity but they manage not to hit the Earth thanks to their enormous velocity (7.6km per second). This scenario is also called 'microgravity'.</p>
                     
                     <p className="question"><a onClick={()=>setWhyFasterX(!whyFasterX)}>Then why balls are not at 100% rest?</a></p>
                     <p style={whyFasterX ? {display: 'block'} : {display: 'none'}}>To imitiate the real ISS environment, when you drop the balls in our animation, you can see tiny drifts up and down or left and right. This is usually caused by the ventilation working inside the spacecraft.</p>
