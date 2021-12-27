@@ -164,7 +164,50 @@ function Schedule() {
                                 
                                 <div className="row" key={flight.id}>
                                     <div className="col">
-                                        <img className="operator-logo" src={`logos/${flight.provider.slug}.png`} title={flight.provider.name}/>
+                                        <img 
+                                            className="operator-logo" 
+                                            src={
+                                                flight.provider.slug === 'arianespace' ?                                                
+                                                `logos/arianespace.png`
+                                                :
+
+                                                flight.provider.slug === 'astra-space' ?                                                
+                                                `logos/astra-space.png`
+                                                :
+
+                                                flight.provider.slug === 'blue-origin' ?                                                
+                                                `logos/blue-origin.png`
+                                                :
+
+                                                flight.provider.slug === 'mitsubishi-heavy-industries' ?                                                
+                                                `logos/mitsubishi-heavy-industries.png`
+                                                :
+
+                                                flight.provider.slug === 'roscosmos' ?                                                
+                                                `logos/roscosmos.png`
+                                                :
+
+                                                flight.provider.slug === 'spacex' ?                                                
+                                                `logos/spacex.png`
+                                                :
+
+                                                flight.provider.slug === 'united-launch-alliance-ula' ?                                                
+                                                `logos/united-launch-alliance-ula.png`
+                                                :
+
+                                                flight.provider.slug === 'china' ?                                                
+                                                `logos/cnsa.png`
+                                                :
+
+                                                flight.provider.slug === 'virgin-orbit' ?                                                
+                                                `logos/virgin-orbit.png`
+                                                :
+                                                
+                                                `logos/rocket_logo.png`
+
+                                                
+                                            } 
+                                            title={flight.provider.name}/>
                                     </div>
                                     <div className="col">{flight.name}</div>
                                     <div className="col rimuv">{flight.vehicle.name}</div>
