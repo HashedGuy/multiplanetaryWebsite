@@ -318,7 +318,7 @@ Background images
 ================= */
 
 /* Desktop + tablet */
-.hero-main, .photos-api, .hero-photos, .pass-satellite-api, .launch-api, .pis-api, .api {
+.hero-main, .photos-api, .hero-photos, .pass-satellite-api, .launch-api, .pis-api, .api, .flights-api {
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.678);
     background-position: 20% top;
@@ -343,6 +343,10 @@ Background images
     background-image: url("https://ik.imagekit.io/74qyv5bswgr/darken-nem-api_IF8JeRZ93B.png?updatedAt=1639144708397");
 }
 
+.flights-api {
+    background-image: url("https://ik.imagekit.io/74qyv5bswgr/flights_5_d416utIGJVS.png?updatedAt=1640612687529")   
+}
+
 .api-error {
     font-family: 'Source Sans Pro', sans-serif;
     text-align: center;
@@ -352,6 +356,8 @@ Background images
     border: 1px solid gray;
     background: rgba(49, 49, 49, 0.534);
 }
+
+
 
 /* Mobile */
 @media only screen 
