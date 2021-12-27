@@ -145,8 +145,8 @@
     animation: chevronBounce 2s infinite ease-out;
     margin-bottom: 1em;
     color: whitesmoke !important;
-    text-shadow: 3px 3px 20px #ff99cc,
-    -2px 1px 30px #ff99cc;
+    text-shadow: 3px 3px 20px #ec8c0d,
+    -2px 1px 30px #ece7ea;
 }
 
 @keyframes chevronBounce {
@@ -294,8 +294,7 @@
 }
 
 .grav-title {    
-    text-shadow: 2px 2px 5px #ff99cc,
-    -2px 1px 20px #ff99cc;
+    text-shadow: 0px 2px 3px #f57e06
 }
 
 .react-player {
