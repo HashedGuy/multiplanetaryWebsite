@@ -66,12 +66,12 @@ import './Dropdown.css'
               </NavItem> 
             }              
 
-            <NavItem icon="&#128640;" title="Operator" active={false}>
+            {/* <NavItem icon="&#128640;" title="Operator" active={false}>
               <DropdownMenuSettings 
                 sendOperatorToChild={sendOperatorToChild}
                 sendLocationToChild={sendLocationToChild}
               />
-            </NavItem> 
+            </NavItem>  */}
 
           </div> 
           

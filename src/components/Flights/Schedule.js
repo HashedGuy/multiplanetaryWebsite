@@ -14,6 +14,7 @@ import TSSArrivals from './Routes/TSSArrivals'
 
 import {BounceLoader, BeatLoader} from 'react-spinners'
 import SpaceXDepartures from './Routes/SpaceXDepartures'
+import SupportedOperators from './SupportedOperators'
 
 function Schedule() {
     document.title = 'Multiplanetary Flights'    
@@ -69,7 +70,7 @@ function Schedule() {
         />
         <div className="schedule">
             <div className="schedules">
-                <div className="departurePro" style={departureBigger ? {flex: 2, opacity: .4} : {}}>           
+                <div className="departurePro" style={departureBigger ? {flex: 0, opacity: .4} : {}}>           
                 <div 
                     className="departure"                    
                 >
@@ -95,7 +96,7 @@ function Schedule() {
 
                                 (clickedOperator === undefined) ? ''
                                 : ''
-                            }   .<br/><br/> <span style={{opacity: .3}}>By clicking the 
+                            }   .<br/> <span>By clicking the 
                             {
                                 clickedLocation === 'moon' ? ' \u{1F314} ' 
                                 
@@ -107,7 +108,7 @@ function Schedule() {
                                     ' \u{1F30D} '
                             
                             } 
-                             you can easily change the departure location. Or by clicking &#128640; icon you can filter out the flights from your preffed operator only .</span></p>
+                             you can easily change the departure location.</span></p>
                             : ''}
                         </div> 
                     
@@ -126,9 +127,9 @@ function Schedule() {
                                 'Choose one of the available commercial operators or the space agencies for the departure location'
                                 :
 
-                                clickedOperator === 'spacex' ? 
-                                <SpaceXDepartures />
-                                :
+                                // clickedOperator === 'spacex' ? 
+                                // <SpaceXDepartures />
+                                // :
                                 
                                 clickedOperator === 'private-companies' ?
                                 'Choose one of the available commercial operators for the departure location'
@@ -247,7 +248,7 @@ function Schedule() {
                 </a>
                 </div>
                 
-                <div className="arrivalsPro" style={bigger ? {flex: 2, opacity: .4} : {}}>
+                <div className="arrivalsPro" style={bigger ? {flex: 0, opacity: .4} : {}}>
                     <a 
                         className={bigger ? "biggerBtn blockedBtn rimuv" : "biggerBtn rimuv"}
                         onClick={() => setDepartureBigger(!departureBigger)}
@@ -280,7 +281,7 @@ function Schedule() {
 
                                 (clickedOperatorA === undefined) ? ''
                                 : ''
-                            }   .<br/><br/> <span style={{opacity: .3}}>By clicking the 
+                            }   .<br/> <span>By clicking the 
                             {
                                 clickedLocationA === 'moon' ? ' \u{1F314} ' 
                                 
@@ -292,7 +293,7 @@ function Schedule() {
                                     ' \u{1F30D} '
                             
                             } 
-                             you can easily change the arrival location. Or by clicking &#128640; icon you can filter out the flights from your preffed operator only .</span></p>
+                             you can easily change the arrival location.</span></p>
                             : ''}
                             </div> 
 
@@ -346,6 +347,9 @@ function Schedule() {
                 </div>
             </div>            
         </div>
+        <SupportedOperators 
+            sendOperatorToParent={sendOperatorToParent}
+        />
         </>
     )
 }
