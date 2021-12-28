@@ -6,7 +6,7 @@ function BehindScenes() {
     return (
         <div className="aloha">
             <h2>That's just me</h2>
-            <p>This is Arbus, a self-taught astronaut (I wish). A space enthusiaist who enjoys to visualizing things. Just started to build this project (a couple of months ago) and I am excited to take it to the next level and make more publicly available data for the space community.</p>
+            <p>This is Arbus, a self-taught astronaut (I wish). A space enthusiaist who enjoys animating things. Just started to build this project (a couple of months ago) and I am excited to take it to the next level and make more publicly available data for the space community.</p>
 
             <br />
             <p>Would love to hear your comments/critique/offers if you have any. Feel free to hit me up at <a href="mailto:arbus@multiplanetary.website">arbus@multiplanetary.website</a></p>
