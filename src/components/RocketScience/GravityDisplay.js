@@ -87,8 +87,8 @@ function GravityDisplay(props) {
                         <ReactPlayer 
                             className="react-player" 
                             url="https://youtu.be/tpwYOtEyQ2Q"
-                            width='100%'
-                            height='100%'
+                            // width='100%'
+                            // height='100%'
                         />
                         <p className="question"><a onClick={()=>setWhyFaster(!whyFaster)}>Ok, why orange ball falls faster?</a></p>
                         
@@ -97,8 +97,8 @@ function GravityDisplay(props) {
                         <ReactPlayer 
                             className="react-player" 
                             url="https://youtu.be/bzZlq1j4Nz8"
-                            width='100%'
-                            height='100%'
+                            // width='100%'
+                            // height='100%'
                         />
                     </>
                     :

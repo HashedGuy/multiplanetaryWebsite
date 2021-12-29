@@ -411,6 +411,11 @@
           font-size: 1rem !important;
       }
 
+      .react-player {
+          width: 100%;
+          height: 100%;
+      }
+
   }
 
   /* Tablet version */
@@ -439,11 +444,24 @@
           width: 100%;
       }
 
+      .gravity-sections {
+          flex-direction: column;
+      }
+
       .gravity-sections h1 {
           font-size: 1.5rem;
       }
 
       .btn-query {
           font-size: .9rem;
+      }
+
+      .locations {
+          justify-content: center;
+      }
+
+      .btn-gravity {
+          width: 150px;
+          margin-right: 1em !important;
       }
   }
