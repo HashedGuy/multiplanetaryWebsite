@@ -277,6 +277,12 @@ footer li {
     .copyright {
         font-size: .9rem;
     }
+
+
+    .nav-footer ul {
+        /* border: 1px solid blue; */
+        text-align: center;
+    }
 }
 
 /* Tablet and mobile landscape version for main page */
@@ -378,6 +384,10 @@ Background images
     .api {
         /* background-image: url("bg-img/compressed/darken-med-api-.png"); */
         background-image: url("https://ik.imagekit.io/74qyv5bswgr/darken-med-api-_sb3_0Em087.png?updatedAt=1639146234359");
+    }
+
+    .rmv-ft {
+        display: none;
     }
 
 }

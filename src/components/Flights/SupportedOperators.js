@@ -3,25 +3,99 @@ import React, {useState, useEffect} from 'react'
 function SupportedOperators(props) {   
 
     const [clickedOp, setClickedOp] = useState('')
+    const [clickedLoc, setClickedLoc] = useState('')
+    const [activeOp, setActiveOp] = useState('rmv-filter')
 
     useEffect(() => {
         props.sendOperatorToParent(clickedOp)
+        props.sendLocationToParent(false)
+        // props.sendLocationToParent(clickedOp)
         // props.sendLocationToChild(clickedOp)
       }, [clickedOp])
+
+      useEffect(() => {
+        // props.sendOperatorToParent(clickedOp)
+        props.sendLocationToParent(clickedLoc)
+        // props.sendOperatorToParent(false)
+        // props.sendLocationToChild(clickedOp)
+      }, [clickedLoc])
 
     return (
         <div className="supported-operators">
             <h1>Available operators</h1>
             <div className="operators">
-                <a onClick={()=>setClickedOp('spacex')}><img src={`logos/spacex.png`} className="supported-operators-logo" title="SpaceX"/></a>
-                <a onClick={()=>setClickedOp('arianespace')}><img src={`logos/arianespace.png`} className="supported-operators-logo" title="ArianeSpace"/></a>
-                <a onClick={()=>setClickedOp('rocket-lab')}><img src={`logos/rocket-lab.png`} className="supported-operators-logo" title="Rocket Lab"/></a>
-                <a onClick={()=>setClickedOp('blue-origin')}><img src={`logos/blue-origin.png`} className="supported-operators-logo" title="Blue Origin"/></a>
-                <a onClick={()=>setClickedOp('astra-space')}><img src={`logos/astra-space.png`} className="supported-operators-logo" title="Astra Space"/></a>
-                <a onClick={()=>setClickedOp('roscosmos')}><img src={`logos/roscosmos.png`} className="supported-operators-logo" title="Roscosmos"/></a>
-                <a onClick={()=>setClickedOp('united-launch-alliance-ula')}><img src={`logos/ula-white.png`} className="supported-operators-logo" title="United Launch Alliance"/></a>
-                <a onClick={()=>setClickedOp('virgin-orbit')}><img src={`logos/virgin-orbit.png`} className="supported-operators-logo" title="Virgin Orbit (coming soon)"/></a>
-                <a onClick={()=>setClickedOp('mitsubishi-heavy-industries')}><img src={`logos/mitsubishi-heavy-industries.png`} className="supported-operators-logo" title="Mitsubishi Heavy Industries (coming soon)"/></a>
+                <a onClick={()=>setClickedOp('spacex')}>
+                    <img 
+                        src={`logos/spacex.png`} 
+                        className={(clickedOp === 'spacex') || (clickedOp === '') ? "supported-operators-logo" : "supported-operators-logo soon"} 
+                        title="SpaceX"
+                    />
+                </a>
+
+                <a onClick={()=>setClickedOp('arianespace')}>
+                    <img 
+                        src={`logos/arianespace.png`} 
+                        className={(clickedOp === 'arianespace') || (clickedOp === '') ? "supported-operators-logo" : "supported-operators-logo soon"}
+                        title="ArianeSpace"
+                    />
+                </a>
+
+                <a onClick={()=>setClickedOp('rocket-lab')}>
+                    <img 
+                        src={`logos/rocket-lab.png`} 
+                        className={(clickedOp === 'rocket-lab') || (clickedOp === '') ? "supported-operators-logo" : "supported-operators-logo soon"}
+                        title="Rocket Lab"
+                    />
+                </a>
+
+                <a onClick={()=>setClickedOp('blue-origin')}>
+                    <img 
+                        src={`logos/blue-origin.png`} 
+                        className={(clickedOp === 'blue-origin') || (clickedOp === '') ? "supported-operators-logo" : "supported-operators-logo soon"}
+                        title="Blue Origin"
+                    />
+                </a>
+
+                <a onClick={()=>setClickedOp('astra-space')}>
+                    <img 
+                        src={`logos/astra-space.png`} 
+                        className={(clickedOp === 'astra-space') || (clickedOp === '') ? "supported-operators-logo" : "supported-operators-logo soon"}
+                        title="Astra Space"
+                    />
+                </a>
+                <a onClick={()=>setClickedOp('roscosmos')}>
+                    <img 
+                        src={`logos/roscosmos.png`} 
+                        className={(clickedOp === 'roscosmos') || (clickedOp === '') ? "supported-operators-logo" : "supported-operators-logo soon"}
+                        title="Roscosmos"
+                    />
+                </a>
+
+                <a onClick={()=>setClickedOp('united-launch-alliance-ula')}>
+                    <img 
+                        src={`logos/ula-white.png`} 
+                        className={(clickedOp === 'united-launch-alliance-ula') || (clickedOp === '') ? "supported-operators-logo" : "supported-operators-logo soon"} 
+                        title="United Launch Alliance"
+                    />
+                </a>
+
+                <a onClick={()=>setClickedOp('virgin-orbit')}>
+                    <img 
+                        src={`logos/virgin-orbit.png`} 
+                        className={(clickedOp === 'virgin-orbit') || (clickedOp === '') ? "supported-operators-logo" : "supported-operators-logo soon"}
+                        title="Virgin Orbit (coming soon)"
+                    />
+                </a>
+
+                <a onClick={()=>setClickedOp('mitsubishi-heavy-industries')}>
+                    <img 
+                        src={`logos/mitsubishi-heavy-industries.png`} 
+                        className={(clickedOp === 'mitsubishi-heavy-industries') || (clickedOp === '') ? "supported-operators-logo" : "supported-operators-logo soon"} 
+                        title="Mitsubishi Heavy Industries (coming soon)"
+                    />
+                </a>
+
+                <a onClick={()=>setClickedOp('')} className={clickedOp === '' ? "supported-operators-logo rmv-filter soon" : "supported-operators-logo rmv-filter"}>Remove filter</a>
 
             </div>
             

@@ -8,11 +8,11 @@ function Footer() {
             <nav className="nav-footer">
                 <ul>
                     <li className="nav-item-footer"><Link to='/martianphotos'><span className="remove">Martian</span>Photos</Link></li>
-                    <li className="nav-item-footer"><Link to='/whoareinspace'>WhoAreInSpace</Link></li>
-                    <li className="nav-item-footer"><Link to='/rocketscience'>RocketScience</Link></li>
+                    <li className="nav-item-footer"><Link to='/whoareinspace'><span className='rmv-ft'>WhoAre</span>InSpace</Link></li>
+                    <li className="nav-item-footer"><Link to='/rocketscience'><span className='rmv-ft'>Rocket</span>Science</Link></li>
                     <li className="nav-item-footer"><Link to='/flights'>Flights</Link></li>
                     {/* <li className="nav-item-footer not-ready"><Link to='/api'>API</Link></li> */}
-                    <li className="nav-item-footer not-ready"><Link to='/behindscenes'>BehindScenes</Link></li>
+                    <li className="nav-item-footer"><Link to='/behindscenes'>BehindScenes</Link></li>
                 </ul>
             </nav>
             <div className="project-name">

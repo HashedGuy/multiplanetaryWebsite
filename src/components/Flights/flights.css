@@ -136,7 +136,7 @@
 .headerX {
     background-color: rgb(198 232 10);
     border-radius: 5px;
-    color: #232324;
+    color: #0c0c0c;
     /* font-weight: 700; */
 }
 
@@ -258,7 +258,7 @@
     flex-direction: column;
     /* border: 1px solid aqua; */
     font-family: 'Source Sans Pro', sans-serif;
-    padding: 2em 5em;
+    padding: 2em;
 }
 
 .operators {
@@ -283,6 +283,16 @@
     opacity: .2;
 }
 
+.rmv-filter{
+    /* border: 1px solid gray;
+    border-radius: 20%; */
+    /* text-align: center;
+    margin: 0 auto; */
+    padding: 1em;
+    color: antiquewhite;
+    border: 1px solid whitesmoke;
+}
+
 /* Mobile portrait */
 @media only screen 
   and (min-device-width: 320px) 
@@ -302,10 +312,6 @@
 
     .arrivals, .departure {
         margin: 0;
-    }
-
-    .departurePro {
-        height: 750px;
     }
 
     .arrivalsPro, .departurePro {
@@ -343,6 +349,35 @@
         font-size: .6rem;
     }
 
+    .status {
+        margin: 1em;
+    }
+
+    .status-eit {
+        margin: 1em;
+    }
+
+    .status-tbc {
+        margin: 1em;
+    }
+
+    .time {
+        margin: 1em;
+    }
+
+    .col {
+        font-size: .6rem;
+    }
+
+    .headerX .col {
+        font-size: .7rem;
+        margin: .1em;
+    }
+
+    .operators {
+        font-size: .3rem;
+    }
+
   }
 
 /* Tablet version */
@@ -378,5 +413,10 @@
       .supported-operators-logo {
           width: 50px;
           height: 50px;
+          margin: .5em;
+      }
+
+      .rmv-filter {
+          font-size: .6rem;
       }
   }

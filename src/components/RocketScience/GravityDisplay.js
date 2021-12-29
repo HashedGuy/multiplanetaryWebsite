@@ -24,8 +24,7 @@ function GravityDisplay(props) {
         setBothRelease(false)
         setReboost(false)
         setReboostLoading(false)
-    }
-    
+    }   
 
       
     const timerRef = useRef(null);
@@ -34,13 +33,10 @@ function GravityDisplay(props) {
         restartFunc()
         setReboost(props.id)
         setReboostLoading(`Reboost starting soon ...`)
-        // timerRef.current = setInterval(() => setReboostLoading(`...`), 500)
         timerRef.current = setTimeout(() => setReboostLoading(`Engine fired!🔥`), 3000)
         timerRef.current = setTimeout(() => setReboostLoading('Reboost complete.'), 11000) 
         timerRef.current = setTimeout(() => setReboostLoading(false), 15000)
         timerRef.current = setTimeout(() => restartFunc(), 15000) 
-        
-          
     }
 
 
@@ -59,8 +55,6 @@ function GravityDisplay(props) {
                 className={reboostLoading ? "btn release" : "btn release reboost-btn"} 
                 onClick={reboostFunc}>Reboost</a> : ''
             }
-
-            {/* {reboost === 'iss' ? <p>Reboost starts in {count}</p> : ''} */}
 
             <GravityAnimation 
                 pinkRelease = {pinkRelease}  
@@ -90,28 +84,22 @@ function GravityDisplay(props) {
                     {props.id === 'earth' ? 
                     <>
                         <p>Because of many reasons, but what concerns us the most here is the greater pulling force of Earth's gravity than the drag force, aka 'air resistance'.</p>
-                        <ReactPlayer className="react-player" url="https://youtu.be/tpwYOtEyQ2Q"/>
-                        {/* <video width="640px" height="480px" controls autoPlay muted>
-                          <source href="https://www.youtube.com/watch?v=tpwYOtEyQ2Q" type="video/mp4"/>
-                          <track king="subtitle" src="wtf.vtt" srcLang='en' default/>
-                        Your browser does not support the video tag.
-                        </video>  */}
-                        
-                        {/* <MathJaxContext className="calculations">
-                            <MathJax 
-                                config={{ "HTML-CSS": { scale: 800 }}}
-                            >
-                                    {"\\(F \= G\\frac{m1m2}{r^2}\\)"}
-                            </MathJax>
-                        </MathJaxContext> */}
-                        {/* <br/> */}
+                        <ReactPlayer 
+                            className="react-player" 
+                            url="https://youtu.be/tpwYOtEyQ2Q"
+                            width='100%'
+                            height='100%'
+                        />
                         <p className="question"><a onClick={()=>setWhyFaster(!whyFaster)}>Ok, why orange ball falls faster?</a></p>
                         
                         <p style={whyFaster ? {display: 'block'} : {display: 'none'}}>Unlike other planets, the Earth has the air! So air resistance affects the objects' falling speed. Two objects with the same mass, the one with less air resistance shape will fall faster. <br/><br/>However, our balls have the same perfect circle shape. Here comes another rule: two objects, with the same shape, heavier will fall faster because it provides more net force against the air, like our <span className="orange-ball"></span> ball.</p>
-                        
-                        
-                        
-                        <ReactPlayer className="react-player" url="https://youtu.be/bzZlq1j4Nz8"/>
+                                          
+                        <ReactPlayer 
+                            className="react-player" 
+                            url="https://youtu.be/bzZlq1j4Nz8"
+                            width='100%'
+                            height='100%'
+                        />
                     </>
                     :
                     

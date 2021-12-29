@@ -29,10 +29,10 @@ function Navbar() {
                 <ul 
                     className={`nav-list ${isActive ? "active" : ""}`}
                 >
-                    <li className="nav-item"><Link to='./martianphotos'>MartianPhotos</Link></li>
-                    <li className="nav-item"><Link to='/whoareinspace'>WhoAreInSpace</Link></li>
-                    <li className="nav-item"><Link to='/rocketscience'>RocketScience</Link></li>
-                    <li className="nav-item"><Link to='/flights'>Flights</Link></li>
+                    <li className="nav-item" onClick={()=>setActive(!isActive)}><Link to='./martianphotos'>MartianPhotos</Link></li>
+                    <li className="nav-item" onClick={()=>setActive(!isActive)}><Link to='/whoareinspace'>WhoAreInSpace</Link></li>
+                    <li className="nav-item" onClick={()=>setActive(!isActive)}><Link to='/rocketscience'>RocketScience</Link></li>
+                    <li className="nav-item" onClick={()=>setActive(!isActive)}><Link to='/flights'>Flights</Link></li>
                     <li className="nav-item not-ready"><Link to='./api'>API</Link></li>
                 </ul>
                 <div 

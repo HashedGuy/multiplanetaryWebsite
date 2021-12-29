@@ -60,8 +60,8 @@ function Schedule() {
     console.log(clickedLocation)
     console.log(clickedOperator)
 
-    console.log(clickedLocationA)
-    console.log(clickedOperatorA)
+    // console.log(clickedLocationA)
+    // console.log(clickedOperatorA)
     return (
         <>
          <Animation
@@ -117,26 +117,26 @@ function Schedule() {
                             <div className="col">Operator</div>
                             <div className="col">Mission</div>
                             <div className="col rimuv">Vehicle</div>
-                            <div className="col">Date/UTC</div>
+                            <div className="col">Date</div>
                             <div className="col">Launch site</div>                      
                             <div className="col">Status</div>
                         </div>
                         {
                                 isLoading ? <BeatLoader size={10} color='green' loading /> : 
-                                clickedOperator === 'OperatorX' ?
-                                'Choose one of the available commercial operators or the space agencies for the departure location'
-                                :
+                                // clickedOperator === 'OperatorX' ?
+                                // 'Choose one of the available commercial operators or the space agencies for the departure location'
+                                // :
 
                                 // clickedOperator === 'spacex' ? 
                                 // <SpaceXDepartures />
                                 // :
                                 
-                                clickedOperator === 'private-companies' ?
-                                'Choose one of the available commercial operators for the departure location'
-                                :
-                                clickedOperator === 'space-agencies' ?
-                                'Choose one of the available space agencies for the departure location'
-                                :
+                                // clickedOperator === 'private-companies' ?
+                                // 'Choose one of the available commercial operators for the departure location'
+                                // :
+                                // clickedOperator === 'space-agencies' ?
+                                // 'Choose one of the available space agencies for the departure location'
+                                // :
                                 clickedOperator ? 
 
                             flights.map(flight => (
@@ -159,7 +159,7 @@ function Schedule() {
                                 
                             )) : 
 
-                            (clickedLocation === 'earth') || (clickedLocation === undefined) ?
+                            (clickedLocation === 'earth') || (clickedLocation === undefined) || (clickedOperator === '') ?
 
                             flights.map(flight => (
                                 
@@ -248,7 +248,7 @@ function Schedule() {
                 </a>
                 </div>
                 
-                <div className="arrivalsPro" style={bigger ? {flex: 0, opacity: .4} : {}}>
+                <div className="arrivalsPro" style={bigger || clickedOperator ? {flex: 0, opacity: .4} : {}}>
                     <a 
                         className={bigger ? "biggerBtn blockedBtn rimuv" : "biggerBtn rimuv"}
                         onClick={() => setDepartureBigger(!departureBigger)}
@@ -302,7 +302,7 @@ function Schedule() {
                                 <div className="col">Operator</div>
                                 <div className="col">Mission</div>
                                 <div className="col rimuv">Vehicle</div>
-                                <div className="col">Date/UTC</div>
+                                <div className="col">Date</div>
                                 <div className="col">Departs from</div>                      
                                 <div className="col">Status</div>
                             </div>
@@ -349,6 +349,7 @@ function Schedule() {
         </div>
         <SupportedOperators 
             sendOperatorToParent={sendOperatorToParent}
+            sendLocationToParent={sendLocationToParent}
         />
         </>
     )

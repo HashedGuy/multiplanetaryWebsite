@@ -18,14 +18,15 @@ function ThreeD(props) {
             {props.type === 'main-page' ?
                 <div className="rsMP"> 
                 <h1>It's a rocket science!</h1>
-                <p className="rimuv">We'll try to learn more about space by applying basic physics concepts and humble animations </p>
-                <Link to="./rocketscience" className="btn">Let's start with gravity</Link>
+                <Link to="./rocketscience" className="btn">start with gravity</Link>
+                <p className="section-info">We'll try to learn more about space by applying basic physics concepts and humble animations.</p>
+                
                 </div>
                 
                 :
                 
                 <div className="titleRS">
-                    <h1 className="grav-title">Let's start with gravity</h1>
+                    <h1>Let's start with gravity</h1>
                     <div className="gravity-chevron"><a onClick={executeScroll}>&#8964;</a></div>
                 </div>
                 } 

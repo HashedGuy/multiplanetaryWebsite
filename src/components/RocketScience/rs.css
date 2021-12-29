@@ -161,7 +161,7 @@
 }
 
 .rsMP {
-    width: 30%;
+    width: 40%;
     align-self: flex-end;
     font-size: 1.2rem;
     font-family: 'Source Sans Pro', sans-serif;
@@ -359,6 +359,11 @@
         align-self: flex-start;
         font-size: .8rem;
         margin-left: 1.5em;
+        width: 70%;
+    }
+
+    .rsMP h1{
+        font-size: 1.5rem;
     }
 
     .sceneMP {
@@ -398,5 +403,20 @@ and (max-device-width: 1024px) {
 
     .animationTitle h1 {
         font-size: 2rem;
+    }
+
+    .rsMP {
+        margin-left: 2em;
+        align-self: flex-start;
+        width: 60%;
+        margin-top: 2em;
+    }
+
+    .rsMP h1 {
+        font-size: 2rem;
+    }
+
+    .rimuvX {
+        display: block;
     }
 }
