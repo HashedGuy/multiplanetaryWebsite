@@ -166,7 +166,7 @@
     .dropdown {
       /* top: 655px; */
       width: 160px;
-      transform: translateX(20%);
+      transform: translateX(-25%);
     }
 
     .ddArrival {
