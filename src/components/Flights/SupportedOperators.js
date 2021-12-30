@@ -8,17 +8,8 @@ function SupportedOperators(props) {
 
     useEffect(() => {
         props.sendOperatorToParent(clickedOp)
-        props.sendLocationToParent(false)
-        // props.sendLocationToParent(clickedOp)
-        // props.sendLocationToChild(clickedOp)
+        // props.sendLocationToParent(undefined)
       }, [clickedOp])
-
-      useEffect(() => {
-        // props.sendOperatorToParent(clickedOp)
-        props.sendLocationToParent(clickedLoc)
-        // props.sendOperatorToParent(false)
-        // props.sendLocationToChild(clickedOp)
-      }, [clickedLoc])
 
     return (
         <div className="supported-operators">

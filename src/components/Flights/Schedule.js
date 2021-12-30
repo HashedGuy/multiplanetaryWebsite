@@ -159,7 +159,7 @@ function Schedule() {
                                 
                             )) : 
 
-                            (clickedLocation === 'earth') || (clickedLocation === undefined) || (clickedOperator === '') ?
+                            (clickedLocation === 'earth') || (clickedLocation === undefined) ?
 
                             flights.map(flight => (
                                 
@@ -202,6 +202,14 @@ function Schedule() {
 
                                                 flight.provider.slug === 'virgin-orbit' ?                                                
                                                 `logos/virgin-orbit.png`
+                                                :
+
+                                                flight.provider.slug === 'isro' ?                                                
+                                                `logos/isro.png`
+                                                :
+
+                                                flight.provider.slug === 'abl-space' ?                                                
+                                                `logos/abl-space.png`
                                                 :
                                                 
                                                 `logos/rocket_logo.png`
