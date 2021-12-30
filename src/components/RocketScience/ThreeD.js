@@ -1,7 +1,6 @@
 import React, {useRef} from 'react'
 import { Link } from 'react-router-dom'
 import Gravity from './Gravity'
-import GravityAnimation from './GravityAnimation'
 
 function ThreeD(props) {
    
@@ -53,8 +52,8 @@ function ThreeD(props) {
         </div>
         {props.type ==='main-page' ? '' :
         <>
-        <div ref={myRef}></div>
-        <Gravity/>
+            <div ref={myRef}></div>
+            <Gravity/>
         </>
             }
         </>

@@ -10,8 +10,6 @@ function Gravity(props) {
    
     return (
         <div className="gravity">
-            {/* <h1>Let's start with Gravity!</h1> */}
-            {/* <p>We heard a lot about gravity from Newton's equations. We will come to that but let's first see how objects fall (if they do at all) in different space locations with humble animations.</p> */}
             <div className="gravity-sections">
                 <div className="gravity-location">
                     <div className="locations">
@@ -33,12 +31,6 @@ function Gravity(props) {
                             onClick={() => setGravityLocation('mars')}>
                             Mars
                         </a>
-                        {/* <a 
-                            className={
-                                gravityLocation === 'venus' ? "btn btn-gravity btn-gr-active" : "btn btn-gravity"}
-                            onClick={() => setGravityLocation('venus')}>
-                            Venus
-                        </a> */}
                         <a 
                             className={
                                 gravityLocation === 'iss' ? "btn btn-gravity btn-gr-active" : "btn btn-gravity"}

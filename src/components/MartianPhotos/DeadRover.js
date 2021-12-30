@@ -25,7 +25,6 @@ function DeadRover() {
             fetch(`https://api.nasa.gov/mars-photos/api/v1//manifests/${myDeadRover}/?api_key=${process.env.REACT_APP_NASA_API_KEY}`)
             .then(res => res.json())
             .then(data => {
-                // console.log("render")
                 setDeadData(data.photo_manifest)
                 setLoading(false)
                 setDeadFetching(false)
@@ -34,7 +33,6 @@ function DeadRover() {
             fetch(`https://api.nasa.gov/mars-photos/api/v1//manifests/opportunity/?api_key=${process.env.REACT_APP_NASA_API_KEY}`)
             .then(res => res.json())
             .then(data => {
-                // console.log("render")
                 setDeadData(data.photo_manifest)
                 setLoading(false)
                 setDeadFetching(false)
@@ -53,7 +51,6 @@ function DeadRover() {
             fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/${myDeadRover}/latest_photos?api_key=${process.env.REACT_APP_NASA_API_KEY}`)
                 .then(res => res.json())
                 .then(data => {
-                    // console.log(data.latest_photos)
                     setDeadPhoto(data.latest_photos[0])
                     setLoading(false)
                     setDeadFetching(false)
@@ -62,7 +59,6 @@ function DeadRover() {
             fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/latest_photos?api_key=${process.env.REACT_APP_NASA_API_KEY}`)
                 .then(res => res.json())
                 .then(data => {
-                    // console.log(data.latest_photos)
                     setDeadPhoto(data.latest_photos[0])
                     setLoading(false)
                     setDeadFetching(false)
@@ -101,7 +97,6 @@ function DeadRover() {
                                 key={deadRover} 
                                 onClick={
                                         () => {setMyDeadRover(deadRover)}}
-                                // onClick = {makeAppear}
                         >
                                 <h2>{deadRover}</h2>
                                         
@@ -151,9 +146,8 @@ function DeadRover() {
                     <div className="dead-photos-info">
                         <h2 className="photos-title">Latest photo from {myDeadRover ? myDeadRover : "Opportunity"}</h2>
                         <p>Photo taken: {isLoading ? <BeatLoader size={6} color='red' loading /> : deadPhoto.earth_date}</p>
-                        {/* <p>Camera: {}</p> */}
+                       
                         <p className="latest-photo-info" id="latest-photo-info-perseverance"></p>
-                        {/* <a href="" className="btn"><span>{myDeadRover ? myDeadRover : "Opportunity"} album</span></a> */}
                     </div>
                     <div className="latest-photo-section" id="perseverance-latest-photo">
                         <img src={isLoading ? "Photo Loading..." : deadPhoto.img_src} className="latest-photo" alt={`latest photo from ${myDeadRover}`}/>

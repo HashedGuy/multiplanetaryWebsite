@@ -70,13 +70,11 @@ function Astronauts() {
     
     // Fetching 'timeZone' from wheretheiss API  
     const fetchDataTwo = async () => {
-        // setLoading(true)
         try {
             const res = await fetch(`https://api.wheretheiss.at/v1/coordinates/${issLocation.latitude},${issLocation.longitude}`)
             const data = await res.json()
             setTimeZone(data.timezone_id)
             data.country_code === '??' ? setCountryCode('N/A') : setCountryCode(data.country_code)
-            // setLoading(false)
         } catch (error) {
             console.log(error)
         }
@@ -154,33 +152,8 @@ function Astronauts() {
                                     <li>Time zone: <span className="details">{timeZone}</span></li>
                                     <li>Country code: <span className="details">{countryCode}</span></li>
                                 
-                                {/* <h3>Currently docked spaceships:</h3> 
-                                    <ul>    
-                                        <li>Northrop Grumman's Cygnus space freighter</li>
-                                        <li>Russia's Soyuz MS-19 crew ship</li>
-                                        <li>Progress 78 and 79 resupply ships</li>
-                                    </ul>
-                                <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/iss_11-08-21.jpg"/> */}
                                 </ul> : ''
                             }
-                            {/* <a class="btn" onClick={issParking}>iss parking</a>
-                            { showISSParking ? 
-                                <div className="issParking">
-                                    <div className="parking-img">
-                                        <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/iss_11-08-21.jpg"/>
-                                        <p className="credits">Credists to NASA ISS Images</p>
-                                    </div>
-                                    
-                                    <div className="parking-show">
-                                        <h4 className="exc">Currently docked spaceships:</h4> 
-                                        <ul className="parking-show-ul">    
-                                            <li><span className="details">Northrop Grumman's Cygnus space freighter</span></li>
-                                            <li><span className="details">Russia's Soyuz MS-19 crew ship</span></li>
-                                            <li><span className="details">Progress 78 and 79 resupply ships</span></li>
-                                        </ul>
-                                    </div>
-                                </div> : ''
-                            } */}
                             </>
                         }
                         </div>

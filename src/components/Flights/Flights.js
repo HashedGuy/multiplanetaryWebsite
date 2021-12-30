@@ -8,7 +8,6 @@ function Flights() {
     return (
         <>           
             <Schedule />
-            {/* <SupportedOperators /> */}
         </>
     )
 }

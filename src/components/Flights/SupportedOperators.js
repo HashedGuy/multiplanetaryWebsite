@@ -3,12 +3,9 @@ import React, {useState, useEffect} from 'react'
 function SupportedOperators(props) {   
 
     const [clickedOp, setClickedOp] = useState('')
-    const [clickedLoc, setClickedLoc] = useState('')
-    const [activeOp, setActiveOp] = useState('rmv-filter')
 
     useEffect(() => {
         props.sendOperatorToParent(clickedOp)
-        // props.sendLocationToParent(undefined)
       }, [clickedOp])
 
     return (

@@ -8,10 +8,7 @@ function RocketScience() {
     document.title = "It's a Rocket Science!"
     return (
         <>
-            <ThreeD 
-            />
-            {/* <Gravity 
-            /> */}
+            <ThreeD />
         </>
     )
 }

@@ -10,7 +10,6 @@ function LatestPhotos() {
         fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/perseverance/latest_photos?api_key=${key}`)
             .then(res => res.json())
             .then(data => {
-                // console.log(data.latest_photos[0])
                 setPhoto(data.latest_photos[0])
             })            
 

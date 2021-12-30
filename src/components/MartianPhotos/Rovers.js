@@ -31,7 +31,6 @@ function Rovers() {
             fetch(`https://api.nasa.gov/mars-photos/api/v1//manifests/${myRover}/?api_key=${process.env.REACT_APP_NASA_API_KEY}`)
             .then(res => res.json())
             .then(data => {
-                // console.log("render")
                 setData(data.photo_manifest)
                 setLoading(false)
                 setFetching(false)
@@ -40,7 +39,6 @@ function Rovers() {
             fetch(`https://api.nasa.gov/mars-photos/api/v1//manifests/perseverance/?api_key=${process.env.REACT_APP_NASA_API_KEY}`)
             .then(res => res.json())
             .then(data => {
-                // console.log("render")
                 setData(data.photo_manifest)
                 setLoading(false)
                 setFetching(false)
@@ -61,7 +59,6 @@ function Rovers() {
             fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/${myRover}/latest_photos?api_key=${process.env.REACT_APP_NASA_API_KEY}`)
                 .then(res => res.json())
                 .then(data => {
-                    // console.log(data.latest_photos)
                     setPhoto(data.latest_photos[0])
                     setLoading(false)
                     setFetching(false) 
@@ -70,7 +67,6 @@ function Rovers() {
             fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/perseverance/latest_photos?api_key=${process.env.REACT_APP_NASA_API_KEY}`)
                 .then(res => res.json())
                 .then(data => {
-                    // console.log(data.latest_photos)
                     setPhoto(data.latest_photos[0])
                     setLoading(false)
                     setFetching(false) 
@@ -85,11 +81,8 @@ function Rovers() {
 
     fetching ? document.title = "Fetching NASA data..." : document.title = "Martian Photos"
 
-    // console.log(myRover)
-
     return (
         <section className="rovers">
-            {/* <h1 className="api-error">Currently NASA servers do not respond. Please check again later:)</h1> */}
             <div className="rover-info">
                     {rovers.map(rover => (
                         
@@ -105,7 +98,6 @@ function Rovers() {
                                 key={rover} 
                                 onClick={
                                         () => {setMyRover(rover)}}
-                                // onClick = {makeAppear}
                             >
                                 <h2>{rover}</h2>
                                 
@@ -175,12 +167,8 @@ function Rovers() {
                 >
                     <div className="photos-info">
                         <h2 className="photos-title">Latest photo from {myRover ? myRover : "Perseverance"}</h2>
-                        <p>Photo taken: {isLoading ? <BeatLoader size={6} color='green' loading /> : photo.earth_date}</p>
-                        {/* <p>Camera: {}</p> */}
+                        <p>Photo taken: {isLoading ? <BeatLoader size={6} color='green' loading /> : photo.earth_date}</p>                       
                         <p className="latest-photo-info" id="latest-photo-info-perseverance"></p>
-                        {/* <a href="" className="btn"><span>{myRover ? myRover : "Perseverance"} album</span></a> */}
-                        {/* <p style={{fontSize: '.8rem'}}>WARNING: We are in <a target="_blank" href="https://mars.nasa.gov/all-about-mars/night-sky/solar-conjunction/"> Mars solar conjunction</a>, the period when the Sun comes between Mars and Earth, blocking the signals. This means {myRover} will temporarily pause sending us back raw images for about two weeks. Check back for new images after Oct. 18.</p> */}
-
                     </div>
                     <div className="latest-photo-section" id="perseverance-latest-photo">
                         <img src={isLoading ? "Photo Loading..." : photo.img_src} className="latest-photo" alt={`latest photo from ${myRover}`}/>

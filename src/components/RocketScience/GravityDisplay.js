@@ -1,8 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react'
 import GravityAnimation from './GravityAnimation'
 import ReactPlayer from "react-player"
-import {BounceLoader, BeatLoader} from 'react-spinners'
-import { MathJax, MathJaxContext } from "better-react-mathjax"
 
 function GravityDisplay(props) {
     const [pinkRelease, setPinkRelease] = useState(false)
@@ -113,7 +111,6 @@ function GravityDisplay(props) {
                         <p style={whyFasterB ? {display: 'block'} : {display: 'none'}}>The answer is it depends. Not having air resistance might make us think of more bounces on the Moon but bouncing mainly depends on the elasticity of the ground. For instance, the wooden floor on the Earth would bounce the object more than the Moon's dusty ground.</p>
                         <video width="640px" height="480px" controls autoPlay muted>
                           <source src="./video/SVGsMoon.mp4" type="video/mp4"/>
-                          {/* <source src="movie.ogg" type="video/ogg"/> */}
                         Your browser does not support the video tag.
                         </video> 
                     </>
@@ -127,7 +124,6 @@ function GravityDisplay(props) {
                         <p style={whyFasterG ? {display: 'block'} : {display: 'none'}}>Despite the fact Mars has an atmosphere, the air density is so low that it would not affect the falling speed of the objects dramatically like it does on the Earth.</p>
                         <video width="640px" height="480px" controls autoPlay muted>
                           <source src="./video/SVGsMars.mp4" type="video/mp4"/>
-                          {/* <source src="movie.ogg" type="video/ogg"/> */}
                         Your browser does not support the video tag.
                         </video> 
                     </>

@@ -1,6 +1,5 @@
 import React from 'react'
 import HomePageSections from './HomePageSections'
-import Animation from '../RocketScience/Animation'
 import ThreeD from '../RocketScience/ThreeD'
 
 function MainContent() {
@@ -23,10 +22,6 @@ function MainContent() {
                 sectionInfo="Feel like you're at the airport checking the flight table for departures or arrivals. But space airport..."
             />
 
-            {/* <Animation
-                type="main-page"
-            /> */}
-
             <HomePageSections 
                 bgImg = "photos-api"
                 title = "Check if we have any new photo from Mars today"
@@ -45,29 +40,9 @@ function MainContent() {
                 sectionInfo = "Some of us has already left the Earth...Thanks to WAIS Multiplanetary API, we can get the updated list of the astronauts in space, and many more about them and their mission in space."
             />
 
-            
-
-            {/* <HomePageSections 
-                bgImg = "pass-satellite-api"
-                title = "Look at the sky! There might be a satellite flying over your head"
-                linkTo ='./'
-                btnActive = {false}
-                buttonText = "coming soon"
-                sectionInfo = "Query next passes for a given satellite above you. Uses Skyfield to predict passes, and Celestrak GP API to get updated TLE data."
-            /> */}
             <ThreeD 
                 type="main-page"
             />
-
-            {/* <HomePageSections 
-                bgImg = "launch-api"
-                title = "Everything about launches, spaceships and many more"
-                linkTo ='./'
-                btnActive = {false}
-                buttonText = "coming soon"
-                sectionInfo = "If you live for adventure, what bigger adventure is there than leaving your planet,
-                traveling through space and helping to colonize another celestial body?"
-            /> */}
 
             <HomePageSections 
                 bgImg = "api"
@@ -77,8 +52,6 @@ function MainContent() {
                 buttonText = "See APIs"
                 sectionInfo = "Based on simple REST principles, the Multiplanetary API endpoints return JSON metadata, directly from the Multiplanetary Data Catalogue."
             />       
-
-            {/* <Animation /> */}
         </>
     )
 }

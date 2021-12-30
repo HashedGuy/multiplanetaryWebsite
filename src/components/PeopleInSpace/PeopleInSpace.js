@@ -7,8 +7,7 @@ function MartianPhotos() {
     return (
         <>
             <HeroPIS />
-            <Astronauts />
-           
+            <Astronauts />           
         </>
     )
 }

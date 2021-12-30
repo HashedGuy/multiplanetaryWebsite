@@ -13,7 +13,6 @@ import ISSArrivals from './Routes/ISSArrivals'
 import TSSArrivals from './Routes/TSSArrivals'
 
 import {BounceLoader, BeatLoader} from 'react-spinners'
-import SpaceXDepartures from './Routes/SpaceXDepartures'
 import SupportedOperators from './SupportedOperators'
 
 function Schedule() {
@@ -50,8 +49,6 @@ function Schedule() {
         fetch('https://fdo.rocketlaunch.live/json/launches/next/5')
             .then(res => res.json())
             .then(data => {
-                
-                // console.log(data.result)
                 setFlights(data.result)
                 setLoading(false)
             })                
@@ -60,8 +57,6 @@ function Schedule() {
     console.log(clickedLocation)
     console.log(clickedOperator)
 
-    // console.log(clickedLocationA)
-    // console.log(clickedOperatorA)
     return (
         <>
          <Animation
@@ -122,42 +117,31 @@ function Schedule() {
                             <div className="col">Status</div>
                         </div>
                         {
-                                isLoading ? <BeatLoader size={10} color='green' loading /> : 
-                                // clickedOperator === 'OperatorX' ?
-                                // 'Choose one of the available commercial operators or the space agencies for the departure location'
-                                // :
+                            isLoading ? 
+                            <BeatLoader size={10} color='green' loading /> 
+                            :
+                            
+                            clickedOperator ? 
 
-                                // clickedOperator === 'spacex' ? 
-                                // <SpaceXDepartures />
-                                // :
-                                
-                                // clickedOperator === 'private-companies' ?
-                                // 'Choose one of the available commercial operators for the departure location'
-                                // :
-                                // clickedOperator === 'space-agencies' ?
-                                // 'Choose one of the available space agencies for the departure location'
-                                // :
-                                clickedOperator ? 
+                                flights.map(flight => (
+                                    flight.provider.slug === clickedOperator ? 
+                                    <div className="row" key={flight.id}>
+                                        <div className="col">
+                                            <img className="operator-logo" src={`logos/${flight.provider.slug}.png`} title={flight.provider.name}/>
+                                        </div>
+                                        <div className="col">{flight.name}</div>
+                                        <div className="col rimuv">{flight.vehicle.name}</div>
+                                        <div className="col time">{flight.win_open === null ? flight.date_str : moment(flight.win_open).format('lll') }</div>
+                                        <div className="col">{flight.pad.location.name}, {flight.pad.location.country}</div>                                    
 
-                            flights.map(flight => (
-                                flight.provider.slug === clickedOperator ? 
-                                <div className="row" key={flight.id}>
-                                    <div className="col">
-                                        <img className="operator-logo" src={`logos/${flight.provider.slug}.png`} title={flight.provider.name}/>
-                                    </div>
-                                    <div className="col">{flight.name}</div>
-                                    <div className="col rimuv">{flight.vehicle.name}</div>
-                                    <div className="col time">{flight.win_open === null ? flight.date_str : moment(flight.win_open).format('lll') }</div>
-                                    <div className="col">{flight.pad.location.name}, {flight.pad.location.country}</div>                                    
-                                    
-                                    <div className={flight.win_open === null ? "col status-tbc" : "col status"}>
-                                    {flight.win_open === null ? "TBC" : "Confirmed"}
-                                    </div>    
-                                                                    
-                                </div> 
+                                        <div className={flight.win_open === null ? "col status-tbc" : "col status"}>
+                                        {flight.win_open === null ? "TBC" : "Confirmed"}
+                                        </div>    
+
+                                    </div> 
                                 : ``
                                 
-                            )) : 
+                                )) : 
 
                             (clickedLocation === 'earth') || (clickedLocation === undefined) ?
 
