@@ -82,7 +82,7 @@ function SupportedOperators(props) {
                         title="Mitsubishi Heavy Industries (coming soon)"
                     />
                 </a>
-
+                
                 <a onClick={()=>setClickedOp('')} className={clickedOp === '' ? "supported-operators-logo rmv-filter soon" : "supported-operators-logo rmv-filter"}>Remove filter</a>
 
             </div>

@@ -338,8 +338,8 @@
     .operator-logo {width: 40px; height: 40px;}
 
     .supported-operators-logo {
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
         margin: .5em;
         border-radius: 50%;
     }
@@ -376,6 +376,11 @@
 
     .operators {
         font-size: .3rem;
+    }
+
+    .rmv-filter {
+        font-size: .1rem;
+        text-align: center;
     }
 
   }
