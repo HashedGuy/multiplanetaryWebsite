@@ -122,10 +122,10 @@ function GravityDisplay(props) {
                     <p className="question"><a onClick={()=>setWhyFasterG(!whyFasterG)}>Martian air resistance slows down the objects' fall as well?</a></p>
                         
                         <p style={whyFasterG ? {display: 'block'} : {display: 'none'}}>Despite the fact Mars has an atmosphere, the air density is so low that it would not affect the falling speed of the objects dramatically like it does on the Earth.</p>
-                        <video width="640px" height="480px" controls autoPlay muted>
+                        {/* <video width="640px" height="480px" controls autoPlay muted>
                           <source src="./video/SVGsMars.mp4" type="video/mp4"/>
                         Your browser does not support the video tag.
-                        </video> 
+                        </video>  */}
                     </>
                     :
                     
