@@ -10,10 +10,10 @@ function GravityDisplay(props) {
     const [reboostLoading, setReboostLoading] = useState(false)
     const [showWhy, setShowWhy] = useState(true)
     const [whyFaster, setWhyFaster] = useState(true)
-    const [whyFasterX, setWhyFasterX] = useState(false)
-    const [whyFasterY, setWhyFasterY] = useState(false)
-    const [whyFasterG, setWhyFasterG] = useState(false)
-    const [whyFasterB, setWhyFasterB] = useState(false)
+    const [whyFasterX, setWhyFasterX] = useState(true)
+    const [whyFasterY, setWhyFasterY] = useState(true)
+    const [whyFasterG, setWhyFasterG] = useState(true)
+    const [whyFasterB, setWhyFasterB] = useState(true)
     const [count, setCount] = useState(3)
 
     const restartFunc = () => {
