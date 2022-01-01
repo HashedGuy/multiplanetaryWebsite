@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import './gravity.css'
 import GravityDisplay from './GravityDisplay'
+import {Link} from 'react-router-dom'
 
 function Gravity(props) {
    
@@ -48,7 +49,7 @@ function Gravity(props) {
                         <p><span className="orange-ball"></span> - is more like a basketball, around 600gr. More mass compare to the green ball, and bigger in radius.</p>
                         <br/><br/>
                         <a onClick={()=>setDisclaimer(!disclaimer)}><span className="warning">&#x26A0; How accurate animations are</span></a>
-                        {disclaimer ? <p className="disclaimer">Just to make it clear, I'm not a physicist or an astronomer, just a space enthusiast. So, I'm sure there might be some inaccuracy in my animations. Would be more than happy if any one of you notice them and let me know. Just contact me <a href="mailto:arbus@multiplanetary.website">here</a>.</p> : ''}
+                        {disclaimer ? <p className="disclaimer">Just to make it clear, I'm not a physicist or an astronomer, just a space enthusiast. So, I'm sure there might be some inaccuracy in my animations. Would be more than happy if any one of you notice them and let me know. Just contact me <Link to='/behindscenes'>here</Link>.</p> : ''}
                     </div>
                 </div>
 
