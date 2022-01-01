@@ -82,12 +82,12 @@ function GravityDisplay(props) {
                     {props.id === 'earth' ? 
                     <>
                         <p>Because of many reasons, but what concerns us the most here is the greater pulling force of Earth's gravity than the drag force, aka 'air resistance'.</p>
-                        <ReactPlayer 
+                        {/* <ReactPlayer 
                             className="react-player" 
                             url="https://youtu.be/tpwYOtEyQ2Q"
                             // width='100%'
                             // height='100%'
-                        />
+                        /> */}
                         <p className="question"><a onClick={()=>setWhyFaster(!whyFaster)}>Ok, why orange ball falls faster?</a></p>
                         
                         <p style={whyFaster ? {display: 'block'} : {display: 'none'}}>Unlike other planets, the Earth has the air! So air resistance affects the objects' falling speed. Two objects with the same mass, the one with less air resistance shape will fall faster. <br/><br/>However, our balls have the same perfect circle shape. Here comes another rule: two objects, with the same shape, heavier will fall faster because it provides more net force against the air, like our <span className="orange-ball"></span> ball.</p>
