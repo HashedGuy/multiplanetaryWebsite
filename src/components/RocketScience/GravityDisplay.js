@@ -93,6 +93,7 @@ function GravityDisplay(props) {
                         <p style={whyFaster ? {display: 'block'} : {display: 'none'}}>Unlike other planets, the Earth has the air! So air resistance affects the objects' falling speed. Two objects with the same mass, the one with less air resistance shape will fall faster. <br/><br/>However, our balls have the same perfect circle shape. Here comes another rule: two objects, with the same shape, heavier will fall faster because it provides more net force against the air, like our <span className="orange-ball"></span> ball.</p>
                                           
                         <ReactPlayer 
+                            controls
                             className="react-player" 
                             url="https://youtu.be/ftruR0oQwOA"
                             // width='100%'
