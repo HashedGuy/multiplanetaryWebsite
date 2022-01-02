@@ -108,9 +108,9 @@ function DeadRover() {
                             <span className="remove">
                                 {
                                     deadRover === 'Opportunity' ?
-                                    "The Mars 2020 Perseverance Rover will search for signs of ancient microbial life, which will advance NASA's quest to explore the past habitability of Mars. The rover has a drill to collect core samples of Martian rock and soil..."
+                                    "Opportunity, also known as MER-B (Mars Exploration Rover – B) or MER-1, and nicknamed 'Oppy', is a robotic rover that was active on Mars from 2004 until mid-2018. Launched on July 7, 2003, as part of NASA's Mars Exploration Rover program, it landed in Meridiani Planum on January 25, 2004, three weeks after its twin Spirit (MER-A) touched down on the other side of the planet."
                                     :                                        
-                                    "Part of NASA's Mars Science Laboratory mission, Spirit is the largest and most capable rover ever sent to Mars. It launched Nov. 26, 2011 and landed on Mars at 10:32 p.m. PDT on Aug. 5, 2012...."
+                                    "Spirit, also known as MER-A (Mars Exploration Rover – A) or MER-2, is a Mars robotic rover, active from 2004 to 2010. Spirit was operational on Mars for 2208 sols or 3.3 Martian years (2249 days; 6 years, 77 days). It was one of two rovers of NASA's Mars Exploration Rover Mission managed by the Jet Propulsion Laboratory (JPL)."
                                 }
                             </span>
                         </p>            
