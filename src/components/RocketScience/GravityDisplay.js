@@ -96,8 +96,6 @@ function GravityDisplay(props) {
                             controls
                             className="react-player" 
                             url="https://youtu.be/ftruR0oQwOA"
-                            // width='100%'
-                            // height='100%'
                         />
                     </>
                     :
