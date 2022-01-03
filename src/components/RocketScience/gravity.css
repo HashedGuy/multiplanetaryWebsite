@@ -433,7 +433,7 @@
 
     .react-player {
         width: 100% !important;
-        /* height: 100% !important; */
+        height: 360px !important;
     }
 
     .gravity-sections p {
