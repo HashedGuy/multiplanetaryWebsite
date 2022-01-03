@@ -435,6 +435,10 @@
         width: 100% !important;
         /* height: 100% !important; */
     }
+
+    .gravity-sections p {
+        font-size: .9rem !important;
+    }
 }
 
   /* Tablet version */

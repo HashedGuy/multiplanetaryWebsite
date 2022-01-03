@@ -381,7 +381,7 @@
     }
 
     .titleRS {
-        margin-bottom: 12.5em !important;
+        margin-bottom: 8.5em !important;
     }
 
     .titleRS h1 {
@@ -396,9 +396,7 @@
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) { 
-    .titleRS {
-        /* margin-top: 1.5em; */
-    }
+    
 }
 
   /* Tablet version */
