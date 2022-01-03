@@ -397,7 +397,7 @@
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) { 
     .titleRS {
-        margin-top: 1.5em;
+        /* margin-top: 1.5em; */
     }
 }
 
