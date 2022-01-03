@@ -220,6 +220,38 @@ header{
     }
 }
 
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+    .nav {
+        height: 0;
+        padding: 2.5em;
+    }
+
+    .nav a:not(.active-link) {
+        font-size: .9rem;
+    }
+
+    .logo {
+        width: 15% !important;
+    }
+
+    .logo-title {
+        padding-left: 1.5em !important;
+    }
+
+    .nav-item:first-child {
+        margin-top: 7rem !important;
+    }
+
+    .nav-list {
+        max-width: 30% !important;
+        margin-left: 30em !important;
+    }
+}
+
 /* Navbar for tablet version */
 @media only screen 
   and (min-device-width: 568px) 

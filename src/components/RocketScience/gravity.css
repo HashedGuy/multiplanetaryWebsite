@@ -418,6 +418,25 @@
 
   }
 
+  @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+    .btn-gravity {
+        width: 120px !important;
+    }
+
+    .mainGravityX {
+        min-height: 150vh !important;
+    }
+
+    .react-player {
+        width: 100% !important;
+        /* height: 100% !important; */
+    }
+}
+
   /* Tablet version */
   @media only screen 
   and (min-device-width: 568px) 

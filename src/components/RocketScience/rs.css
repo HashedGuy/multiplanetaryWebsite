@@ -303,8 +303,8 @@
 
 /* Mobile portrait */
 @media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2) {
 
     .rocket {
@@ -390,6 +390,16 @@
     }
     
   }
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+    .titleRS {
+        margin-top: 5.5em;
+    }
+}
 
   /* Tablet version */
 @media only screen 
