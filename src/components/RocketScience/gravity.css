@@ -359,7 +359,20 @@
 }
 
 .reboost-message {
-    text-align: left;
+    text-align: left;    
+}
+
+.reboost-starting {
+    animation: reboost-message 1s infinite;
+}
+
+@keyframes reboost-message {
+    0% {opacity: 1; color: yellow;}
+    100% {opacity: 0; color: yellow;}
+}
+
+.reboost-complete {
+    color: green;
 }
 
 /* Mobile portrait */
