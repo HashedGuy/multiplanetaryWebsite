@@ -92,12 +92,11 @@ function GravityDisplay(props) {
                     {props.id === 'earth' ? 
                     <>
                         <p>Because of many reasons, but what concerns us the most here is the greater pulling force of Earth's gravity than the drag force, aka 'air resistance'.</p>
-                        {/* <ReactPlayer 
+                        <ReactPlayer 
+                            controls
                             className="react-player" 
-                            url="https://youtu.be/tpwYOtEyQ2Q"
-                            // width='100%'
-                            // height='100%'
-                        /> */}
+                            url="https://youtu.be/6DgkzjjzLjk"
+                        />
                         <p className="question"><a onClick={()=>setWhyFaster(!whyFaster)}>Ok, why orange ball falls faster?</a></p>
                         
                         <p style={whyFaster ? {display: 'block'} : {display: 'none'}}>Unlike other planets, the Earth has the air! So air resistance affects the objects' falling speed. Two objects with the same mass, the one with less air resistance shape will fall faster. <br/><br/>However, our balls have the same perfect circle shape. Here comes another rule: two objects, with the same shape, heavier will fall faster because it provides more net force against the air, like our <span className="orange-ball"></span> ball.</p>
@@ -149,6 +148,7 @@ function GravityDisplay(props) {
                     
                     <p className="question"><a onClick={()=>setWhyFasterX(!whyFasterX)}>Then why balls are not at 100% rest?</a></p>
                     <p style={whyFasterX ? {display: 'block'} : {display: 'none'}}>To imitiate the real ISS environment, when you drop the balls in our animation, you can see tiny drifts up and down or left and right. This is usually caused by the ventilation working inside the spacecraft.</p>
+                    {/* <img src={'GIFs/logo.gif'}/> */}
                     </>
 
                     :
