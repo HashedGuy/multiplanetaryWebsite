@@ -379,11 +379,11 @@
 
 
 .air {
-    animation: rain 2s linear infinite;
+    animation: rain 2.5s linear infinite;
 }
 
 .airMax {
-    animation: rain 1s linear infinite;
+    animation: rain 1.5s linear infinite;
 }
 
 @keyframes rain {
