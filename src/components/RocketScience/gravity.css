@@ -103,6 +103,8 @@
     
 }
 
+
+
 .sceneG {
     position: relative;
     transform-style: preserve-3d;
@@ -374,6 +376,21 @@
 .reboost-complete {
     color: green;
 }
+
+
+.air {
+    animation: rain 2s linear infinite;
+}
+
+.airMax {
+    animation: rain 1s linear infinite;
+}
+
+@keyframes rain {
+    0% {background-position:100% 0% ;}
+    100% {background-position:-100% 0% ;}
+}
+
 
 /* Mobile portrait */
 @media only screen 

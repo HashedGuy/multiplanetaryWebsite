@@ -7,7 +7,12 @@ function GravityAnimation(props) {
             <div className={props.reboost ? "sceneG sceneISS" : "sceneG"}>
                 <div 
                     className={
-                            props.id === 'iss' ? "floorG floorISS" 
+                            
+
+                            (props.id === 'iss') && (props.reboostLoading === 'Engine fired!🔥') ? "floorG floorISS airMax"
+                            :
+
+                            props.id === 'iss' ? "floorG floorISS air" 
                             :
 
                             props.id === 'mars' ? "floorG floorMars"

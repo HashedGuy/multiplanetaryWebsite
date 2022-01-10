@@ -70,6 +70,7 @@ function GravityDisplay(props) {
                 bothRelease = {bothRelease}
                 id = {props.id}
                 reboost = {reboost}
+                reboostLoading = {reboostLoading}
             />
             <div className="queriesG">
                 <a className="btn btn-query" onClick={()=>setShowWhy(!showWhy)}>
