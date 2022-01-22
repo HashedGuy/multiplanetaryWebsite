@@ -19,7 +19,7 @@ function MainContent() {
                 btnActive={true}
                 linkTo='./flights'
                 buttonText="flights table"
-                sectionInfo="Feel like you're at the airport checking the flight table for departures or arrivals. But space airport..."
+                sectionInfo="Imagine you're at the airport checking the flight table of departures or arrivals. But this time space airport..."
             />
 
             <HomePageSections 
@@ -28,7 +28,7 @@ function MainContent() {
                 linkTo ='./martianphotos'
                 btnActive = {true}
                 buttonText = "today's photo"
-                sectionInfo = "Thanks to NASA Mars Rover API, we are receiving photos from Mars from the active rovers. Choose your own rover and see the latest photos with all the details."
+                sectionInfo = "Thanks to the NASA Mars Rover API, we are able to receive photos from Mars from the active rovers. Choose your own rover and see the latest photos with all the details."
             />
 
             <HomePageSections 
@@ -37,7 +37,7 @@ function MainContent() {
                 linkTo ='./whoareinspace'
                 btnActive = {true}
                 buttonText = "let's know them"
-                sectionInfo = "Some of us has already left the Earth...Thanks to WAIS Multiplanetary API, we can get the updated list of the astronauts in space, and many more about them and their mission in space."
+                sectionInfo = "Some of us have already left the Earth...Thanks to WAIS Multiplanetary API, we can get the updated list of the astronauts in space, and many more about them and their mission in space."
             />
 
             <ThreeD 
