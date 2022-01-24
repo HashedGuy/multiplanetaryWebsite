@@ -44,9 +44,9 @@ function Gravity(props) {
                         <h1>We've got some balls!</h1>
                         <p>Green and orange. We will drop them from the altitude of 5m to the ground everywhere - on the Earth, Moon, Mars and even in International Space Station. Let's see if they're gonna fall at all.</p>
                         <br/>
-                        <p><span className="blue-ball"></span> - is more like a tennis ball, lighter, 1/10 times (around 60gr) of the orange ball's mass (not weight!).</p>
+                        <p><span className="blue-ball"></span> - is closer to the mass of a tennis ball. It's mass is one tenth that of the orange ball.</p>
                         <br/>
-                        <p><span className="orange-ball"></span> - is more like a basketball, around 600gr. More mass compare to the green ball, and bigger in radius.</p>
+                        <p><span className="orange-ball"></span> - it's mass is closer to that of a basket ball which is around 600 gram. It's mass and radius are greater than that of the green ball.</p>
                         <br/><br/>
                         <a onClick={()=>setDisclaimer(!disclaimer)}><span className="warning">&#x26A0; How accurate animations are</span></a>
                         {disclaimer ? <p className="disclaimer">Just to make it clear, I'm not a physicist or an astronomer, just a space enthusiast. So, I'm sure there might be some inaccuracy in my animations. Would be more than happy if any one of you notice them and let me know. Just contact me <Link to='/behindscenes'>here</Link>.</p> : ''}
