@@ -42,7 +42,7 @@ function Gravity(props) {
                     </div>
                     <div className="ball-info">
                         <h1>We've got some balls!</h1>
-                        <p>Green and orange. We will drop them from the altitude of 5m to the ground everywhere - on the Earth, Moon, Mars and even in International Space Station. Let's see if they're gonna fall at all.</p>
+                        <p>Green and orange. We will drop them from the altitude of 500m to the ground everywhere - on the Earth, Moon, Mars and even in International Space Station. Let's see if they're gonna fall at all.</p>
                         <br/>
                         <p><span className="blue-ball"></span> - is closer to the mass of a tennis ball. It's mass is one tenth that of the orange ball.</p>
                         <br/>
