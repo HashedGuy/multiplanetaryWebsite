@@ -218,14 +218,14 @@
 
 .pink-earth {
     animation: 
-        ballGravityEarthPink 3.3s,
+        ballGravityEarthPink 1.41s ease-in,
         sceneRotate 30s infinite linear reverse; 
     animation-fill-mode: forwards;
 }
 
 .orange-earth {
     animation: 
-        ballGravityEarthOrange 1.36s forwards,
+        ballGravityEarthOrange 1.36s forwards ease-in,
         sceneRotate 30s infinite linear reverse; 
 }
 
@@ -260,15 +260,15 @@
 
 @keyframes ballGravityEarthOrange {
     0% { bottom: 4em;}
-    40% {bottom: 0em;} 
-    55% {bottom: .5em;}
+    65% {bottom: 0em;} 
+    75% {bottom: .25em;}
     100% {bottom: 0em;}
 }
 
 @keyframes ballGravityEarthPink {
     0% { bottom: 3.8em;}
-    94% {bottom: 0em;} 
-    97% {bottom: .005em;}
+    70% {bottom: 0em;} 
+    75% {bottom: .1em;}
     100% {bottom: 0em;}
 }
 
