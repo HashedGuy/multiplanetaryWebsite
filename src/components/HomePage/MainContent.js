@@ -4,11 +4,12 @@ import ThreeD from '../RocketScience/ThreeD'
 
 function MainContent() {
     document.title = 'Home page'
+    let textOne = `Enough dreaming. \nLearn how the f*ckin universe works.`
     return (
         <>  
             <HomePageSections 
                 bgImg = "hero-main"
-                title = "For wannabe multiplanetary species"                
+                title = {textOne}               
                 noBtn={true}
                 sectionInfo = "Getting back to the Moon, mining asteroids, building a city on Mars, colonizing planets, you name it...if all these excite you, this is your website."
             />
