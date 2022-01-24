@@ -195,6 +195,10 @@ function Schedule() {
                                                 flight.provider.slug === 'abl-space' ?                                                
                                                 `logos/abl-space.png`
                                                 :
+
+                                                flight.provider.slug === 'rocket-lab' ?                                                
+                                                `logos/rocket-lab.png`
+                                                :
                                                 
                                                 `logos/rocket_logo.png`
 
