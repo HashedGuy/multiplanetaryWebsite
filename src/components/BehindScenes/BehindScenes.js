@@ -5,8 +5,8 @@ function BehindScenes() {
     return (
         <div className='bs-container'>
         <div className="aloha">
-            <h2>That's just me</h2>
-            <p>This is Arbus, a space enthusiaist who enjoys animating things.</p>
+            <h2><span className='dream'>dream.</span> UNDERSTAND.<span className='dream'> dream again</span></h2>
+            <p>This is Arbus, a space enthusiast. I am trying to UNDERSTAND some basic physics/astronomy concepts via visualizing them. Surely one day, we will be able to simulate multi-planetary life to a large extent. Then more realistic dreams will come.</p>
 
             <br />
             <p>Would love to hear your comments/critique/offers. Feel free to hit me up at <a href="mailto:arbus@multiplanetary.website">arbus@multiplanetary.website</a></p>

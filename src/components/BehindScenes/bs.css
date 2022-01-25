@@ -37,6 +37,10 @@
     display: inline-block !important;
 }
 
+.dream {
+    opacity: .4;
+}
+
 /* Tablet version */
 @media only screen 
   and (min-device-width: 568px) 
