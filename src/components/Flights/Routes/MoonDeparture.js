@@ -9,7 +9,7 @@ function MoonDeparture() {
                 </div>
                 <div className="col">Artemis 1</div>
                 <div className="col rimuv">Orion CM-002</div>
-                <div className="col time"> March 2022</div> 
+                <div className="col time"> April 2022</div> 
                 <div className="col">Lunar Orbit</div> 
                 <div className="col status-tbc">TBC</div>
             </div> 
