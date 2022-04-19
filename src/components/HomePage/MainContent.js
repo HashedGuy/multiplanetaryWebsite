@@ -4,7 +4,7 @@ import ThreeD from '../RocketScience/ThreeD'
 
 function MainContent() {
     document.title = 'Home page'
-    let textOne = `Enough dreaming. \nLearn how the f*ckin universe works.`
+    let textOne = `Enough dreaming. \nLearn how the freakin universe works.`
     return (
         <>  
             <HomePageSections 
