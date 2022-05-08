@@ -9,7 +9,7 @@ function HeroPhotos() {
 
     useEffect(() => {
         setLoading(true)
-        fetch('https://multiplanatery-api.netlify.app/api/wais')
+        fetch('https:/https://hilarious-tarsier-5d7f57.netlify.app/api/wais')
             .then(res => res.json())
             .then(data => {
                 
